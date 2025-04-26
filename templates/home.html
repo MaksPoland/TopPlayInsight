@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block title %}TopPlayInsight - Trusted Casino Reviews & Gaming Tips{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Your Trusted Guide to Online Gaming</h1>
+        <p>Discover honest reviews, expert tips, and responsible gaming advice to enhance your online casino experience.</p>
+        <a href="{{ url_for('reviews') }}" class="btn btn-primary">Read Our Reviews</a>
+    </div>
+</section>
+
+<!-- Top Casinos Section -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Top Rated Online Casinos</h2>
+            <p>Carefully reviewed and rated for your gaming experience</p>
+        </div>
+        
+        <div class="row">
+            <!-- Casino 1 -->
+            <div class="col-md-4">
+                <div class="casino-card">
+                    <h3>Royal Casino</h3>
+                    <div class="rating" data-rating="5"></div>
+                    <p>Offering an exceptional gaming experience with over 1000 games, generous bonuses, and 24/7 customer support. Licensed by the Malta Gaming Authority.</p>
+                    <div class="d-flex">
+                        <a href="{{ url_for('reviews') }}" class="btn btn-primary">Read Review</a>
+                        <a href="#" class="btn btn-outline-primary">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Casino 2 -->
+            <div class="col-md-4">
+                <div class="casino-card">
+                    <h3>Golden Palace</h3>
+                    <div class="rating" data-rating="4"></div>
+                    <p>Known for fast payouts and a wide variety of table games. Features a user-friendly interface and excellent mobile compatibility. UK Gambling Commission licensed.</p>
+                    <div class="d-flex">
+                        <a href="{{ url_for('reviews') }}" class="btn btn-primary">Read Review</a>
+                        <a href="#" class="btn btn-outline-primary">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Casino 3 -->
+            <div class="col-md-4">
+                <div class="casino-card">
+                    <h3>Luxury Spins</h3>
+                    <div class="rating" data-rating="4"></div>
+                    <p>A premium casino experience with exclusive VIP program and high-value promotions. Features cutting-edge live dealer games and a sleek interface.</p>
+                    <div class="d-flex">
+                        <a href="{{ url_for('reviews') }}" class="btn btn-primary">Read Review</a>
+                        <a href="#" class="btn btn-outline-primary">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Articles Section -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Latest Articles</h2>
+            <p>Expert insights, tips, and guides</p>
+        </div>
+        
+        <div class="article-list">
+            <!-- Article 1 -->
+            <div class="article-item">
+                <h3><a href="{{ url_for('tips') }}">How to Choose a Safe Online Casino</a></h3>
+                <div class="article-date">June 15, 2023</div>
+                <p>Learn the key factors to consider when selecting a trustworthy online casino, including licensing, security measures, and transparent policies.</p>
+            </div>
+            
+            <!-- Article 2 -->
+            <div class="article-item">
+                <h3><a href="{{ url_for('tips') }}">Understanding Casino Bonuses and Wagering Requirements</a></h3>
+                <div class="article-date">June 10, 2023</div>
+                <p>A comprehensive guide to navigating welcome bonuses, free spins, and the fine print of wagering requirements at online casinos.</p>
+            </div>
+            
+            <!-- Article 3 -->
+            <div class="article-item">
+                <h3><a href="{{ url_for('responsible_gaming') }}">Setting Healthy Gambling Limits: A Practical Approach</a></h3>
+                <div class="article-date">June 5, 2023</div>
+                <p>Strategies for maintaining control of your gaming habits through effective budgeting, time management, and utilizing responsible gaming tools.</p>
+            </div>
+            
+            <!-- Article 4 -->
+            <div class="article-item">
+                <h3><a href="{{ url_for('tips') }}">Mobile Casino Gaming: Top Apps and Websites for 2023</a></h3>
+                <div class="article-date">May 28, 2023</div>
+                <p>Discover the best mobile-optimized casinos offering seamless gameplay, secure banking, and exclusive mobile bonuses for gaming on the go.</p>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{{ url_for('tips') }}" class="btn btn-primary">View All Articles</a>
+        </div>
+    </div>
+</section>
+
+<!-- Responsible Gaming Callout -->
+<section class="section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8 offset-md-2 text-center">
+                <i class="fas fa-shield-alt fa-3x text-primary mb-4"></i>
+                <h2>Play Responsibly</h2>
+                <p class="lead">Gambling should always be approached as entertainment, not as a way to make money. Know your limits and play within them.</p>
+                <a href="{{ url_for('responsible_gaming') }}" class="btn btn-primary mt-3">Responsible Gaming Resources</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

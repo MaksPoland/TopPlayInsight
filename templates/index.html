@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+
+{% block title %}TopPlayInsight - Trusted Casino Information Portal{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero text-center">
+    <div class="container">
+        <h1>Informed Casino Gaming Starts Here</h1>
+        <p>Welcome to TopPlayInsight, your trusted source for honest casino reviews, expert tips, and responsible gaming advice. We help you make informed decisions in the world of online gaming.</p>
+        <div>
+            <a href="{{ url_for('reviews') }}" class="btn btn-primary me-2">Explore Casino Reviews</a>
+            <a href="{{ url_for('responsible_gaming') }}" class="btn btn-outline-primary">Responsible Gaming Tips</a>
+        </div>
+    </div>
+</section>
+
+<!-- Top Casinos Section -->
+<section class="pt-60 pb-60">
+    <div class="section-header">
+        <h2>Top Rated Online Casinos</h2>
+        <p>Our experts thoroughly review each casino based on game selection, bonuses, security, payment options, and overall player experience.</p>
+    </div>
+    
+    <div class="row">
+        <!-- Casino 1 -->
+        <div class="col-md-4">
+            <div class="casino-card">
+                <div class="casino-title">Royal Vegas Casino</div>
+                <div class="rating">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star-half-alt star"></i>
+                    <span class="ms-2">4.5/5</span>
+                </div>
+                <p>Royal Vegas offers an exceptional gaming experience with over 700 games, reliable customer support, and secure payment methods. Their welcome bonus is generous and the loyalty program rewards regular players.</p>
+                <div class="casino-buttons">
+                    <a href="{{ url_for('reviews') }}" class="btn btn-outline-primary">Read Review</a>
+                    <a href="#" class="btn btn-primary">Visit Site</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Casino 2 -->
+        <div class="col-md-4">
+            <div class="casino-card">
+                <div class="casino-title">Platinum Play</div>
+                <div class="rating">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="far fa-star star"></i>
+                    <span class="ms-2">4.0/5</span>
+                </div>
+                <p>Platinum Play has built a strong reputation with its diverse game library, mobile compatibility, and fast withdrawals. The interface is user-friendly and the VIP program offers exclusive benefits for dedicated players.</p>
+                <div class="casino-buttons">
+                    <a href="{{ url_for('reviews') }}" class="btn btn-outline-primary">Read Review</a>
+                    <a href="#" class="btn btn-primary">Visit Site</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Casino 3 -->
+        <div class="col-md-4">
+            <div class="casino-card">
+                <div class="casino-title">Jackpot City</div>
+                <div class="rating">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <span class="ms-2">5.0/5</span>
+                </div>
+                <p>Jackpot City stands out with its impressive progressive jackpot slots, excellent mobile experience, and 24/7 support. Their banking options are diverse and their security measures are industry-leading.</p>
+                <div class="casino-buttons">
+                    <a href="{{ url_for('reviews') }}" class="btn btn-outline-primary">Read Review</a>
+                    <a href="#" class="btn btn-primary">Visit Site</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Articles -->
+<section class="articles-section pt-60 pb-60">
+    <div class="container">
+        <div class="section-header">
+            <h2>Latest Articles</h2>
+            <p>Stay updated with our latest insights, guides, and news from the online casino world.</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <!-- Article 1 -->
+                <div class="article-item">
+                    <h3 class="article-title"><a href="{{ url_for('tips') }}">Understanding Casino Bonuses: What's Really a Good Deal?</a></h3>
+                    <div class="article-date">July 15, 2023</div>
+                    <p>Not all casino bonuses are created equal. Learn how to identify truly valuable offers and understand the terms behind them to maximize your gaming experience.</p>
+                </div>
+                
+                <!-- Article 2 -->
+                <div class="article-item">
+                    <h3 class="article-title"><a href="{{ url_for('tips') }}">Top 5 Strategies for Playing Online Blackjack</a></h3>
+                    <div class="article-date">July 8, 2023</div>
+                    <p>Improve your chances at the virtual blackjack table with these proven strategies from our casino gaming experts. Master basic strategy and card counting fundamentals.</p>
+                </div>
+                
+                <!-- Article 3 -->
+                <div class="article-item">
+                    <h3 class="article-title"><a href="{{ url_for('responsible_gaming') }}">Setting Effective Gambling Limits: A Comprehensive Guide</a></h3>
+                    <div class="article-date">July 1, 2023</div>
+                    <p>Responsible gaming starts with setting proper limits. This guide explores different types of limits you can set and how to maintain a healthy relationship with gambling.</p>
+                </div>
+                
+                <!-- Article 4 -->
+                <div class="article-item">
+                    <h3 class="article-title"><a href="{{ url_for('reviews') }}">Mobile Casino Gaming: Top Platforms for On-the-Go Play</a></h3>
+                    <div class="article-date">June 25, 2023</div>
+                    <p>The mobile gaming revolution is here. Discover which online casinos offer the best mobile experience, with responsive design and full game libraries on your smartphone.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{{ url_for('tips') }}" class="btn btn-primary">View All Articles</a>
+        </div>
+    </div>
+</section>
+
+<!-- Responsible Gaming Reminder -->
+<section class="container mb-30">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="responsible-gaming-tip">
+                <h3 class="tip-title"><i class="fas fa-shield-alt me-2"></i> Play Responsibly</h3>
+                <p>At TopPlayInsight, we advocate for responsible gaming practices. Always remember that gambling should be enjoyable entertainment, not a way to make money. Set time and money limits before you play, and never chase losses.</p>
+                <a href="{{ url_for('responsible_gaming') }}" class="btn btn-outline-primary mt-2">Learn More About Responsible Gaming</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

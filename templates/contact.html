@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us - TopPlayInsight{% endblock %}
+
+{% block content %}
+<!-- Header Section -->
+<div class="section-header pt-60 pb-30">
+    <h1>Contact Us</h1>
+    <p>Have questions, feedback, or suggestions? We'd love to hear from you! Use the form below to get in touch with our team.</p>
+</div>
+
+<!-- Main Content -->
+<div class="container mb-60">
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2 class="mb-4">Send us a message</h2>
+                <form id="contactForm">
+                    <div class="form-group mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group mb-3">
+                        <label for="subject" class="form-label">Subject</label>
+                        <select class="form-select" id="subject" required>
+                            <option value="" selected disabled>Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="feedback">Website Feedback</option>
+                            <option value="review">Review Request</option>
+                            <option value="collaboration">Collaboration Proposal</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group mb-4">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Type your message here..." required></textarea>
+                    </div>
+                    
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" id="consent" required>
+                        <label class="form-check-label" for="consent">
+                            I agree to the processing of my personal data in accordance with the <a href="{{ url_for('privacy_policy') }}">Privacy Policy</a>.
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <!-- Contact Information -->
+            <div class="card border-0 shadow mb-4">
+                <div class="card-body p-4">
+                    <h3 class="card-title mb-4">Contact Information</h3>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="me-3">
+                            <i class="fas fa-envelope fa-2x text-primary"></i>
+                        </div>
+                        <div>
+                            <h5>Email Us</h5>
+                            <p class="mb-0">info@topplayinsight.com</p>
+                            <p class="text-muted small">We respond within 24-48 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="me-3">
+                            <i class="fas fa-clock fa-2x text-primary"></i>
+                        </div>
+                        <div>
+                            <h5>Hours of Operation</h5>
+                            <p class="mb-0">Monday-Friday: 9am-5pm EST</p>
+                            <p class="text-muted small">Closed on major holidays</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex">
+                        <div class="me-3">
+                            <i class="fas fa-question-circle fa-2x text-primary"></i>
+                        </div>
+                        <div>
+                            <h5>Frequently Asked Questions</h5>
+                            <p class="mb-0">Check our <a href="#">FAQ page</a> for quick answers to common questions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Follow Us -->
+            <div class="card border-0 shadow">
+                <div class="card-body p-4">
+                    <h3 class="card-title mb-4">Follow Us</h3>
+                    <p>Stay updated with our latest reviews, tips, and casino news by following us on social media.</p>
+                    
+                    <div class="d-flex justify-content-center gap-4 mt-4">
+                        <a href="#" class="text-primary" target="_blank" aria-label="Follow on Twitter">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-primary" target="_blank" aria-label="Follow on Facebook">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-primary" target="_blank" aria-label="Follow on Instagram">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-primary" target="_blank" aria-label="Follow on LinkedIn">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FAQs Section -->
+<section class="bg-light-gray pt-60 pb-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+                
+                <div class="accordion" id="contactFAQ">
+                    <!-- FAQ Item 1 -->
+                    <div class="accordion-item border-0 shadow-sm mb-3">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                How do you select casinos for review?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                We select casinos based on reputation, licensing, game variety, payment options, customer support, and user experience. Our team conducts thorough research and testing before publishing any review. We prioritize casinos that demonstrate commitment to player safety, fair gaming, and responsible gambling practices.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="accordion-item border-0 shadow-sm mb-3">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Can I suggest a casino for you to review?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                Absolutely! We welcome suggestions from our readers. If there's a casino you'd like us to review, please use our contact form and select "Review Request" as the subject. Include as much detail as possible about the casino and why you think it would be valuable for our readers.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="accordion-item border-0 shadow-sm mb-3">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                How can I collaborate with TopPlayInsight?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                We're open to various collaboration opportunities with individuals and organizations committed to responsible gaming. This could include content partnerships, expert interviews, or educational initiatives. Please use our contact form and select "Collaboration Proposal" to discuss potential partnerships.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="accordion-item border-0 shadow-sm">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                How quickly will I receive a response to my inquiry?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                We strive to respond to all inquiries within 24-48 business hours. During busy periods or weekends, response times may be slightly longer. For urgent matters, please mention this in your subject line, and we'll do our best to prioritize your request.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
