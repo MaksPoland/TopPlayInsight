@@ -48,40 +48,60 @@
         
         <!-- Casino Listings -->
         <div class="casino-listings">
-            <!-- Casino 1 -->
-            <div class="casino-list-item">
+            {% for casino in all_casinos %}
+            <div class="casino-list-item {% if casino.is_new %}new-casino{% endif %} {% if casino.is_featured %}featured-casino{% endif %}">
                 <div class="row align-items-center">
                     <div class="col-lg-1 col-md-2 text-center ranking">
-                        <div class="rank-number">1</div>
+                        <div class="rank-number">{{ loop.index }}</div>
                     </div>
                     <div class="col-lg-2 col-md-2 text-center">
-                        <img src="https://via.placeholder.com/150x75" alt="Royal Vegas Casino" class="img-fluid casino-logo">
+                        <img src="{{ casino.logo_url }}" alt="{{ casino.name }}" class="img-fluid casino-logo">
                     </div>
                     <div class="col-lg-3 col-md-3">
-                        <h3 class="casino-name">Royal Vegas Casino</h3>
+                        <h3 class="casino-name">{{ casino.name }}</h3>
                         <div class="rating mb-2">
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star-half-alt star"></i>
-                            <span class="ms-2">4.5/5</span>
+                            {% set full_stars = (casino.rating | int) %}
+                            {% set half_star = (casino.rating - full_stars) >= 0.5 %}
+                            
+                            {% for i in range(full_stars) %}
+                                <i class="fas fa-star star"></i>
+                            {% endfor %}
+                            
+                            {% if half_star %}
+                                <i class="fas fa-star-half-alt star"></i>
+                                {% set remaining_stars = 4 - full_stars %}
+                            {% else %}
+                                {% set remaining_stars = 5 - full_stars %}
+                            {% endif %}
+                            
+                            {% for i in range(remaining_stars) %}
+                                <i class="far fa-star star"></i>
+                            {% endfor %}
+                            
+                            <span class="ms-2">{{ casino.rating }}/5</span>
                         </div>
                         <div class="casino-features">
-                            <span class="badge bg-light text-dark me-1">Fast Payouts</span>
-                            <span class="badge bg-light text-dark">700+ Games</span>
+                            {% if casino.is_new %}
+                                <span class="badge bg-success text-white me-1">New</span>
+                            {% endif %}
+                            {% if casino.is_featured %}
+                                <span class="badge bg-warning text-dark me-1">Featured</span>
+                            {% endif %}
+                            {% if casino.min_deposit %}
+                                <span class="badge bg-light text-dark">Min Deposit: ${{ casino.min_deposit }}</span>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-2">
                         <div class="bonus-info">
                             <span class="bonus-label">Welcome Bonus</span>
-                            <h4 class="bonus-amount">$1,200</h4>
-                            <p class="bonus-details">+ 120 Free Spins</p>
+                            <h4 class="bonus-amount">{{ casino.bonus_description.split(':')[0] if ':' in casino.bonus_description else casino.bonus_description }}</h4>
+                            <p class="bonus-details">{{ casino.bonus_description.split(':', 1)[1] if ':' in casino.bonus_description else '' }}</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 text-center">
                         <div class="d-grid gap-2">
-                            <a href="#" class="btn btn-primary btn-lg visit-btn">Visit Casino</a>
+                            <a href="{{ casino.url }}" class="btn btn-primary btn-lg visit-btn" target="_blank">Visit Casino</a>
                             <a href="{{ url_for('reviews') }}" class="btn-link review-link">Read Full Review</a>
                         </div>
                     </div>
@@ -89,7 +109,7 @@
                 <div class="casino-highlights mt-3">
                     <div class="row">
                         <div class="col-md-9">
-                            <p><strong>Why we recommend:</strong> Excellent game selection with fast withdrawals and responsive customer support available 24/7.</p>
+                            <p><strong>Why we recommend:</strong> {{ casino.description }}</p>
                         </div>
                         <div class="col-md-3 text-md-end">
                             <p class="terms-note">T&Cs Apply, 18+</p>
@@ -97,206 +117,7 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Casino 2 -->
-            <div class="casino-list-item">
-                <div class="row align-items-center">
-                    <div class="col-lg-1 col-md-2 text-center ranking">
-                        <div class="rank-number">2</div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 text-center">
-                        <img src="https://via.placeholder.com/150x75" alt="Platinum Play" class="img-fluid casino-logo">
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <h3 class="casino-name">Platinum Play</h3>
-                        <div class="rating mb-2">
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="far fa-star star"></i>
-                            <span class="ms-2">4.0/5</span>
-                        </div>
-                        <div class="casino-features">
-                            <span class="badge bg-light text-dark me-1">Mobile Friendly</span>
-                            <span class="badge bg-light text-dark">VIP Program</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-2">
-                        <div class="bonus-info">
-                            <span class="bonus-label">Welcome Bonus</span>
-                            <h4 class="bonus-amount">$800</h4>
-                            <p class="bonus-details">100% Match on First Deposit</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 text-center">
-                        <div class="d-grid gap-2">
-                            <a href="#" class="btn btn-primary btn-lg visit-btn">Visit Casino</a>
-                            <a href="{{ url_for('reviews') }}" class="btn-link review-link">Read Full Review</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="casino-highlights mt-3">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <p><strong>Why we recommend:</strong> User-friendly interface with excellent mobile compatibility and a rewarding VIP program for loyal players.</p>
-                        </div>
-                        <div class="col-md-3 text-md-end">
-                            <p class="terms-note">T&Cs Apply, 18+</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Casino 3 -->
-            <div class="casino-list-item">
-                <div class="row align-items-center">
-                    <div class="col-lg-1 col-md-2 text-center ranking">
-                        <div class="rank-number">3</div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 text-center">
-                        <img src="https://via.placeholder.com/150x75" alt="Jackpot City" class="img-fluid casino-logo">
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <h3 class="casino-name">Jackpot City</h3>
-                        <div class="rating mb-2">
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <span class="ms-2">5.0/5</span>
-                        </div>
-                        <div class="casino-features">
-                            <span class="badge bg-light text-dark me-1">Progressive Jackpots</span>
-                            <span class="badge bg-light text-dark">24/7 Support</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-2">
-                        <div class="bonus-info">
-                            <span class="bonus-label">Welcome Package</span>
-                            <h4 class="bonus-amount">$1,600</h4>
-                            <p class="bonus-details">+ 100 Free Spins on Mega Moolah</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 text-center">
-                        <div class="d-grid gap-2">
-                            <a href="#" class="btn btn-primary btn-lg visit-btn">Visit Casino</a>
-                            <a href="{{ url_for('reviews') }}" class="btn-link review-link">Read Full Review</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="casino-highlights mt-3">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <p><strong>Why we recommend:</strong> Outstanding selection of progressive jackpot games with industry-leading security measures and fast payouts.</p>
-                        </div>
-                        <div class="col-md-3 text-md-end">
-                            <p class="terms-note">T&Cs Apply, 18+</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Casino 4 -->
-            <div class="casino-list-item">
-                <div class="row align-items-center">
-                    <div class="col-lg-1 col-md-2 text-center ranking">
-                        <div class="rank-number">4</div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 text-center">
-                        <img src="https://via.placeholder.com/150x75" alt="Spin Palace" class="img-fluid casino-logo">
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <h3 class="casino-name">Spin Palace</h3>
-                        <div class="rating mb-2">
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="far fa-star star"></i>
-                            <span class="ms-2">4.0/5</span>
-                        </div>
-                        <div class="casino-features">
-                            <span class="badge bg-light text-dark me-1">Great Slots</span>
-                            <span class="badge bg-light text-dark">Weekly Promos</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-2">
-                        <div class="bonus-info">
-                            <span class="bonus-label">Welcome Bonus</span>
-                            <h4 class="bonus-amount">$1,000</h4>
-                            <p class="bonus-details">+ 50 Free Spins</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 text-center">
-                        <div class="d-grid gap-2">
-                            <a href="#" class="btn btn-primary btn-lg visit-btn">Visit Casino</a>
-                            <a href="{{ url_for('reviews') }}" class="btn-link review-link">Read Full Review</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="casino-highlights mt-3">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <p><strong>Why we recommend:</strong> Excellent selection of slot games with regular promotions and tournaments for existing players.</p>
-                        </div>
-                        <div class="col-md-3 text-md-end">
-                            <p class="terms-note">T&Cs Apply, 18+</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Casino 5 -->
-            <div class="casino-list-item">
-                <div class="row align-items-center">
-                    <div class="col-lg-1 col-md-2 text-center ranking">
-                        <div class="rank-number">5</div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 text-center">
-                        <img src="https://via.placeholder.com/150x75" alt="Lucky Days" class="img-fluid casino-logo">
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <h3 class="casino-name">Lucky Days</h3>
-                        <div class="rating mb-2">
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star-half-alt star"></i>
-                            <span class="ms-2">4.5/5</span>
-                        </div>
-                        <div class="casino-features">
-                            <span class="badge bg-light text-dark me-1">Live Dealer</span>
-                            <span class="badge bg-light text-dark">Fast Registration</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-2">
-                        <div class="bonus-info">
-                            <span class="bonus-label">Welcome Package</span>
-                            <h4 class="bonus-amount">$1,500</h4>
-                            <p class="bonus-details">+ 300 Free Spins</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 text-center">
-                        <div class="d-grid gap-2">
-                            <a href="#" class="btn btn-primary btn-lg visit-btn">Visit Casino</a>
-                            <a href="{{ url_for('reviews') }}" class="btn-link review-link">Read Full Review</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="casino-highlights mt-3">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <p><strong>Why we recommend:</strong> Impressive live dealer section with quick registration process and fast withdrawal times.</p>
-                        </div>
-                        <div class="col-md-3 text-md-end">
-                            <p class="terms-note">T&Cs Apply, 18+</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
         
         <div class="text-center mt-4">

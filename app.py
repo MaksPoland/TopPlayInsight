@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, request, flash, redirect, url_for
 from models import db, Casino, Review, Tip, Contact
 
 # Create the Flask application
@@ -38,18 +38,53 @@ def index():
 
 @app.route('/reviews')
 def reviews():
-    return render_template('reviews.html', active_page='reviews')
+    casino_reviews = Review.query.all()
+    casinos = Casino.query.all()
+    return render_template('reviews.html', 
+                          active_page='reviews',
+                          casino_reviews=casino_reviews,
+                          casinos=casinos)
 
 @app.route('/tips')
 def tips():
-    return render_template('tips.html', active_page='tips')
+    all_tips = Tip.query.all()
+    return render_template('tips.html', 
+                          active_page='tips', 
+                          tips=all_tips)
 
 @app.route('/responsible-gaming')
 def responsible_gaming():
     return render_template('responsible_gaming.html', active_page='responsible_gaming')
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        email = request.form.get('email')
+        subject = request.form.get('subject')
+        message = request.form.get('message')
+        
+        # Validate form data
+        if not name or not email or not subject or not message:
+            flash('All fields are required!', 'danger')
+            return render_template('contact.html', active_page='contact')
+        
+        # Create new contact record
+        new_contact = Contact(
+            name=name,
+            email=email,
+            subject=subject,
+            message=message
+        )
+        
+        # Save to database
+        db.session.add(new_contact)
+        db.session.commit()
+        
+        # Show success message
+        flash('Your message has been sent successfully! We will get back to you soon.', 'success')
+        return redirect(url_for('contact'))
+    
     return render_template('contact.html', active_page='contact')
 
 @app.route('/privacy-policy')
