@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="80" viewBox="0 0 100 80">
+  <style>
+    .casino-text { font-family: 'Arial', sans-serif; font-weight: bold; }
+    .bg { fill: #3949AB; }
+    .wheel { fill: #E91E63; }
+    .wheel-inner { fill: #FFEB3B; }
+    .wheel-line { stroke: #FFFFFF; stroke-width: 2; }
+    .white { fill: #FFFFFF; }
+  </style>
+  <rect class="bg" x="0" y="0" width="100" height="80" rx="10" ry="10" />
+  <circle class="wheel" cx="50" cy="30" r="20" />
+  <circle class="wheel-inner" cx="50" cy="30" r="5" />
+  <line class="wheel-line" x1="50" y1="10" x2="50" y2="50" />
+  <line class="wheel-line" x1="30" y1="30" x2="70" y2="30" />
+  <line class="wheel-line" x1="36" y1="16" x2="64" y2="44" />
+  <line class="wheel-line" x1="36" y1="44" x2="64" y2="16" />
+  <text x="20" y="65" class="casino-text white" font-size="10">LUCKY SPIN</text>
+</svg>
