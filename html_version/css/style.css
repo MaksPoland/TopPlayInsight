@@ -158,6 +158,19 @@ a:hover {
     margin: 0 auto 30px auto;
 }
 
+.hero-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-button-wrapper {
+    margin-right: 10px;
+}
+
+.hero-button-wrapper:last-child {
+    margin-right: 0;
+}
+
 /* Casino List Section */
 .casino-list-section {
     background-color: white;
@@ -707,6 +720,26 @@ footer {
     
     .hero {
         padding: 40px 0;
+    }
+    
+    /* Отступ между кнопками в секции hero на мобильной версии */
+    .hero-button-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .hero-button-wrapper {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .hero-button-wrapper:last-child {
+        margin-bottom: 0;
+    }
+    
+    .hero-button-wrapper .btn-hero {
+        display: block;
+        width: 100%;
     }
     
     /* Мобильные карточки в новом формате */
