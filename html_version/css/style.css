@@ -446,7 +446,7 @@ a:hover {
 
 .d-grid {
     display: grid;
-    gap: 10px;
+    gap: 20px;
 }
 
 .visit-btn {
@@ -709,21 +709,115 @@ footer {
         padding: 40px 0;
     }
     
+    /* Мобильные карточки в новом формате */
     .casino-list-item {
         padding: 15px;
+        border-radius: 6px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px;
+        background-color: white;
     }
     
-    .rank-number {
-        font-size: 1.2rem;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
+    /* Скрываем некоторые элементы на мобильной версии */
+    .casino-specs,
+    .casino-highlights,
+    .ranking {
+        display: none;
     }
     
+    /* Изменяем размер логотипа */
+    .casino-logo {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        display: block;
+        margin: 0 auto 10px;
+        background-color: #f8f8f8;
+    }
+    
+    /* Стилизация рейтинга */
+    .rating {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    .casino-name {
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+        font-weight: 700;
+    }
+    
+    /* Стилизация количества отзывов */
+    .rating-count {
+        color: #777;
+        font-size: 0.9rem;
+        font-weight: normal;
+        display: block;
+        text-align: right;
+    }
+    
+    /* Стилизация галочек */
+    .check-list {
+        margin: 15px 0;
+    }
+    
+    .check-list li {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+    }
+    
+    .check-list li:before {
+        font-size: 1.1rem;
+    }
+    
+    /* Стилизация бонусов */
     .bonus-amount {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin: 10px 0;
+        color: #333;
+        text-align: left;
     }
     
+    /* Стилизация кнопки */
+    .visit-btn {
+        margin-top: 10px;
+        font-size: 1rem;
+        padding: 12px 0;
+        border-radius: 6px;
+        letter-spacing: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .visit-btn i {
+        margin-left: 8px;
+    }
+    
+    /* Стилизация ссылки на обзор */
+    .review-link {
+        display: block;
+        margin: 15px 0;
+        text-align: center;
+        color: #0066cc;
+        font-weight: 500;
+    }
+    
+    /* Стилизация информации об условиях */
+    .terms-note {
+        text-align: center;
+        font-size: 0.8rem;
+        color: #777;
+        margin-top: 10px;
+    }
+    
+    /* Адаптируем сетку для мобильной версии */
     .col-lg-8, .offset-lg-2, .col-md-8, .offset-md-2 {
         flex: 0 0 100%;
         max-width: 100%;
@@ -734,5 +828,20 @@ footer {
         width: 100%;
         max-width: 100%;
         justify-content: center;
+    }
+    
+    /* Кнопки на мобильной версии */
+    .btn-hero {
+        display: block;
+        width: 100%;
+        margin-bottom: 25px;  /* Увеличен отступ между кнопками */
+        padding: 12px 0;
+        font-size: 1rem;
+        border-radius: 6px;
+    }
+    
+    /* Дополнительный класс для кнопок d-grid */
+    .d-grid {
+        gap: 25px;  /* Увеличен отступ между кнопками */
     }
 }
