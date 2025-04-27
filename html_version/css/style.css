@@ -464,17 +464,22 @@ a:hover {
 
 .visit-btn {
     font-weight: 600;
-    padding: 12px 20px;
+    padding: 12px 8px;
     background-color: var(--offer-btn-color);
     border-color: var(--offer-btn-color);
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     width: 100%;
+    max-width: 100%;
     display: block;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     border-radius: 4px;
     transition: background-color 0.2s ease-in-out;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .visit-btn:hover {
@@ -832,13 +837,18 @@ footer {
     /* Стилизация кнопки */
     .visit-btn {
         margin-top: 10px;
-        font-size: 1rem;
+        font-size: 0.85rem;
         padding: 12px 0;
         border-radius: 6px;
         letter-spacing: 1px;
         display: flex;
         justify-content: center;
         align-items: center;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     
     .visit-btn i {
