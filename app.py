@@ -1,14 +1,40 @@
 import os
 from flask import Flask, render_template
+from models import db, Casino, Review, Tip, Contact
 
 # Create the Flask application
 app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", "dev-key-for-topplayinsight")
 
+# Configure the database
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
+if not app.config["SQLALCHEMY_DATABASE_URI"]:
+    print("Warning: DATABASE_URL is not set. Using SQLite as fallback.")
+    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///topplayinsight.db"
+app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
+    "pool_recycle": 300,
+    "pool_pre_ping": True,
+}
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+# Initialize the database
+db.init_app(app)
+
+# Create tables
+with app.app_context():
+    db.create_all()
+
 # Routes
 @app.route('/')
 def index():
-    return render_template('index.html', active_page='home')
+    featured_casinos = Casino.query.filter_by(is_featured=True).all()
+    new_casinos = Casino.query.filter_by(is_new=True).all()
+    all_casinos = Casino.query.all()
+    return render_template('index.html', 
+                          active_page='home',
+                          featured_casinos=featured_casinos,
+                          new_casinos=new_casinos,
+                          all_casinos=all_casinos)
 
 @app.route('/reviews')
 def reviews():
