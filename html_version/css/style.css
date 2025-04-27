@@ -158,17 +158,17 @@ a:hover {
     margin: 0 auto 30px auto;
 }
 
-.hero-button-container {
-    display: flex;
-    justify-content: center;
-}
-
-.hero-button-wrapper {
+.mobile-button {
+    width: auto;
+    display: inline-block !important;
     margin-right: 10px;
 }
 
-.hero-button-wrapper:last-child {
-    margin-right: 0;
+/* Отменяем отступ для мобильной версии на десктопе */
+@media (min-width: 769px) {
+    .mobile-button {
+        margin-bottom: 0 !important;
+    }
 }
 
 /* Casino List Section */
@@ -720,6 +720,18 @@ footer {
     
     .hero {
         padding: 40px 0;
+    }
+    
+    /* Принудительный стиль для кнопок на мобильной версии */
+    .mobile-button {
+        display: block !important;
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+    
+    /* Первая кнопка всегда имеет отступ снизу 20px */
+    .mobile-button:first-of-type {
+        margin-bottom: 20px !important;
     }
     
     /* Отступ между кнопками в секции hero на мобильной версии */

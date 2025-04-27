@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кнопки с отступом</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .btn-primary {
+            background-color: #2E7D32;
+            color: white;
+        }
+
+        .btn-outline {
+            border: 2px solid #2E7D32;
+            color: #2E7D32;
+            background-color: transparent;
+        }
+
+        @media (max-width: 768px) {
+            .button-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .btn {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+                box-sizing: border-box;
+            }
+
+            .btn:last-child {
+                margin-bottom: 0;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Тест отступа между кнопками</h1>
+    <p>При ширине экрана меньше 768px (на мобильном устройстве) отступ между кнопками должен быть 20px.</p>
+
+    <div class="button-container">
+        <a href="#" class="btn btn-primary">Explore Casino Reviews</a>
+        <a href="#" class="btn btn-outline">Responsible Gaming Tips</a>
+    </div>
+</body>
+</html>
