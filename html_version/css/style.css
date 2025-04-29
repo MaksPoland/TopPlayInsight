@@ -2272,11 +2272,30 @@ textarea.form-control {
     
     .col-md-8.offset-md-2,
     .col-md-6,
-    .col-md-12 {
+    .col-md-12,
+    .col-lg-4,
+    .col-lg-8,
+    .col-md-4,
+    .col-md-8 {
         padding: 0 10px;
         max-width: 100%;
         margin-left: 0;
         flex: 0 0 100%;
+    }
+    
+    /* Исправление мобильной структуры для страницы обзоров */
+    .casino-list-item .row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .casino-logo-container {
+        max-width: 200px;
+        margin: 0 auto 15px;
+    }
+    
+    .casino-list-item .row .col-md-6 {
+        margin-bottom: 15px;
     }
     
     /* Улучшения для контактной формы */
@@ -2352,6 +2371,94 @@ textarea.form-control {
         width: 100%;
         padding: 10px;
         font-size: 14px;
+    }
+    
+    /* Улучшения для карточек казино на странице обзоров */
+    .casino-list-item .casino-name {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+        max-width: 100%;
+    }
+    
+    .casino-list-item p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+        max-width: 100%;
+    }
+    
+    .casino-list-item ul {
+        padding-left: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .casino-list-item li {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 5px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+    
+    .bonus-info {
+        margin-top: 15px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .bonus-label {
+        display: block;
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 5px;
+    }
+    
+    .bonus-amount {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 5px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+    
+    .bonus-terms {
+        font-size: 12px;
+        color: #777;
+        line-height: 1.4;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+    
+    .visit-btn {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 16px;
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
     }
     
     /* Улучшение адаптивности футера для мобильных устройств */
