@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Casino Card</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .card {
+      max-width: 360px;
+      margin: auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .logo {
+      background-color: #b8f25c;
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .stars {
+      color: gold;
+      font-size: 18px;
+      margin-right: 8px;
+    }
+
+    .score {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .features {
+      margin: 16px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .features li {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+      font-size: 14px;
+    }
+
+    .features li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: green;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      background-color: #3c883c;
+      color: white;
+      padding: 12px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 400px) {
+      .card {
+        padding: 16px;
+      }
+
+      .score {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">WILKIN</div>
+    <h2>Midnite Casino Review</h2>
+    <div class="rating">
+      <div class="stars">★★★★★</div>
+      <div class="score">5.0 / 5</div>
+    </div>
+    <ul class="features">
+      <li>Over 1650 games</li>
+      <li>Attractive bonuses</li>
+      <li>Secure and reliable</li>
+    </ul>
+    <a href="#" class="btn">SEE OFFER</a>
+  </div>
+</body>
+</html>
