@@ -302,6 +302,11 @@ a:hover {
     position: relative;
     overflow: hidden;
     word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .casino-list-item:hover {
@@ -1580,19 +1585,41 @@ textarea.form-control {
         word-wrap: break-word;
         word-break: break-word;
         hyphens: auto;
+        overflow: hidden;
     }
     
+    /* Переходим на структуру в соответствии с reviews.html */
     .casino-card-layout {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
+        display: block;
         width: 100%;
         max-width: 100%;
         overflow: hidden;
-        grid-template-areas:
-            "logo"
-            "content"
-            "offer";
+    }
+    
+    /* Сброс grid-разметки на мобильных */
+    .casino-card-layout > div {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+    
+    .casino-list-item .row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .casino-list-item .col-lg-4,
+    .casino-list-item .col-md-4,
+    .casino-list-item .col-lg-8,
+    .casino-list-item .col-md-8 {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        padding: 0;
     }
     
     .casino-rank {
@@ -1600,16 +1627,36 @@ textarea.form-control {
     }
     
     .casino-logo-section {
-        grid-area: logo;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 0 10px;
     }
     
     .casino-description {
-        grid-area: content;
         padding-right: 0;
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 0 10px;
     }
     
     .casino-offer {
-        grid-area: offer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .casino-logo-container {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     /* Улучшаем отображение текста в карточках */
@@ -1617,12 +1664,26 @@ textarea.form-control {
     .casino-list-item .bonus-terms,
     .casino-list-item .check-list li,
     .casino-list-item .more-details-btn,
-    .casino-list-item .review-link {
+    .casino-list-item .review-link,
+    .casino-list-item .casino-name,
+    .casino-list-item .bonus-main,
+    .casino-list-item .bonus-text,
+    .casino-list-item .mobile-rating-container,
+    .casino-list-item .rating-container {
         overflow-wrap: break-word;
         word-wrap: break-word;
         word-break: break-word;
         hyphens: auto;
         max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Дополнительное обертывание длинных слов */
+    .casino-list-item * {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
     }
     
     /* Скрываем некоторые элементы на мобильной версии */
@@ -1633,13 +1694,6 @@ textarea.form-control {
     }
     
     /* Лого и рейтинг */
-    .casino-logo-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 10px;
-        width: 100%;
-    }
     
     /* Добавим мобильный контейнер для рейтинга как на странице reviews.html */
     .mobile-rating-container {
