@@ -356,6 +356,21 @@ a:hover {
     font-size: 0.9rem;
 }
 
+.rating-value-container {
+    display: flex;
+    align-items: baseline;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.rating-denominator {
+    font-size: 0.9rem;
+    color: #777;
+    font-weight: normal;
+    margin-left: 3px;
+}
+
 .rating-value {
     font-weight: bold;
     margin-right: 5px;
@@ -368,6 +383,11 @@ a:hover {
 .casino-description {
     grid-column: 3;
     padding-right: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .casino-description p {
@@ -383,11 +403,21 @@ a:hover {
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .bonus-text {
     text-align: right;
     margin-bottom: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .bonus-main {
@@ -866,12 +896,16 @@ footer {
 .footer-links {
     text-align: center;
     margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer-links a {
     color: var(--text-color);
-    margin: 0 15px;
+    margin: 0 15px 10px;
     text-decoration: none;
+    font-size: 0.95rem;
 }
 
 .footer-links a:hover {
@@ -887,6 +921,10 @@ footer {
     font-weight: 600;
     display: inline-block;
     margin: 15px 0;
+    font-size: 0.95rem;
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .copyright {
@@ -981,6 +1019,30 @@ footer {
     .bonus-terms {
         font-size: 0.7rem;
         line-height: 1.3;
+    }
+    
+    /* Футер для мобильных устройств */
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-links a {
+        margin: 5px 0;
+        padding: 8px 0;
+    }
+    
+    .age-notice {
+        width: 100%;
+        font-size: 0.85rem;
+        padding: 8px 10px;
+        margin: 10px 0;
+    }
+    
+    .copyright {
+        font-size: 0.8rem;
+        padding: 0 15px;
+        word-wrap: break-word;
     }
 }
 
@@ -1199,6 +1261,10 @@ textarea.form-control {
     overflow: hidden;
     opacity: 1;
     filter: blur(0);
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 .casino-list-item:hover {
@@ -1508,29 +1574,39 @@ textarea.form-control {
     
     .rating-text {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         gap: 5px;
     }
     
     .rating-value {
-        font-size: 1.8rem;
+        font-size: 2.4rem;
         font-weight: bold;
         color: #333;
+        line-height: 1;
     }
     
-    .rating-value::after {
-        content: " / 5";
+    .rating-value-container {
+        display: flex;
+        align-items: baseline;
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    .rating-denominator {
         font-size: 1.2rem;
         color: #777;
         font-weight: normal;
+        margin-left: 5px;
+        line-height: 1;
     }
     
     .rating-count {
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: #777;
         display: block;
-        margin-top: 5px;
-        text-align: center;
+        margin-top: 2px;
     }
     
     /* Чек-лист */
@@ -1633,6 +1709,10 @@ textarea.form-control {
         text-align: center;
         text-decoration: none;
         transition: all 0.3s ease;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        box-sizing: border-box;
+        white-space: normal;
     }
     
     .more-details-btn i {
