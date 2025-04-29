@@ -1,0 +1,18 @@
+RewriteEngine On
+RewriteBase /
+
+# 1) Примусове HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 2) Корінь сайту → html_version/index.html
+RewriteRule ^$ html_version/index.html [L]
+
+# 3) Усі інші запити “перекидаємо” в html_version/
+RewriteCond %{REQUEST_URI} !^/html_version/
+RewriteRule ^(.*)$ html_version/$1 [L]
+
+# 4) Якщо файл/папка не знайдені, віддаємо index (для SPA-лінків)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ html_version/index.html [L]
