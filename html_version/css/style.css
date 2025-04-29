@@ -1571,6 +1571,35 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
+    /* Улучшение адаптивности хедера */
+    header .container, 
+    .top-nav .container, 
+    .main-navigation .container, 
+    .secondary-navigation .container {
+        padding: 0 10px; /* Меньше отступы в мобильной версии */
+        overflow-x: hidden; /* Предотвращаем горизонтальный скролл */
+    }
+    
+    .secondary-navigation p {
+        font-size: 14px; /* Меньший размер шрифта */
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+        padding: 5px 0;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .navbar-nav {
+        padding: 0 5px;
+    }
+    
+    .nav-link {
+        padding: 10px 8px; /* Уменьшенные отступы для ссылок в навигации */
+        font-size: 14px; /* Меньший размер шрифта */
+    }
+    
     /* Обновленный макет карточек казино по референсу OLBG.com */
     .casino-list-item {
         border-radius: 8px;
@@ -2172,5 +2201,212 @@ textarea.form-control {
     /* Дополнительный класс для кнопок d-grid */
     .d-grid {
         gap: 25px;  /* Увеличен отступ между кнопками */
+    }
+    
+    /* Общие улучшения для всех страниц на мобильной версии */
+    main,
+    section,
+    .container,
+    .row {
+        max-width: 100%;
+        overflow-x: hidden;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+    
+    /* Улучшение адаптивности всех страниц контента */
+    .content-section,
+    .article-section,
+    .tip-card,
+    .responsible-gaming-section,
+    .contact-form-section,
+    .privacy-section {
+        padding: 20px 15px;
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    /* Стили для всех заголовков и текстовых блоков */
+    h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span, div {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+    
+    /* Специальные стили для страницы ответственной игры */
+    .responsible-gaming-tip {
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        padding: 15px;
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+    
+    .responsible-gaming-tip .tip-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #333;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+    
+    .responsible-gaming-tip p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 0;
+        color: #555;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+    
+    .col-md-8.offset-md-2,
+    .col-md-6,
+    .col-md-12 {
+        padding: 0 10px;
+        max-width: 100%;
+        margin-left: 0;
+        flex: 0 0 100%;
+    }
+    
+    /* Улучшения для контактной формы */
+    .contact-form {
+        padding: 15px;
+        margin-top: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    textarea.form-control {
+        min-height: 120px;
+    }
+    
+    .contact-info {
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    
+    .contact-item i {
+        color: #2e7d32;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+    
+    /* Специфические улучшения для страницы Reviews */
+    .review-filters {
+        padding: 10px 5px;
+        box-sizing: border-box;
+    }
+    
+    .filter-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+    
+    .filter-badges .badge {
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+        white-space: normal;
+        text-align: center;
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+    
+    .sort-container {
+        margin-bottom: 15px;
+    }
+    
+    .form-select {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    /* Улучшение адаптивности футера для мобильных устройств */
+    footer {
+        padding: 30px 10px 15px; /* Уменьшаем отступы для мобильных */
+        margin-top: 30px;
+        overflow-x: hidden; /* Предотвращаем горизонтальный скролл */
+    }
+    
+    footer .container {
+        padding: 0 10px;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px; /* Равномерные отступы между ссылками */
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0 5px;
+    }
+    
+    .footer-links a {
+        margin: 0 8px 8px; /* Уменьшенные отступы для ссылок */
+        font-size: 14px; /* Уменьшенный размер шрифта */
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+    
+    .age-notice {
+        font-size: 13px; /* Уменьшенный размер шрифта */
+        padding: 0 15px;
+        margin: 15px auto;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+    
+    .copyright {
+        font-size: 12px;
+        margin-top: 15px;
+        padding: 0 15px;
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
     }
 }
