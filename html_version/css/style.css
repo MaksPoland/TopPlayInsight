@@ -314,6 +314,9 @@ a:hover {
     grid-template-columns: 50px 140px 1fr 240px;
     grid-column-gap: 20px;
     align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .casino-rank {
@@ -1455,8 +1458,27 @@ textarea.form-control {
 /* Media Queries */
 @media (max-width: 1200px) {
     .casino-card-layout {
+        display: grid;
         grid-template-columns: 50px 120px 1fr 180px;
         grid-column-gap: 15px;
+        grid-template-areas:
+            "rank logo content offer";
+    }
+    
+    .casino-rank {
+        grid-area: rank;
+    }
+    
+    .casino-logo-section {
+        grid-area: logo;
+    }
+    
+    .casino-description {
+        grid-area: content;
+    }
+    
+    .casino-offer {
+        grid-area: offer;
     }
     
     .offer-button {
@@ -1477,16 +1499,32 @@ textarea.form-control {
 
 @media (max-width: 992px) {
     .casino-card-layout {
+        display: grid;
         grid-template-columns: 40px auto 1fr auto;
         grid-column-gap: 10px;
+        grid-template-areas:
+            "rank logo content offer";
+    }
+    
+    .casino-rank {
+        grid-area: rank;
     }
     
     .casino-logo-section {
+        grid-area: logo;
         width: 100px;
+    }
+    
+    .casino-description {
+        grid-area: content;
     }
     
     .casino-description p {
         font-size: 0.9rem;
+    }
+    
+    .casino-offer {
+        grid-area: offer;
     }
     
     .check-list li {
@@ -1545,12 +1583,33 @@ textarea.form-control {
     }
     
     .casino-card-layout {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
         gap: 15px;
         width: 100%;
         max-width: 100%;
         overflow: hidden;
+        grid-template-areas:
+            "logo"
+            "content"
+            "offer";
+    }
+    
+    .casino-rank {
+        display: none;
+    }
+    
+    .casino-logo-section {
+        grid-area: logo;
+    }
+    
+    .casino-description {
+        grid-area: content;
+        padding-right: 0;
+    }
+    
+    .casino-offer {
+        grid-area: offer;
     }
     
     /* Улучшаем отображение текста в карточках */
