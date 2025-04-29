@@ -306,6 +306,130 @@ a:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* New OLBG-style Card Layout */
+.casino-card-layout {
+    display: grid;
+    grid-template-columns: 50px 140px 1fr 240px;
+    grid-column-gap: 20px;
+    align-items: flex-start;
+}
+
+.casino-rank {
+    grid-column: 1;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.casino-logo-section {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.logo-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.rating-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stars {
+    margin-bottom: 5px;
+}
+
+.rating-text {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.rating-value {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.rating-count {
+    color: #777;
+}
+
+.casino-description {
+    grid-column: 3;
+    padding-right: 20px;
+}
+
+.casino-description p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.casino-offer {
+    grid-column: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bonus-text {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.bonus-main {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.bonus-terms {
+    font-size: 0.75rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.offer-button-container {
+    width: 100%;
+}
+
+.offer-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.offer-button:hover {
+    background-color: #1c6c1c;
+    color: white;
+    text-decoration: none;
+}
+
+.offer-button i {
+    margin-left: 8px;
+}
+
 .align-items-center {
     align-items: center;
 }
@@ -462,54 +586,36 @@ a:hover {
 }
 
 .spec-item {
-    text-align: center;
     flex: 1;
     border-right: 1px solid #e0e5eb;
-    padding: 12px 8px;
     transition: all 0.3s ease;
     position: relative;
 }
 
-/* Special styling for Min Deposit item */
-.casino-specs .spec-item:nth-child(2) {
-    background-color: rgba(46, 125, 50, 0.08);
-    border-radius: 8px;
-    padding: 8px 12px;
-    margin-top: -8px;
-    margin-bottom: -8px;
+.spec-item:last-child {
     border-right: none;
-    border-left: 3px solid var(--primary-color);
-    box-shadow: 0 3px 10px rgba(46, 125, 50, 0.1);
-    z-index: 2;
+}
+
+.spec-header {
+    padding: 8px 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid #e0e5eb;
+    text-align: center;
 }
 
 .spec-label {
     font-size: 0.85rem;
     color: #666;
-    margin-bottom: 8px;
-    display: block;
     font-weight: 500;
     letter-spacing: 0.3px;
 }
 
-/* Special styling for Min Deposit label */
-.casino-specs .spec-item:nth-child(2) .spec-label {
-    color: var(--primary-color);
-    font-weight: 600;
-}
-
 .spec-value {
-    font-size: 1.1rem;
-    font-weight: 700;
+    padding: 12px 8px;
+    font-size: 1rem;
+    font-weight: 600;
     color: #333;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
-}
-
-/* Special styling for Min Deposit value */
-.casino-specs .spec-item:nth-child(2) .spec-value {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    font-weight: 800;
+    text-align: center;
 }
 
 .check-list {
