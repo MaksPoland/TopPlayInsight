@@ -14,6 +14,8 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     background-color: #ffffff;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 a {
@@ -326,42 +328,57 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
 }
 
 .logo-container {
     width: 100%;
     margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-container img {
     width: 100%;
     height: auto;
     object-fit: contain;
+    margin: 0 auto;
 }
 
 .rating-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .stars {
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .rating-text {
     display: flex;
     align-items: center;
+    justify-content: center;
     font-size: 0.9rem;
+    text-align: center;
 }
 
 .rating-value-container {
     display: flex;
     align-items: baseline;
+    justify-content: center;
     box-sizing: border-box;
     max-width: 100%;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 .rating-denominator {
@@ -378,6 +395,9 @@ a:hover {
 
 .rating-count {
     color: #777;
+    text-align: center;
+    width: 100%;
+    display: block;
 }
 
 .casino-description {
