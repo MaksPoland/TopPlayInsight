@@ -1535,12 +1535,35 @@ textarea.form-control {
         padding: 20px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         background-color: white;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
     }
     
     .casino-card-layout {
         display: flex;
         flex-direction: column;
         gap: 15px;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    /* Улучшаем отображение текста в карточках */
+    .casino-list-item p, 
+    .casino-list-item .bonus-terms,
+    .casino-list-item .check-list li,
+    .casino-list-item .more-details-btn,
+    .casino-list-item .review-link {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+        max-width: 100%;
     }
     
     /* Скрываем некоторые элементы на мобильной версии */
@@ -1556,6 +1579,22 @@ textarea.form-control {
         flex-direction: column;
         align-items: center;
         margin-bottom: 10px;
+        width: 100%;
+    }
+    
+    /* Добавим мобильный контейнер для рейтинга как на странице reviews.html */
+    .mobile-rating-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .ranking-label {
+        font-size: 0.9rem;
+        color: #777;
+        margin-bottom: 5px;
     }
     
     .logo-container {
@@ -1868,15 +1907,33 @@ textarea.form-control {
     /* Стилизация галочек */
     .check-list {
         margin: 15px 0;
+        padding-left: 5px;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .check-list li {
         font-size: 0.95rem;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
+        padding-left: 25px;
+        position: relative;
+        line-height: 1.4;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .check-list li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 0;
         font-size: 1.1rem;
+        color: #4caf50;
+        font-weight: bold;
     }
     
     /* Стилизация бонусов */
@@ -1889,7 +1946,8 @@ textarea.form-control {
     }
     
     /* Стилизация кнопки */
-    .visit-btn {
+    .visit-btn,
+    .offer-button {
         margin-top: 10px;
         font-size: 0.85rem;
         padding: 12px 0;
@@ -1903,6 +1961,17 @@ textarea.form-control {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+    }
+    
+    /* Улучшения для текста бонусов */
+    .bonus-main,
+    .bonus-terms {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+        max-width: 100%;
+        box-sizing: border-box;
     }
     
     .visit-btn i {
