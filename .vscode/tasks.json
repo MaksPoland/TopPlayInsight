@@ -1,0 +1,12 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Deploy to Cityhost",
+        "type": "shell",
+        "command": "scp -r ${workspaceFolder}/html_version/* chdae0be9a@macan.cityhost.com.ua:/var/www/chdae0be9a/www/topplayinsight.org/",
+        "problemMatcher": []
+      }
+    ]
+  }
+  
