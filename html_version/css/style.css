@@ -82,9 +82,9 @@ a:hover {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1800px; /* Увеличенная ширина для десктопной версии */
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 .navbar .container {
@@ -316,8 +316,8 @@ a:hover {
 /* New OLBG-style Card Layout */
 .casino-card-layout {
     display: grid;
-    grid-template-columns: 50px 140px 1fr 240px;
-    grid-column-gap: 20px;
+    grid-template-columns: 50px 180px 1fr 280px; /* Увеличены колонки для лого и кнопки */
+    grid-column-gap: 30px; /* Увеличен отступ между колонками */
     align-items: flex-start;
     width: 100%;
     box-sizing: border-box;
@@ -1308,6 +1308,7 @@ textarea.form-control {
     align-items: center;
     justify-content: center;
     height: 220px;
+    margin-right: 20px; /* Добавляем отступ справа для десктопной версии */
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
