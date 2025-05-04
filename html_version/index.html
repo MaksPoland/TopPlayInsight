@@ -6,8 +6,8 @@
     <title>TopPlayInsight - Trusted Casino Information Portal</title>
     <meta name="description" content="TopPlayInsight is your trusted source for honest casino reviews, exclusive bonuses, and expert recommendations.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/irishluck-style.css">
     <link rel="stylesheet" href="css/payment-methods.css">
     <link rel="stylesheet" href="css/top-casinos.css">
     <link rel="stylesheet" href="css/new-casino-cards.css">
@@ -15,101 +15,202 @@
 <body>
     <!-- Header with Navigation -->
     <header>
-        <div class="top-nav">
-            <div class="container">
-                <a href="index.html" class="navbar-brand">
-                    <img src="images/logo.svg" alt="TopPlayInsight" height="40">
+        <div class="header-inner container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="TopPlayInsight">
                 </a>
             </div>
-        </div>
-        <nav class="navbar main-navigation">
-            <div class="container">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-                    <li class="nav-item"><a href="reviews.html" class="nav-link">Reviews</a></li>
-                    <li class="nav-item"><a href="tips.html" class="nav-link">Tips</a></li>
-                    <li class="nav-item"><a href="responsible-gaming.html" class="nav-link">Responsible Gaming</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="secondary-navigation">
-            <div class="container">
-                <p class="mb-0">Best Casino Sites Ireland 🍀 | Irish Online Casinos</p>
-            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="main-nav-item active">Home</a>
+                <a href="reviews.html" class="main-nav-item">Casino Reviews</a>
+                <a href="tips.html" class="main-nav-item">Casino Guides</a>
+                <a href="responsible-gaming.html" class="main-nav-item">Responsible Gaming</a>
+                <a href="contact.html" class="main-nav-item">Contact Us</a>
+            </nav>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero-section">
         <div class="container">
-            <h1>Best Online Casino Sites 2023</h1>
-            <p>Welcome to TopPlayInsight, your trusted source for honest casino reviews, exclusive bonuses, and expert recommendations. We help you find the best online casinos for a safe and rewarding gaming experience.</p>
+            <h1 class="hero-title">Best Online Casino Sites Ireland 2023</h1>
+            <p class="hero-subtitle">Your trusted guide to the top online casinos, honest reviews, exclusive bonuses, and expert recommendations for a safe and rewarding gaming experience.</p>
             
-            <!-- NEW BUTTONS STRUCTURE -->
-            <div style="text-align: center; display: block; margin-top: 30px;">
-                <!-- First button with bottom margin 20px -->
-                <div style="margin-bottom: 20px; display: block;">
-                    <a href="reviews.html" style="display: inline-block; background-color: #2E7D32; color: white; padding: 12px 25px; text-decoration: none; border-radius: 4px; font-weight: 600;">
-                        Explore Casino Reviews
-                    </a>
-                </div>
-                
-                <!-- Second button -->
-                <div style="display: block;">
-                    <a href="responsible-gaming.html" style="display: inline-block; border: 2px solid #2E7D32; color: #2E7D32; background-color: transparent; padding: 10px 25px; text-decoration: none; border-radius: 4px; font-weight: 600;">
-                        Responsible Gaming Tips
-                    </a>
-                </div>
+            <div class="hero-buttons">
+                <a href="reviews.html" class="hero-cta">Explore Casino Reviews</a>
+                <a href="responsible-gaming.html" class="btn btn-secondary" style="margin-left: 15px;">Responsible Gaming Tips</a>
             </div>
         </div>
     </section>
     
-    <!-- Top 3 Casinos Banner -->
-    <section class="pt-30 pb-30">
+    <!-- Top 3 Casinos Section -->
+    <section class="top-casinos-section">
         <div class="container">
-            <div class="top-casinos-banner">
-                <h3>Top 3 Recommended Casinos</h3>
-                <div class="top-casinos-grid">
-                    <!-- Top Casino 1 -->
-                    <div class="top-casino-card">
-                        <div class="top-casino-rank">1</div>
+            <div class="top-casinos-heading">
+                <h2>Top 3 Recommended Casinos</h2>
+                <p class="top-casinos-subtitle">Handpicked by our experts for excellent gaming experience, generous bonuses and reliable service</p>
+            </div>
+            
+            <div class="top-casinos-grid">
+                <!-- Top Casino 1 -->
+                <div class="top-casino-card">
+                    <div class="top-casino-position">1</div>
+                    <div class="top-casino-header">
                         <div class="top-casino-logo">
                             <img src="images/midnite.svg" alt="Midnite Casino">
                         </div>
-                        <div class="top-casino-content">
-                            <h4 class="top-casino-name">Midnite Casino</h4>
-                            <div class="top-casino-bonus">Bet €20 get 100 free spins</div>
-                            <a href="reviews.html" class="top-casino-review">Read full review</a>
-                            <a href="https://example.com/midnite" class="top-casino-action" target="_blank">VISIT CASINO</a>
+                        <h3 class="top-casino-name">Midnite Casino</h3>
+                        <div class="top-casino-rating">
+                            <div class="top-casino-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="top-casino-score">5.0/5</span>
                         </div>
                     </div>
                     
-                    <!-- Top Casino 2 -->
-                    <div class="top-casino-card">
-                        <div class="top-casino-rank">2</div>
+                    <div class="top-casino-body">
+                        <div class="top-casino-bonus">
+                            <div class="top-casino-bonus-label">WELCOME BONUS</div>
+                            <div class="top-casino-bonus-value">Bet €20 get 100 free spins</div>
+                            <div class="top-casino-bonus-terms">New customers only. 18+. T&Cs apply.</div>
+                        </div>
+                        
+                        <div class="top-casino-features">
+                            <div class="top-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Over 1650 games from top providers</span>
+                            </div>
+                            <div class="top-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Instant withdrawal options</span>
+                            </div>
+                            <div class="top-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>New to the Irish casino scene</span>
+                            </div>
+                        </div>
+                        
+                        <div class="top-casino-cta">
+                            <a href="reviews.html" class="top-casino-review">
+                                <i class="fas fa-file-alt"></i> Read Full Review
+                            </a>
+                            <a href="https://example.com/midnite" class="top-casino-action" target="_blank">
+                                Visit Casino <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Top Casino 2 -->
+                <div class="top-casino-card">
+                    <div class="top-casino-position">2</div>
+                    <div class="top-casino-header">
                         <div class="top-casino-logo">
                             <img src="images/golden-nugget.svg" alt="Golden Nugget">
                         </div>
-                        <div class="top-casino-content">
-                            <h4 class="top-casino-name">Golden Nugget</h4>
-                            <div class="top-casino-bonus">Get up to €3,000 + 50 Free Spins</div>
-                            <a href="reviews.html" class="top-casino-review">Read full review</a>
-                            <a href="https://example.com/golden-nugget" class="top-casino-action" target="_blank">VISIT CASINO</a>
+                        <h3 class="top-casino-name">Golden Nugget</h3>
+                        <div class="top-casino-rating">
+                            <div class="top-casino-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="top-casino-score">4.8/5</span>
                         </div>
                     </div>
                     
-                    <!-- Top Casino 3 -->
-                    <div class="top-casino-card">
-                        <div class="top-casino-rank">3</div>
+                    <div class="top-casino-body">
+                        <div class="top-casino-bonus">
+                            <div class="top-casino-bonus-label">WELCOME BONUS</div>
+                            <div class="top-casino-bonus-value">Up to €3,000 + 50 Free Spins</div>
+                            <div class="top-casino-bonus-terms">€10 Min. Deposit. 18+. T&Cs apply.</div>
+                        </div>
+                        
+                        <div class="top-casino-features">
+                            <div class="top-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>1500+ slots from top providers</span>
+                            </div>
+                            <div class="top-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Premium VIP program</span>
+                            </div>
+                            <div class="top-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Quick payouts within 24-48 hours</span>
+                            </div>
+                        </div>
+                        
+                        <div class="top-casino-cta">
+                            <a href="reviews.html" class="top-casino-review">
+                                <i class="fas fa-file-alt"></i> Read Full Review
+                            </a>
+                            <a href="https://example.com/golden-nugget" class="top-casino-action" target="_blank">
+                                Visit Casino <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Top Casino 3 -->
+                <div class="top-casino-card">
+                    <div class="top-casino-position">3</div>
+                    <div class="top-casino-header">
                         <div class="top-casino-logo">
                             <img src="images/diamond-club.svg" alt="Diamond Club">
                         </div>
-                        <div class="top-casino-content">
-                            <h4 class="top-casino-name">Diamond Club</h4>
-                            <div class="top-casino-bonus">Bet €10, Get €50 Casino Bonus</div>
-                            <a href="reviews.html" class="top-casino-review">Read full review</a>
-                            <a href="https://example.com/diamond-club" class="top-casino-action" target="_blank">VISIT CASINO</a>
+                        <h3 class="top-casino-name">Diamond Club</h3>
+                        <div class="top-casino-rating">
+                            <div class="top-casino-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="top-casino-score">4.7/5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="top-casino-body">
+                        <div class="top-casino-bonus">
+                            <div class="top-casino-bonus-label">WELCOME BONUS</div>
+                            <div class="top-casino-bonus-value">Bet €10 Get €50 Casino Bonus</div>
+                            <div class="top-casino-bonus-terms">New customers only. 18+. T&Cs apply.</div>
+                        </div>
+                        
+                        <div class="top-casino-features">
+                            <div class="top-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>PlayTech Games and Live Casino</span>
+                            </div>
+                            <div class="top-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Fast payouts within 24 hours</span>
+                            </div>
+                            <div class="top-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Premium VIP experience</span>
+                            </div>
+                        </div>
+                        
+                        <div class="top-casino-cta">
+                            <a href="reviews.html" class="top-casino-review">
+                                <i class="fas fa-file-alt"></i> Read Full Review
+                            </a>
+                            <a href="https://example.com/diamond-club" class="top-casino-action" target="_blank">
+                                Visit Casino <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -117,185 +218,195 @@
         </div>
     </section>
 
-    <!-- Top Casinos Section -->
-    <section class="casino-list-section pt-60 pb-60">
+    <!-- All Casinos Section -->
+    <section class="section section-light">
         <div class="container">
-            <div class="section-header mb-4">
+            <div class="section-title">
                 <h2>Top Rated Online Casinos</h2>
-                <p>Our experts thoroughly review and rank the best casino sites based on game selection, bonuses, payment methods, customer support, and safety measures.</p>
+                <p class="section-description">Our experts thoroughly review and rank the best casino sites based on game selection, bonuses, payment methods, customer support, and safety measures.</p>
             </div>
             
             <!-- Casino Filter Options -->
-            <div class="casino-filters mb-4">
-                <div class="row align-items-center">
-                    <div class="col-md-9">
-                        <div class="filter-badges">
-                            <span class="badge badge-active me-2 mb-2">All Casinos</span>
-                            <span class="badge bg-light text-dark me-2 mb-2">New Casinos</span>
-                            <span class="badge bg-light text-dark me-2 mb-2">Featured Casinos</span>
-                            <span class="badge bg-light text-dark me-2 mb-2">Best Bonus</span>
-                            <span class="badge bg-light text-dark me-2 mb-2">Fast Payouts</span>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <select class="form-select">
-                            <option selected>Sort By: Recommended</option>
-                            <option>Highest Rated</option>
-                            <option>Newest First</option>
-                            <option>Biggest Bonus</option>
-                        </select>
-                    </div>
+            <div class="filters-container">
+                <div class="filter-group">
+                    <span class="filter-label">Filter:</span>
+                    <div class="filter-tag active">All Casinos</div>
+                    <div class="filter-tag">New Casinos</div>
+                    <div class="filter-tag">Featured Casinos</div>
+                    <div class="filter-tag">Best Bonus</div>
+                    <div class="filter-tag">Fast Payouts</div>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">Sort By:</span>
+                    <select style="padding: 8px 15px; border-radius: 6px; border: 1px solid #ddd; background-color: #fff;">
+                        <option selected>Recommended</option>
+                        <option>Highest Rated</option>
+                        <option>Newest First</option>
+                        <option>Biggest Bonus</option>
+                    </select>
                 </div>
             </div>
             
             <!-- Casino Listings -->
-            <div class="casino-listings">
-                <!-- Карточка казино в новом дизайне -->
-                <div class="new-casino-card">
-                    <div class="new-casino-header">
-                        <div class="new-casino-rank">1</div>
-                        <div class="new-casino-logo">
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin-top: 30px;">
+                <!-- Casino Card 1 -->
+                <div class="casino-card">
+                    <div class="casino-position">1</div>
+                    <div class="casino-header">
+                        <div class="casino-logo-wrapper">
                             <img src="images/midnite.svg" alt="Midnite Casino">
                         </div>
-                        <div class="new-casino-title">
-                            <h4 class="new-casino-name">Midnite Casino</h4>
-                            <div class="new-casino-rating">
-                                <div class="new-casino-stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <div class="new-casino-rating-value">5.0/5 • 5 Ratings</div>
+                        <h3 class="casino-title">Midnite Casino</h3>
+                        <div class="casino-rating">
+                            <div class="rating-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
+                            <span class="rating-value">5.0</span>
+                            <span class="rating-count">(5 reviews)</span>
                         </div>
                     </div>
-                    <div class="new-casino-body">
-                        <div class="new-casino-features">
-                            <div class="new-casino-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Over 1650 games from top providers</span>
+                    
+                    <div class="casino-body">
+                        <div class="casino-features">
+                            <div class="casino-feature">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <span class="feature-text">Over 1650 games from top providers</span>
                             </div>
-                            <div class="new-casino-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Instant withdrawal options available</span>
+                            <div class="casino-feature">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <span class="feature-text">Instant withdrawal options available</span>
                             </div>
-                            <div class="new-casino-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Secure platform with 24/7 support</span>
+                            <div class="casino-feature">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <span class="feature-text">Secure platform with 24/7 support</span>
                             </div>
                         </div>
                         
-                        <div class="new-casino-bonus">
-                            <span class="new-casino-bonus-label">WELCOME BONUS</span>
-                            <div class="new-casino-bonus-value">Bet €20 get 100 free spins</div>
-                            <div class="new-casino-bonus-terms">New customers only. Opt in and wager €20 or more on selected games within 14 days of registration. Get 100 Free Spins for selected games, valued at 10 cents each and valid for 7 days. T&Cs apply.</div>
+                        <div class="casino-bonus">
+                            <span class="bonus-label">WELCOME BONUS</span>
+                            <div class="bonus-value">Bet €20 get 100 free spins</div>
+                            <div class="bonus-terms">New customers only. Opt in and wager €20 or more on selected games within 14 days of registration. T&Cs apply.</div>
                         </div>
                         
-                        <div class="new-casino-actions">
-                            <a href="reviews.html" class="new-casino-review-link">Read Full Review</a>
-                            <a href="https://example.com/midnite" class="new-casino-cta" target="_blank">VISIT CASINO</a>
+                        <div class="casino-actions">
+                            <a href="reviews.html" class="btn-review">
+                                <i class="fas fa-file-alt"></i> Read Full Review
+                            </a>
+                            <a href="https://example.com/midnite" class="btn-play" target="_blank">
+                                Visit Casino <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Карточка казино в новом дизайне -->
-                <div class="new-casino-card">
-                    <div class="new-casino-header">
-                        <div class="new-casino-rank">2</div>
-                        <div class="new-casino-logo">
+                <!-- Casino Card 2 -->
+                <div class="casino-card">
+                    <div class="casino-position">2</div>
+                    <div class="casino-header">
+                        <div class="casino-logo-wrapper">
                             <img src="images/golden-nugget.svg" alt="Golden Nugget">
                         </div>
-                        <div class="new-casino-title">
-                            <h4 class="new-casino-name">Golden Nugget</h4>
-                            <div class="new-casino-rating">
-                                <div class="new-casino-stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <div class="new-casino-rating-value">4.8/5 • 16 Ratings</div>
+                        <h3 class="casino-title">Golden Nugget</h3>
+                        <div class="casino-rating">
+                            <div class="rating-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
                             </div>
+                            <span class="rating-value">4.8</span>
+                            <span class="rating-count">(16 reviews)</span>
                         </div>
                     </div>
-                    <div class="new-casino-body">
-                        <div class="new-casino-features">
-                            <div class="new-casino-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>1500+ slots from top providers</span>
+                    
+                    <div class="casino-body">
+                        <div class="casino-features">
+                            <div class="casino-feature">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <span class="feature-text">1500+ slots from top providers</span>
                             </div>
-                            <div class="new-casino-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Bonuses on every deposit</span>
+                            <div class="casino-feature">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <span class="feature-text">Bonuses on every deposit</span>
                             </div>
-                            <div class="new-casino-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Premium VIP program with exclusive rewards</span>
+                            <div class="casino-feature">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <span class="feature-text">Premium VIP program with exclusive rewards</span>
                             </div>
                         </div>
                         
-                        <div class="new-casino-bonus">
-                            <span class="new-casino-bonus-label">WELCOME BONUS</span>
-                            <div class="new-casino-bonus-value">Get up to €3,000 + 50 Free Spins</div>
-                            <div class="new-casino-bonus-terms">€10 Min. Deposit. Up to €3,000 on the first 3 deposits, x35 wagering requirements. 50 Free Spins on Big Bass Splash T&Cs apply.</div>
+                        <div class="casino-bonus">
+                            <span class="bonus-label">WELCOME BONUS</span>
+                            <div class="bonus-value">Up to €3,000 + 50 Free Spins</div>
+                            <div class="bonus-terms">€10 Min. Deposit. Up to €3,000 on the first 3 deposits, x35 wagering requirements. T&Cs apply.</div>
                         </div>
                         
-                        <div class="new-casino-actions">
-                            <a href="reviews.html" class="new-casino-review-link">Read Full Review</a>
-                            <a href="https://example.com/golden-nugget" class="new-casino-cta" target="_blank">VISIT CASINO</a>
+                        <div class="casino-actions">
+                            <a href="reviews.html" class="btn-review">
+                                <i class="fas fa-file-alt"></i> Read Full Review
+                            </a>
+                            <a href="https://example.com/golden-nugget" class="btn-play" target="_blank">
+                                Visit Casino <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Карточка казино в новом дизайне -->
-                <div class="new-casino-card">
-                    <div class="new-casino-header">
-                        <div class="new-casino-rank">3</div>
-                        <div class="new-casino-logo">
+                <!-- Casino Card 3 -->
+                <div class="casino-card">
+                    <div class="casino-position">3</div>
+                    <div class="casino-header">
+                        <div class="casino-logo-wrapper">
                             <img src="images/diamond-club.svg" alt="Diamond Club">
                         </div>
-                        <div class="new-casino-title">
-                            <h4 class="new-casino-name">Diamond Club</h4>
-                            <div class="new-casino-rating">
-                                <div class="new-casino-stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <div class="new-casino-rating-value">4.7/5 • 5 Ratings</div>
+                        <h3 class="casino-title">Diamond Club</h3>
+                        <div class="casino-rating">
+                            <div class="rating-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
                             </div>
+                            <span class="rating-value">4.7</span>
+                            <span class="rating-count">(5 reviews)</span>
                         </div>
                     </div>
-                    <div class="new-casino-body">
-                        <div class="new-casino-features">
-                            <div class="new-casino-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>PlayTech Games and Live Casino</span>
+                    
+                    <div class="casino-body">
+                        <div class="casino-features">
+                            <div class="casino-feature">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <span class="feature-text">PlayTech Games and Live Casino</span>
                             </div>
-                            <div class="new-casino-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Fast payouts within 24 hours</span>
+                            <div class="casino-feature">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <span class="feature-text">Fast payouts within 24 hours</span>
                             </div>
-                            <div class="new-casino-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Premium VIP experience with exclusive benefits</span>
+                            <div class="casino-feature">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <span class="feature-text">Premium VIP experience with exclusive benefits</span>
                             </div>
                         </div>
                         
-                        <div class="new-casino-bonus">
-                            <span class="new-casino-bonus-label">WELCOME BONUS</span>
-                            <div class="new-casino-bonus-value">Bet €10 Get €50 Casino Bonus</div>
-                            <div class="new-casino-bonus-terms">New customers only. Deposit and wager €10 minimum on qualifying games. Get €50 bonus to use on select casino games. Wagering requirements and terms apply.</div>
+                        <div class="casino-bonus">
+                            <span class="bonus-label">WELCOME BONUS</span>
+                            <div class="bonus-value">Bet €10 Get €50 Casino Bonus</div>
+                            <div class="bonus-terms">New customers only. Deposit and wager €10 minimum on qualifying games. T&Cs apply.</div>
                         </div>
                         
-                        <div class="new-casino-actions">
-                            <a href="reviews.html" class="new-casino-review-link">Read Full Review</a>
-                            <a href="https://example.com/diamond-club" class="new-casino-cta" target="_blank">VISIT CASINO</a>
+                        <div class="casino-actions">
+                            <a href="reviews.html" class="btn-review">
+                                <i class="fas fa-file-alt"></i> Read Full Review
+                            </a>
+                            <a href="https://example.com/diamond-club" class="btn-play" target="_blank">
+                                Visit Casino <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -569,25 +680,88 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="text-center">
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="reviews.html">Reviews</a>
-                    <a href="tips.html">Tips</a>
-                    <a href="responsible-gaming.html">Responsible Gaming</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="privacy-policy.html">Privacy Policy</a>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding-bottom: 40px;">
+                <div>
+                    <div class="footer-logo">
+                        <img src="images/logo-white.svg" alt="TopPlayInsight" height="40">
+                    </div>
+                    <p class="footer-description">
+                        We provide honest and independent reviews of online casinos to help you make informed decisions. Our team thoroughly tests each casino for game quality, bonuses, payments, security, and support.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
                 
-                <div class="age-notice">
-                    <i class="fas fa-exclamation-triangle me-2"></i> 18+ Gambling can be addictive. Play responsibly.
+                <div>
+                    <h3 class="footer-links-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="reviews.html">Casino Reviews</a></li>
+                        <li><a href="tips.html">Casino Guides</a></li>
+                        <li><a href="responsible-gaming.html">Responsible Gaming</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
                 </div>
                 
-                <p class="copyright">© 2023 TopPlayInsight. All rights reserved.</p>
+                <div>
+                    <h3 class="footer-links-title">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Beginner's Guide</a></li>
+                        <li><a href="#">Casino Games</a></li>
+                        <li><a href="#">Casino Bonuses</a></li>
+                        <li><a href="#">Payment Methods</a></li>
+                        <li><a href="#">Casino Security</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-links-title">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookies Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                    <div style="margin-top: 20px;">
+                        <img src="images/responsible-gaming-badge.svg" alt="Responsible Gaming" width="120">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 TopPlayInsight. All Rights Reserved.</p>
+                <p>Our website is intended for individuals aged 18 and above. Gambling can be addictive. Please play responsibly.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+        // Простой скрипт для мобильного меню
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mainNav = document.querySelector('.main-nav');
+            
+            if (mobileMenuToggle && mainNav) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mainNav.style.display = mainNav.style.display === 'flex' ? 'none' : 'flex';
+                });
+            }
+            
+            // Функциональность для фильтров казино
+            const filterTags = document.querySelectorAll('.filter-tag');
+            filterTags.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    // Сбросить активный класс со всех тегов
+                    filterTags.forEach(t => t.classList.remove('active'));
+                    // Добавить активный класс на нажатый тег
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
