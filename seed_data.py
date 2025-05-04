@@ -6,20 +6,12 @@ def seed_database():
     """Seed the database with initial data"""
     
     # Delete existing data
+    Casino.query.delete()
     Review.query.delete()
     Tip.query.delete()
-    Casino.query.delete()
     
     # Create casino entries
-    casino_names = [
-        'Royal Palace Casino',
-        'Golden Nugget',
-        'Diamond Club',
-        'Lucky Spin',
-        'Mega Jackpot'
-    ]
-    
-    casino_data = [
+    casinos = [
         {
             'name': 'Royal Palace Casino',
             'logo_url': 'https://placehold.co/100x80?text=Royal+Palace',
@@ -77,30 +69,21 @@ def seed_database():
         }
     ]
     
-    # Add casinos and store them for reference
-    created_casinos = {}
-    for casino_info in casino_data:
-        casino = Casino(**casino_info)
+    for casino_data in casinos:
+        casino = Casino(**casino_data)
         db.session.add(casino)
-        db.session.flush()  # This assigns the ID without committing
-        created_casinos[casino_info['name']] = casino
     
-    # Commit casinos first to ensure IDs are generated
-    db.session.commit()
-    
-    print(f"Created casinos with IDs: {[(name, casino.id) for name, casino in created_casinos.items()]}")
-    
-    # Create review entries using the actual casino IDs
+    # Create review entries
     reviews = [
         {
-            'casino_id': created_casinos['Royal Palace Casino'].id,
+            'casino_id': 1,  # Royal Palace Casino
             'title': 'Royal Palace Casino Review: Luxury Gaming Experience',
             'content': 'Royal Palace Casino offers an exceptional gaming experience with a wide variety of games including slots, table games, and live dealer options. The customer service is outstanding, and the VIP program provides excellent benefits for loyal players.',
             'pros': 'Great game selection, Fast payouts, Excellent VIP program',
             'cons': 'Higher than average wagering requirements, Limited payment methods'
         },
         {
-            'casino_id': created_casinos['Golden Nugget'].id,
+            'casino_id': 2,  # Golden Nugget
             'title': 'Golden Nugget Review: Classic Casino with Modern Touch',
             'content': 'Golden Nugget combines classic casino charm with modern features. Their slot selection is impressive, and the table games have competitive limits for both casual players and high rollers.',
             'pros': 'Huge game library, User-friendly interface, Great mobile experience',

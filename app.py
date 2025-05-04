@@ -27,10 +27,9 @@ with app.app_context():
 # Routes
 @app.route('/')
 def index():
-    # Get featured casinos, sorted by rating from highest to lowest
-    featured_casinos = Casino.query.filter_by(is_featured=True).order_by(Casino.rating.desc()).all()
+    featured_casinos = Casino.query.filter_by(is_featured=True).all()
     new_casinos = Casino.query.filter_by(is_new=True).all()
-    all_casinos = Casino.query.order_by(Casino.rating.desc()).all()
+    all_casinos = Casino.query.all()
     return render_template('index.html', 
                           active_page='home',
                           featured_casinos=featured_casinos,
@@ -49,11 +48,9 @@ def reviews():
 @app.route('/tips')
 def tips():
     all_tips = Tip.query.all()
-    casinos = Casino.query.order_by(Casino.rating.desc()).all()
     return render_template('tips.html', 
                           active_page='tips', 
-                          tips=all_tips,
-                          casinos=casinos)
+                          tips=all_tips)
 
 @app.route('/responsible-gaming')
 def responsible_gaming():
@@ -95,5 +92,4 @@ def privacy_policy():
     return render_template('privacy_policy.html', active_page='privacy_policy')
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 8000))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
