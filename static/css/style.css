@@ -904,6 +904,7 @@ footer {
 @media (max-width: 576px) {
     .top-choice-casino {
         padding: 15px 12px 20px;
+        margin-top: 20px;
     }
     
     .top-choice-casino::before {
@@ -913,20 +914,97 @@ footer {
         padding: 3px 40px;
     }
     
+    .top-choice-casino .row {
+        flex-direction: row;
+        margin: 0;
+    }
+    
     .top-choice-casino .casino-logo {
-        max-width: 80px;
+        max-width: 70px;
+        height: auto;
+        margin: 0;
+    }
+    
+    .top-choice-casino .col-lg-2,
+    .top-choice-casino .col-md-3, 
+    .top-choice-casino .col-6 {
+        padding-right: 5px;
+        padding-left: 5px;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    
+    .top-choice-casino .col-lg-3,
+    .top-choice-casino .col-lg-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-top: 0 !important;
+    }
+    
+    .top-choice-casino .col-lg-3:last-of-type {
+        flex: 0 0 25%;
+        max-width: 25%;
     }
     
     .top-choice-casino .casino-name {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+    
+    .top-choice-casino .rating {
+        margin-bottom: 5px;
+        text-align: left;
+    }
+    
+    .top-choice-casino .star {
+        font-size: 0.9rem;
+    }
+    
+    .top-choice-casino .bonus-info {
+        padding: 8px;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .top-choice-casino .bonus-label {
+        font-size: 0.7rem;
+        margin-bottom: 2px;
     }
     
     .top-choice-casino .bonus-amount {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        margin-bottom: 2px;
+    }
+    
+    .top-choice-casino .bonus-details {
+        font-size: 0.7rem;
+        margin: 0;
+    }
+    
+    .top-choice-casino .visit-btn {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+        margin-top: 0;
+        white-space: nowrap;
+        width: auto;
+        min-width: 60px;
+        margin-bottom: 0;
+        display: block;
+    }
+    
+    .top-choice-casino .review-link {
+        display: none;
+    }
+    
+    .top-choice-casino .casino-highlights {
+        padding: 10px;
+        margin-top: 10px;
     }
     
     .top-choice-casino .casino-highlights p {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+        margin-bottom: 0;
     }
     
     /* Related Casinos Extra Small Screen Styles */
