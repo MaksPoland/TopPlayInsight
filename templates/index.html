@@ -23,8 +23,73 @@
             <p>Our experts thoroughly review and rank the best casino sites based on game selection, bonuses, payment methods, customer support, and safety measures.</p>
         </div>
         
+        <!-- TOP CHOICE Casino Section -->
+        <div class="top-choice-container">
+            <div class="top-choice-label">
+                <i class="fas fa-trophy me-1"></i> Our Top Choice
+            </div>
+            
+            {% set top_casino = featured_casinos|first %}
+            {% if top_casino %}
+            <div class="top-choice-casino">
+                <div class="row align-items-center">
+                    <div class="col-lg-2 col-md-3 col-6 mx-auto text-center">
+                        <img src="{{ top_casino.logo_url }}" alt="{{ top_casino.name }}" class="img-fluid casino-logo">
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 text-lg-start text-center">
+                        <h3 class="casino-name">{{ top_casino.name }}</h3>
+                        <div class="rating mb-2">
+                            {% set full_stars = (top_casino.rating | int) %}
+                            {% set half_star = (top_casino.rating - full_stars) >= 0.5 %}
+                            
+                            {% for i in range(full_stars) %}
+                                <i class="fas fa-star star"></i>
+                            {% endfor %}
+                            
+                            {% if half_star %}
+                                <i class="fas fa-star-half-alt star"></i>
+                                {% set remaining_stars = 4 - full_stars %}
+                            {% else %}
+                                {% set remaining_stars = 5 - full_stars %}
+                            {% endif %}
+                            
+                            {% for i in range(remaining_stars) %}
+                                <i class="far fa-star star"></i>
+                            {% endfor %}
+                            
+                            <span class="ms-2 fw-bold">{{ top_casino.rating }}/5</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-3 col-sm-12 mt-md-0 mt-3">
+                        <div class="bonus-info">
+                            <span class="bonus-label">Exclusive Welcome Bonus</span>
+                            <h4 class="bonus-amount">{{ top_casino.bonus_description.split(':')[0] if ':' in top_casino.bonus_description else top_casino.bonus_description }}</h4>
+                            <p class="bonus-details">{{ top_casino.bonus_description.split(':', 1)[1] if ':' in top_casino.bonus_description else '' }}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 text-center mt-md-0 mt-4">
+                        <div class="d-grid gap-2">
+                            <a href="{{ top_casino.url }}" class="btn btn-primary btn-lg visit-btn" target="_blank">Visit Casino</a>
+                            <a href="{{ url_for('reviews') }}" class="btn-link review-link">Read Full Review</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="casino-highlights mt-3">
+                    <div class="row">
+                        <div class="col-md-9 col-sm-12">
+                            <p><strong>Why it's our top choice:</strong> {{ top_casino.description }}</p>
+                        </div>
+                        <div class="col-md-3 col-sm-12 text-md-end text-center">
+                            <p class="terms-note">T&Cs Apply, 18+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        
         <!-- Casino Filter Options -->
-        <div class="casino-filters mb-4">
+        <div class="casino-filters mb-4 mt-5">
             <div class="row align-items-center">
                 <div class="col-md-9">
                     <div class="filter-badges">

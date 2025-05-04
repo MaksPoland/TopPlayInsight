@@ -27,9 +27,10 @@ with app.app_context():
 # Routes
 @app.route('/')
 def index():
-    featured_casinos = Casino.query.filter_by(is_featured=True).all()
+    # Get featured casinos, sorted by rating from highest to lowest
+    featured_casinos = Casino.query.filter_by(is_featured=True).order_by(Casino.rating.desc()).all()
     new_casinos = Casino.query.filter_by(is_new=True).all()
-    all_casinos = Casino.query.all()
+    all_casinos = Casino.query.order_by(Casino.rating.desc()).all()
     return render_template('index.html', 
                           active_page='home',
                           featured_casinos=featured_casinos,
