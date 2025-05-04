@@ -350,6 +350,138 @@ a:hover {
     margin: 0;
 }
 
+/* Related Casinos Section */
+.related-casinos-section {
+    padding: 40px 0;
+    background-color: #f2efec;
+    margin-top: 40px;
+}
+
+.related-casinos-container {
+    margin-bottom: 30px;
+}
+
+.related-casinos-heading {
+    display: inline-block;
+    background-color: #188454;
+    color: white;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.related-casino-item {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e7e4df;
+}
+
+.related-casino-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.related-casino-rank {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: #ff893f;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.related-casino-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.related-casino-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin: 0 auto 15px;
+    transition: transform 0.3s ease;
+}
+
+.related-casino-item:hover .related-casino-logo {
+    transform: scale(1.05);
+}
+
+.related-casino-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1B1B1C;
+    text-align: center;
+}
+
+.related-casino-rating {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.related-casino-rating .star {
+    color: #FFD700;
+    font-size: 1.1rem;
+}
+
+.related-casino-bonus {
+    background-color: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+    margin: 12px 0;
+    text-align: center;
+}
+
+.related-casino-bonus-amount {
+    font-weight: 700;
+    color: #188454;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.related-casino-bonus-details {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.related-casino-buttons {
+    margin-top: 15px;
+}
+
+.related-casino-buttons .btn {
+    width: 100%;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.related-casino-terms {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #777;
+    margin-top: 8px;
+}
+
 /* Articles Section */
 .articles-section {
     background-color: var(--light-gray);
@@ -553,6 +685,62 @@ footer {
         margin-bottom: 30px;
     }
     
+    /* Related Casinos Mobile Styles */
+    .related-casinos-section {
+        padding: 30px 0;
+    }
+    
+    .related-casinos-heading {
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 200px;
+        font-size: 0.9rem;
+    }
+    
+    .related-casino-item {
+        padding: 20px 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .related-casino-rank {
+        left: 10px;
+        width: 26px;
+        height: 26px;
+        font-size: 0.9rem;
+    }
+    
+    .related-casino-logo {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .related-casino-name {
+        font-size: 1.1rem;
+    }
+    
+    .related-casino-rating .star {
+        font-size: 1rem;
+    }
+    
+    .related-casino-bonus {
+        padding: 10px;
+    }
+    
+    .related-casino-bonus-amount {
+        font-size: 1.2rem;
+    }
+    
+    .related-casino-bonus-details {
+        font-size: 0.8rem;
+    }
+    
+    .related-casino-terms {
+        font-size: 0.7rem;
+    }
+    
     /* Top Choice Mobile Styles */
     .top-choice-casino {
         padding: 20px 15px 25px;
@@ -671,5 +859,57 @@ footer {
     
     .top-choice-casino .casino-highlights p {
         font-size: 0.8rem;
+    }
+    
+    /* Related Casinos Extra Small Screen Styles */
+    .related-casinos-heading {
+        font-size: 0.8rem;
+        padding: 6px 15px;
+    }
+    
+    .related-casino-item {
+        padding: 15px 10px;
+    }
+    
+    .related-casino-rank {
+        top: -10px;
+        left: 8px;
+        width: 24px;
+        height: 24px;
+        font-size: 0.8rem;
+    }
+    
+    .related-casino-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .related-casino-name {
+        font-size: 1rem;
+    }
+    
+    .related-casino-rating .star {
+        font-size: 0.9rem;
+    }
+    
+    .related-casino-bonus {
+        padding: 8px;
+    }
+    
+    .related-casino-bonus-amount {
+        font-size: 1.1rem;
+    }
+    
+    .related-casino-bonus-details {
+        font-size: 0.75rem;
+    }
+    
+    .related-casino-buttons .btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .related-casino-terms {
+        font-size: 0.65rem;
     }
 }

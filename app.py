@@ -49,9 +49,11 @@ def reviews():
 @app.route('/tips')
 def tips():
     all_tips = Tip.query.all()
+    casinos = Casino.query.order_by(Casino.rating.desc()).all()
     return render_template('tips.html', 
                           active_page='tips', 
-                          tips=all_tips)
+                          tips=all_tips,
+                          casinos=casinos)
 
 @app.route('/responsible-gaming')
 def responsible_gaming():
