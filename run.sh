@@ -1,2 +1,2 @@
 #!/bin/bash
-cd html_version && python3 -m http.server 8080 --bind 0.0.0.0
+python3 app.py
