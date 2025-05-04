@@ -1,0 +1,144 @@
+/* Стили для верхнего блока с топ-3 казино */
+.top-casinos-banner {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.top-casinos-banner h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.top-casinos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.top-casino-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.top-casino-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.top-casino-rank {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #2E7D32;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.top-casino-logo {
+    height: 100px;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.top-casino-logo img {
+    max-width: 80%;
+    max-height: 60px;
+}
+
+.top-casino-content {
+    padding: 15px;
+}
+
+.top-casino-name {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.top-casino-bonus {
+    font-weight: 600;
+    color: #2E7D32;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.top-casino-review {
+    display: block;
+    color: #555;
+    font-size: 13px;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+.top-casino-review:hover {
+    color: #2E7D32;
+    text-decoration: underline;
+}
+
+.top-casino-action {
+    display: block;
+    background-color: #2E7D32;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.top-casino-action:hover {
+    background-color: #1b5e20;
+}
+
+@media screen and (max-width: 992px) {
+    .top-casinos-grid {
+        gap: 15px;
+    }
+    
+    .top-casino-card {
+        width: calc(33.333% - 10px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .top-casino-card {
+        width: calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .top-casinos-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .top-casino-card {
+        width: 100%;
+        max-width: 320px;
+    }
+}

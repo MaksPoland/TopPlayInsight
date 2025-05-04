@@ -1,0 +1,197 @@
+/* Новый дизайн карточек казино в стиле irishluck.ie */
+.new-casino-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.new-casino-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.new-casino-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.new-casino-rank {
+    width: 34px;
+    height: 34px;
+    background-color: #2E7D32;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.new-casino-logo {
+    width: 120px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 6px;
+    padding: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.new-casino-logo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.new-casino-title {
+    flex-grow: 1;
+}
+
+.new-casino-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.new-casino-rating {
+    display: flex;
+    align-items: center;
+}
+
+.new-casino-stars {
+    color: #ffc107;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.new-casino-rating-value {
+    font-size: 14px;
+    color: #555;
+}
+
+.new-casino-body {
+    padding: 20px;
+}
+
+.new-casino-features {
+    margin-bottom: 20px;
+}
+
+.new-casino-feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.new-casino-feature i {
+    color: #2E7D32;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.new-casino-feature span {
+    font-size: 14px;
+    color: #555;
+}
+
+.new-casino-bonus {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.new-casino-bonus-label {
+    font-size: 13px;
+    color: #777;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.new-casino-bonus-value {
+    font-size: 18px;
+    color: #2E7D32;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.new-casino-bonus-terms {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.4;
+}
+
+.new-casino-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-casino-review-link {
+    color: #2E7D32;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.new-casino-review-link:hover {
+    text-decoration: underline;
+}
+
+.new-casino-cta {
+    display: block;
+    width: 100%;
+    background-color: #2E7D32;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    padding: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.new-casino-cta:hover {
+    background-color: #1b5e20;
+}
+
+/* Адаптивность */
+@media screen and (max-width: 767px) {
+    .new-casino-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .new-casino-rank {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        margin-right: 0;
+    }
+    
+    .new-casino-logo {
+        margin-bottom: 15px;
+        margin-right: 0;
+        width: 100%;
+        height: 80px;
+    }
+    
+    .new-casino-title {
+        width: 100%;
+    }
+}

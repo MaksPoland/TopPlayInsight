@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/payment-methods.css">
+    <link rel="stylesheet" href="css/top-casinos.css">
+    <link rel="stylesheet" href="css/new-casino-cards.css">
 </head>
 <body>
     <!-- Header with Navigation -->
@@ -62,6 +64,58 @@
             </div>
         </div>
     </section>
+    
+    <!-- Top 3 Casinos Banner -->
+    <section class="pt-30 pb-30">
+        <div class="container">
+            <div class="top-casinos-banner">
+                <h3>Top 3 Recommended Casinos</h3>
+                <div class="top-casinos-grid">
+                    <!-- Top Casino 1 -->
+                    <div class="top-casino-card">
+                        <div class="top-casino-rank">1</div>
+                        <div class="top-casino-logo">
+                            <img src="images/midnite.svg" alt="Midnite Casino">
+                        </div>
+                        <div class="top-casino-content">
+                            <h4 class="top-casino-name">Midnite Casino</h4>
+                            <div class="top-casino-bonus">Bet €20 get 100 free spins</div>
+                            <a href="reviews.html" class="top-casino-review">Read full review</a>
+                            <a href="https://example.com/midnite" class="top-casino-action" target="_blank">VISIT CASINO</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Top Casino 2 -->
+                    <div class="top-casino-card">
+                        <div class="top-casino-rank">2</div>
+                        <div class="top-casino-logo">
+                            <img src="images/golden-nugget.svg" alt="Golden Nugget">
+                        </div>
+                        <div class="top-casino-content">
+                            <h4 class="top-casino-name">Golden Nugget</h4>
+                            <div class="top-casino-bonus">Get up to €3,000 + 50 Free Spins</div>
+                            <a href="reviews.html" class="top-casino-review">Read full review</a>
+                            <a href="https://example.com/golden-nugget" class="top-casino-action" target="_blank">VISIT CASINO</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Top Casino 3 -->
+                    <div class="top-casino-card">
+                        <div class="top-casino-rank">3</div>
+                        <div class="top-casino-logo">
+                            <img src="images/diamond-club.svg" alt="Diamond Club">
+                        </div>
+                        <div class="top-casino-content">
+                            <h4 class="top-casino-name">Diamond Club</h4>
+                            <div class="top-casino-bonus">Bet €10, Get €50 Casino Bonus</div>
+                            <a href="reviews.html" class="top-casino-review">Read full review</a>
+                            <a href="https://example.com/diamond-club" class="top-casino-action" target="_blank">VISIT CASINO</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Top Casinos Section -->
     <section class="casino-list-section pt-60 pb-60">
@@ -96,267 +150,152 @@
             
             <!-- Casino Listings -->
             <div class="casino-listings">
-                <!-- Casino 1 -->
-                <div class="casino-list-item featured-casino">
-                    <div class="casino-card-layout">
-                        <div class="casino-rank">
-                            <span>1</span>
+                <!-- Карточка казино в новом дизайне -->
+                <div class="new-casino-card">
+                    <div class="new-casino-header">
+                        <div class="new-casino-rank">1</div>
+                        <div class="new-casino-logo">
+                            <img src="images/midnite.svg" alt="Midnite Casino">
                         </div>
-                        <div class="casino-logo-section">
-                            <div class="logo-container">
-                                <img src="images/midnite.svg" alt="Midnite Casino" class="casino-logo" style="background-color: #8ded3f; padding: 10px;">
-                            </div>
-                            <div class="rating-container">
-                                <div class="stars">
-                                    <i class="fas fa-star star"></i>
-                                    <i class="fas fa-star star"></i>
-                                    <i class="fas fa-star star"></i>
-                                    <i class="fas fa-star star"></i>
-                                    <i class="fas fa-star star"></i>
+                        <div class="new-casino-title">
+                            <h4 class="new-casino-name">Midnite Casino</h4>
+                            <div class="new-casino-rating">
+                                <div class="new-casino-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
-                                <div class="rating-text">
-                                    <div class="rating-value-container">
-                                        <span class="rating-value">5.0</span>
-                                        <span class="rating-denominator">/ 5</span>
-                                    </div>
-                                    <span class="rating-count">• 5 Ratings</span>
-                                </div>
+                                <div class="new-casino-rating-value">5.0/5 • 5 Ratings</div>
                             </div>
-                            <a href="reviews.html" class="review-link">Midnite Casino Review</a>
                         </div>
-                        <div class="casino-description">
-                            <p>New to the Irish casino scene, Midnite Casino offers an outstanding user experience with over 1,650 games, delivering a truly modern and engaging gaming environment.</p>
-                            
-                            <div class="casino-specs">
-                                <div class="spec-item">
-                                    <div class="spec-header">
-                                        <span class="spec-label">No. of slots</span>
-                                    </div>
-                                    <div class="spec-value">1650+</div>
-                                </div>
-                                <div class="spec-item">
-                                    <div class="spec-header">
-                                        <span class="spec-label">Payout speed</span>
-                                    </div>
-                                    <div class="spec-value">Instant Options</div>
-                                </div>
-                                <div class="spec-item">
-                                    <div class="spec-header">
-                                        <span class="spec-label">Win rate</span>
-                                    </div>
-                                    <div class="spec-value">Variable</div>
-                                </div>
+                    </div>
+                    <div class="new-casino-body">
+                        <div class="new-casino-features">
+                            <div class="new-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Over 1650 games from top providers</span>
                             </div>
-                            
-                            <ul class="check-list">
-                                <li>Over 1650 games</li>
-                                <li>Attractive bonuses</li>
-                                <li>Secure and reliable</li>
-                            </ul>
+                            <div class="new-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Instant withdrawal options available</span>
+                            </div>
+                            <div class="new-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Secure platform with 24/7 support</span>
+                            </div>
                         </div>
-                        <div class="casino-offer">
-                            <div class="bonus-text">
-                                <p class="bonus-main">Bet €20 get 100 free spins</p>
-                                <p class="bonus-terms">New customers only. Opt in and wager €20 or more on selected games within 14 days of registration. Get 100 Free Spins for selected games, valued at 10 cents each and valid for 7 days. T&Cs apply. BeGambleAware.org</p>
-                            </div>
-                            <div class="offer-button-container">
-                                <a href="https://example.com/midnite" class="offer-button" target="_blank">SEE OFFER <i class="fas fa-chevron-right"></i></a>
-                            </div>
-                            <a href="reviews.html" class="more-details-btn">More Details <i class="fas fa-chevron-down"></i></a>
+                        
+                        <div class="new-casino-bonus">
+                            <span class="new-casino-bonus-label">WELCOME BONUS</span>
+                            <div class="new-casino-bonus-value">Bet €20 get 100 free spins</div>
+                            <div class="new-casino-bonus-terms">New customers only. Opt in and wager €20 or more on selected games within 14 days of registration. Get 100 Free Spins for selected games, valued at 10 cents each and valid for 7 days. T&Cs apply.</div>
+                        </div>
+                        
+                        <div class="new-casino-actions">
+                            <a href="reviews.html" class="new-casino-review-link">Read Full Review</a>
+                            <a href="https://example.com/midnite" class="new-casino-cta" target="_blank">VISIT CASINO</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Casino 2 -->
-                <div class="casino-list-item featured-casino">
-                    <div class="casino-card-layout">
-                        <div class="casino-rank">
-                            <span>2</span>
+                <!-- Карточка казино в новом дизайне -->
+                <div class="new-casino-card">
+                    <div class="new-casino-header">
+                        <div class="new-casino-rank">2</div>
+                        <div class="new-casino-logo">
+                            <img src="images/golden-nugget.svg" alt="Golden Nugget">
                         </div>
-                        <div class="casino-logo-section">
-                            <div class="logo-container">
-                                <img src="images/golden-nugget.svg" alt="Golden Nugget" class="casino-logo">
-                            </div>
-                            <div class="rating-container">
-                                <div class="stars">
-                                    <i class="fas fa-star star"></i>
-                                    <i class="fas fa-star star"></i>
-                                    <i class="fas fa-star star"></i>
-                                    <i class="fas fa-star star"></i>
-                                    <i class="fas fa-star-half-alt star"></i>
+                        <div class="new-casino-title">
+                            <h4 class="new-casino-name">Golden Nugget</h4>
+                            <div class="new-casino-rating">
+                                <div class="new-casino-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
                                 </div>
-                                <div class="rating-text">
-                                    <div class="rating-value-container">
-                                        <span class="rating-value">4.8</span>
-                                        <span class="rating-denominator">/ 5</span>
-                                    </div>
-                                    <span class="rating-count">• 16 Ratings</span>
-                                </div>
+                                <div class="new-casino-rating-value">4.8/5 • 16 Ratings</div>
                             </div>
-                            <a href="reviews.html" class="review-link">Golden Nugget Review</a>
                         </div>
-                        <div class="casino-description">
-                            <p>An international brand with a fantastic selection of in-house games and quick payouts. Offers a premium casino experience with amazing bonuses and reliable service.</p>
-                            
-                            <div class="casino-specs">
-                                <div class="spec-item">
-                                    <div class="spec-header">
-                                        <span class="spec-label">No. of slots</span>
-                                    </div>
-                                    <div class="spec-value">1500+</div>
-                                </div>
-                                <div class="spec-item">
-                                    <div class="spec-header">
-                                        <span class="spec-label">Payout speed</span>
-                                    </div>
-                                    <div class="spec-value">24-48 Hours</div>
-                                </div>
-                                <div class="spec-item">
-                                    <div class="spec-header">
-                                        <span class="spec-label">Win rate</span>
-                                    </div>
-                                    <div class="spec-value">97.3%</div>
-                                </div>
+                    </div>
+                    <div class="new-casino-body">
+                        <div class="new-casino-features">
+                            <div class="new-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>1500+ slots from top providers</span>
                             </div>
-                            
-                            <ul class="check-list">
-                                <li>Bonuses on Every Deposit</li>
-                                <li>Top In-House Game Providers</li>
-                                <li>24/7 Customer Support</li>
-                            </ul>
+                            <div class="new-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Bonuses on every deposit</span>
+                            </div>
+                            <div class="new-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Premium VIP program with exclusive rewards</span>
+                            </div>
                         </div>
-                        <div class="casino-offer">
-                            <div class="bonus-text">
-                                <p class="bonus-main">Get up to €3,000 + 50 Free Spins</p>
-                                <p class="bonus-terms">€10 Min. Deposit. Up to €3,000 on the first 3 deposits, x35 wagering requirements. 50 Free Spins on Big Bass Splash T&Cs apply.</p>
-                            </div>
-                            <div class="payment-methods">
-                                <div class="payment-method">
-                                    <div class="payment-method-icon">
-                                        <img src="images/payment-methods/visa.svg" alt="Visa">
-                                    </div>
-                                    <span class="payment-method-label">Visa</span>
-                                </div>
-                                <div class="payment-method">
-                                    <div class="payment-method-icon">
-                                        <img src="images/payment-methods/mastercard.svg" alt="Mastercard">
-                                    </div>
-                                    <span class="payment-method-label">Mastercard</span>
-                                </div>
-                                <div class="payment-method">
-                                    <div class="payment-method-icon">
-                                        <img src="images/payment-methods/paypal.svg" alt="PayPal">
-                                    </div>
-                                    <span class="payment-method-label">PayPal</span>
-                                </div>
-                                <div class="payment-method">
-                                    <div class="payment-method-icon">
-                                        <img src="images/payment-methods/skrill.svg" alt="Skrill">
-                                    </div>
-                                    <span class="payment-method-label">Skrill</span>
-                                </div>
-                            </div>
-                            <div class="offer-button-container">
-                                <a href="https://example.com/golden-nugget" class="offer-button" target="_blank">SEE OFFER <i class="fas fa-chevron-right"></i></a>
-                            </div>
-                            <a href="reviews.html" class="more-details-btn">More Details <i class="fas fa-chevron-down"></i></a>
+                        
+                        <div class="new-casino-bonus">
+                            <span class="new-casino-bonus-label">WELCOME BONUS</span>
+                            <div class="new-casino-bonus-value">Get up to €3,000 + 50 Free Spins</div>
+                            <div class="new-casino-bonus-terms">€10 Min. Deposit. Up to €3,000 on the first 3 deposits, x35 wagering requirements. 50 Free Spins on Big Bass Splash T&Cs apply.</div>
+                        </div>
+                        
+                        <div class="new-casino-actions">
+                            <a href="reviews.html" class="new-casino-review-link">Read Full Review</a>
+                            <a href="https://example.com/golden-nugget" class="new-casino-cta" target="_blank">VISIT CASINO</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Casino 3 -->
-                <div class="casino-list-item featured-casino new-casino">
-                    <div class="casino-card-layout">
-                        <div class="casino-rank">
-                            <span>3</span>
+                <!-- Карточка казино в новом дизайне -->
+                <div class="new-casino-card">
+                    <div class="new-casino-header">
+                        <div class="new-casino-rank">3</div>
+                        <div class="new-casino-logo">
+                            <img src="images/diamond-club.svg" alt="Diamond Club">
                         </div>
-                        <div class="casino-logo-section">
-                            <div class="logo-container">
-                                <img src="images/diamond-club.svg" alt="Diamond Club" class="casino-logo">
-                            </div>
-                            <div class="rating-container">
-                                <div class="stars">
-                                    <i class="fas fa-star star"></i>
-                                    <i class="fas fa-star star"></i>
-                                    <i class="fas fa-star star"></i>
-                                    <i class="fas fa-star star"></i>
-                                    <i class="fas fa-star-half-alt star"></i>
+                        <div class="new-casino-title">
+                            <h4 class="new-casino-name">Diamond Club</h4>
+                            <div class="new-casino-rating">
+                                <div class="new-casino-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
                                 </div>
-                                <div class="rating-text">
-                                    <div class="rating-value-container">
-                                        <span class="rating-value">4.7</span>
-                                        <span class="rating-denominator">/ 5</span>
-                                    </div>
-                                    <span class="rating-count">• 5 Ratings</span>
-                                </div>
+                                <div class="new-casino-rating-value">4.7/5 • 5 Ratings</div>
                             </div>
-                            <a href="reviews.html" class="review-link">Diamond Club Review</a>
                         </div>
-                        <div class="casino-description">
-                            <p>Your favourite sports betting site now has an extensive casino offering slots, live roulette, blackjack and more. Premium experience with exclusive VIP benefits.</p>
-                            
-                            <div class="casino-specs">
-                                <div class="spec-item">
-                                    <div class="spec-header">
-                                        <span class="spec-label">No. of slots</span>
-                                    </div>
-                                    <div class="spec-value">250</div>
-                                </div>
-                                <div class="spec-item">
-                                    <div class="spec-header">
-                                        <span class="spec-label">Payout speed</span>
-                                    </div>
-                                    <div class="spec-value">24 Hours</div>
-                                </div>
-                                <div class="spec-item">
-                                    <div class="spec-header">
-                                        <span class="spec-label">Win rate</span>
-                                    </div>
-                                    <div class="spec-value">95%</div>
-                                </div>
+                    </div>
+                    <div class="new-casino-body">
+                        <div class="new-casino-features">
+                            <div class="new-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>PlayTech Games and Live Casino</span>
                             </div>
-                            
-                            <ul class="check-list">
-                                <li>PlayTech Games and Live Casino</li>
-                                <li>PowerPlay Progressive Jackpot Slots</li>
-                                <li>Empire Treasures Slots series with bonuses</li>
-                            </ul>
+                            <div class="new-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Fast payouts within 24 hours</span>
+                            </div>
+                            <div class="new-casino-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Premium VIP experience with exclusive benefits</span>
+                            </div>
                         </div>
-                        <div class="casino-offer">
-                            <div class="bonus-text">
-                                <p class="bonus-main">Bet €10 Get €50 Casino Bonus</p>
-                                <p class="bonus-terms">New customers only. Deposit and wager €10 minimum on qualifying games. Get €50 bonus to use on select casino games. Wagering requirements and terms apply.</p>
-                            </div>
-                            <div class="payment-methods">
-                                <div class="payment-method">
-                                    <div class="payment-method-icon">
-                                        <img src="images/payment-methods/visa.svg" alt="Visa">
-                                    </div>
-                                    <span class="payment-method-label">Visa</span>
-                                </div>
-                                <div class="payment-method">
-                                    <div class="payment-method-icon">
-                                        <img src="images/payment-methods/mastercard.svg" alt="Mastercard">
-                                    </div>
-                                    <span class="payment-method-label">Mastercard</span>
-                                </div>
-                                <div class="payment-method">
-                                    <div class="payment-method-icon">
-                                        <img src="images/payment-methods/skrill.svg" alt="Skrill">
-                                    </div>
-                                    <span class="payment-method-label">Skrill</span>
-                                </div>
-                                <div class="payment-method">
-                                    <div class="payment-method-icon">
-                                        <img src="images/payment-methods/neteller.svg" alt="Neteller">
-                                    </div>
-                                    <span class="payment-method-label">Neteller</span>
-                                </div>
-                            </div>
-                            <div class="offer-button-container">
-                                <a href="https://example.com/diamond-club" class="offer-button" target="_blank">SEE OFFER <i class="fas fa-chevron-right"></i></a>
-                            </div>
-                            <a href="reviews.html" class="more-details-btn">More Details <i class="fas fa-chevron-down"></i></a>
+                        
+                        <div class="new-casino-bonus">
+                            <span class="new-casino-bonus-label">WELCOME BONUS</span>
+                            <div class="new-casino-bonus-value">Bet €10 Get €50 Casino Bonus</div>
+                            <div class="new-casino-bonus-terms">New customers only. Deposit and wager €10 minimum on qualifying games. Get €50 bonus to use on select casino games. Wagering requirements and terms apply.</div>
+                        </div>
+                        
+                        <div class="new-casino-actions">
+                            <a href="reviews.html" class="new-casino-review-link">Read Full Review</a>
+                            <a href="https://example.com/diamond-club" class="new-casino-cta" target="_blank">VISIT CASINO</a>
                         </div>
                     </div>
                 </div>
