@@ -241,22 +241,23 @@
 <section class="related-casinos-section">
     <div class="container">
         <div class="related-casinos-container">
-            <div class="text-center mb-4">
-                <span class="related-casinos-heading">
-                    <i class="fas fa-star me-2"></i> Popular Casinos
-                </span>
-            </div>
+            <h2 class="related-casinos-heading">Top Rated Online Casinos</h2>
             
-            <div class="row">
-                {% for casino in all_casinos[:3] %}
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="related-casino-item">
-                        <div class="related-casino-rank">{{ loop.index }}</div>
-                        <div class="related-casino-content">
-                            <img src="{{ casino.logo_url }}" alt="{{ casino.name }}" class="related-casino-logo">
+            <ul class="related-casinos-list">
+                {% for casino in all_casinos[:4] %}
+                <li class="related-casino-item" data-rank="{{ loop.index }}">
+                    <div class="related-casino-rank">{{ loop.index }}</div>
+                    
+                    <div class="related-casino-logo-wrapper">
+                        <img src="{{ casino.logo_url }}" alt="{{ casino.name }}" class="related-casino-logo">
+                    </div>
+                    
+                    <div class="related-casino-content">
+                        <div class="related-casino-info">
                             <h3 class="related-casino-name">{{ casino.name }}</h3>
                             
                             <div class="related-casino-rating">
+                                <span class="rating-label">Overall</span>
                                 {% set full_stars = (casino.rating | int) %}
                                 {% set half_star = (casino.rating - full_stars) >= 0.5 %}
                                 
@@ -275,25 +276,28 @@
                                     <i class="far fa-star star"></i>
                                 {% endfor %}
                                 
-                                <span class="ms-2">{{ casino.rating }}/5</span>
+                                <span>{{ casino.rating }}</span><span>/</span><span>5</span>
                             </div>
                             
-                            <div class="related-casino-bonus">
-                                <span class="bonus-label">Welcome Bonus</span>
-                                <h4 class="related-casino-bonus-amount">{{ casino.bonus_description.split(':')[0] if ':' in casino.bonus_description else casino.bonus_description }}</h4>
-                                <p class="related-casino-bonus-details">{{ casino.bonus_description.split(':', 1)[1] if ':' in casino.bonus_description else '' }}</p>
-                            </div>
-                            
-                            <div class="related-casino-buttons">
-                                <a href="{{ casino.url }}" class="btn btn-primary visit-btn" target="_blank">Visit Casino</a>
-                            </div>
-                            
-                            <p class="related-casino-terms">T&Cs Apply, 18+</p>
+                            <a href="{{ url_for('reviews') }}#{{ casino.name|lower|replace(' ', '-') }}" class="related-casino-review-link">{{ casino.name }} Review</a>
                         </div>
+                        
+                        <div class="related-casino-bonus">
+                            <span class="related-casino-bonus-amount">{{ casino.bonus_description.split(':')[0] if ':' in casino.bonus_description else casino.bonus_description }}</span>
+                            {% if ':' in casino.bonus_description %}
+                            <span class="related-casino-bonus-details">{{ casino.bonus_description.split(':', 1)[1] }}</span>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="related-casino-buttons">
+                            <a href="{{ casino.url }}" class="related-casino-visit-btn" target="_blank">Visit Casino</a>
+                        </div>
+                        
+                        <div class="related-casino-terms">T&Cs Apply, 18+</div>
                     </div>
-                </div>
+                </li>
                 {% endfor %}
-            </div>
+            </ul>
         </div>
     </div>
 </section>
