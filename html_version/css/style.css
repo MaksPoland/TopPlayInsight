@@ -1407,7 +1407,7 @@ textarea.form-control {
 /* Платежные методы */
 .payment-methods {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-top: 15px;
     padding: 10px;
     background-color: #f9f9f9;
