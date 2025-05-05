@@ -23,19 +23,35 @@
             <p>Our experts thoroughly review and rank the best casino sites based on game selection, bonuses, payment methods, customer support, and safety measures.</p>
         </div>
         
-        <!-- Casino Filter Options -->
-        <div class="casino-filters mb-4">
-            <div class="filters-container">
-                <div class="filters-scroll-wrapper">
-                    <div class="filter-badges">
-                        <span class="filter-badge active">All Casinos</span>
-                        <span class="filter-badge">New Casinos</span>
-                        <span class="filter-badge">Featured Casinos</span>
-                        <span class="filter-badge">Best Bonus</span>
-                        <span class="filter-badge">Fast Payouts</span>
-                        <span class="filter-badge">Live Dealer</span>
+        <!-- Table of Contents Navigation -->
+        <div class="toc-section mb-4">
+            <h2 class="toc-title">Table of Contents</h2>
+            <div class="toc-nav-container">
+                <div class="toc-tabs-wrapper">
+                    <div class="toc-tabs">
+                        <a href="#best-casinos" class="toc-tab active">
+                            <span class="toc-icon">⭐</span> Best Online Casinos
+                        </a>
+                        <a href="#casino-categories" class="toc-tab">
+                            <span class="toc-icon">🏅</span> Casinos by Category
+                        </a>
+                        <a href="#new-casinos" class="toc-tab">
+                            <span class="toc-icon">🆕</span> New Casinos
+                        </a>
+                        <a href="#bonuses" class="toc-tab">
+                            <span class="toc-icon">🎁</span> Best Bonuses
+                        </a>
                     </div>
                 </div>
+                <div class="toc-progress">
+                    <div class="toc-progress-bar"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Casino Filter Options (Hidden by default, shown when needed) -->
+        <div class="casino-filters mb-4" style="display:none;">
+            <div class="filters-container">
                 <div class="sort-dropdown">
                     <select class="form-select">
                         <option selected>Sort By: Recommended</option>
@@ -49,76 +65,256 @@
         
         <!-- Casino Listings -->
         <div class="casino-listings">
-            {% for casino in all_casinos %}
-            <div class="casino-list-item {% if casino.is_new %}new-casino{% endif %} {% if casino.is_featured %}featured-casino{% endif %}">
-                <div class="row align-items-center">
-                    <div class="col-lg-1 col-md-2 text-center ranking">
-                        <div class="rank-number">{{ loop.index }}</div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 text-center">
-                        <img src="{{ casino.logo_url }}" alt="{{ casino.name }}" class="img-fluid casino-logo">
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <h3 class="casino-name">{{ casino.name }}</h3>
-                        <div class="rating mb-2">
-                            {% set full_stars = (casino.rating | int) %}
-                            {% set half_star = (casino.rating - full_stars) >= 0.5 %}
-                            
-                            {% for i in range(full_stars) %}
-                                <i class="fas fa-star star"></i>
-                            {% endfor %}
-                            
-                            {% if half_star %}
-                                <i class="fas fa-star-half-alt star"></i>
-                                {% set remaining_stars = 4 - full_stars %}
-                            {% else %}
-                                {% set remaining_stars = 5 - full_stars %}
-                            {% endif %}
-                            
-                            {% for i in range(remaining_stars) %}
-                                <i class="far fa-star star"></i>
-                            {% endfor %}
-                            
-                            <span class="ms-2">{{ casino.rating }}/5</span>
+            <!-- Best Online Casinos Section -->
+            <div id="best-casinos" class="content-section">
+                <h3 class="section-subheading mt-4 mb-3">Best Online Casinos</h3>
+                <p class="section-intro mb-4">Our experts have reviewed and ranked the top online casinos based on game variety, bonuses, security, and overall player experience.</p>
+                
+                {% set top_casinos = all_casinos|selectattr('is_featured', 'eq', true)|list %}
+                {% for casino in top_casinos[:3] %}
+                <div class="casino-list-item featured-casino">
+                    <div class="row align-items-center">
+                        <div class="col-lg-1 col-md-2 text-center ranking">
+                            <div class="rank-number">{{ loop.index }}</div>
                         </div>
-                        <div class="casino-features">
-                            {% if casino.is_new %}
-                                <span class="badge bg-success text-white me-1">New</span>
-                            {% endif %}
-                            {% if casino.is_featured %}
+                        <div class="col-lg-2 col-md-2 text-center">
+                            <img src="{{ casino.logo_url }}" alt="{{ casino.name }}" class="img-fluid casino-logo">
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <h3 class="casino-name">{{ casino.name }}</h3>
+                            <div class="rating mb-2">
+                                {% set full_stars = (casino.rating | int) %}
+                                {% set half_star = (casino.rating - full_stars) >= 0.5 %}
+                                
+                                {% for i in range(full_stars) %}
+                                    <i class="fas fa-star star"></i>
+                                {% endfor %}
+                                
+                                {% if half_star %}
+                                    <i class="fas fa-star-half-alt star"></i>
+                                    {% set remaining_stars = 4 - full_stars %}
+                                {% else %}
+                                    {% set remaining_stars = 5 - full_stars %}
+                                {% endif %}
+                                
+                                {% for i in range(remaining_stars) %}
+                                    <i class="far fa-star star"></i>
+                                {% endfor %}
+                                
+                                <span class="ms-2">{{ casino.rating }}/5</span>
+                            </div>
+                            <div class="casino-features">
                                 <span class="badge bg-warning text-dark me-1">Featured</span>
-                            {% endif %}
-                            {% if casino.min_deposit %}
-                                <span class="badge bg-light text-dark">Min Deposit: ${{ casino.min_deposit }}</span>
-                            {% endif %}
+                                {% if casino.min_deposit %}
+                                    <span class="badge bg-light text-dark">Min Deposit: ${{ casino.min_deposit }}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-2">
+                            <div class="bonus-info">
+                                <span class="bonus-label">Welcome Bonus</span>
+                                <h4 class="bonus-amount">{{ casino.bonus_description.split(':')[0] if ':' in casino.bonus_description else casino.bonus_description }}</h4>
+                                <p class="bonus-details">{{ casino.bonus_description.split(':', 1)[1] if ':' in casino.bonus_description else '' }}</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 text-center">
+                            <div class="d-grid gap-2">
+                                <a href="{{ casino.url }}" class="btn btn-primary btn-lg visit-btn" target="_blank">Visit Casino</a>
+                                <a href="{{ url_for('reviews') }}" class="btn-link review-link">Read Full Review</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-2">
-                        <div class="bonus-info">
-                            <span class="bonus-label">Welcome Bonus</span>
-                            <h4 class="bonus-amount">{{ casino.bonus_description.split(':')[0] if ':' in casino.bonus_description else casino.bonus_description }}</h4>
-                            <p class="bonus-details">{{ casino.bonus_description.split(':', 1)[1] if ':' in casino.bonus_description else '' }}</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 text-center">
-                        <div class="d-grid gap-2">
-                            <a href="{{ casino.url }}" class="btn btn-primary btn-lg visit-btn" target="_blank">Visit Casino</a>
-                            <a href="{{ url_for('reviews') }}" class="btn-link review-link">Read Full Review</a>
+                    <div class="casino-highlights mt-3">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <p><strong>Why we recommend:</strong> {{ casino.description }}</p>
+                            </div>
+                            <div class="col-md-3 text-md-end">
+                                <p class="terms-note">T&Cs Apply, 18+</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="casino-highlights mt-3">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <p><strong>Why we recommend:</strong> {{ casino.description }}</p>
+                {% endfor %}
+            </div>
+            
+            <!-- Casino Categories Section -->
+            <div id="casino-categories" class="content-section">
+                <h3 class="section-subheading mt-5 mb-3">Casinos by Category</h3>
+                <p class="section-intro mb-4">Find the perfect casino based on your preferences and playing style.</p>
+                
+                <div class="categories-grid row">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="category-card">
+                            <h4><i class="fas fa-mobile-alt me-2"></i> Mobile Casinos</h4>
+                            <p>Perfect gaming experience on smartphones and tablets</p>
                         </div>
-                        <div class="col-md-3 text-md-end">
-                            <p class="terms-note">T&Cs Apply, 18+</p>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="category-card">
+                            <h4><i class="fas fa-money-bill-wave me-2"></i> High Payout Casinos</h4>
+                            <p>Casinos with the highest RTP percentages</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="category-card">
+                            <h4><i class="fas fa-user-tie me-2"></i> Live Dealer Casinos</h4>
+                            <p>Real-time gaming with professional dealers</p>
                         </div>
                     </div>
                 </div>
             </div>
-            {% endfor %}
+            
+            <!-- New Casinos Section -->
+            <div id="new-casinos" class="content-section">
+                <h3 class="section-subheading mt-5 mb-3">New Online Casinos</h3>
+                <p class="section-intro mb-4">Explore the latest additions to the online casino world, offering fresh gaming experiences and innovative features.</p>
+                
+                {% set new_casinos = all_casinos|selectattr('is_new', 'eq', true)|list %}
+                {% for casino in new_casinos[:3] %}
+                <div class="casino-list-item new-casino">
+                    <div class="row align-items-center">
+                        <div class="col-lg-1 col-md-2 text-center ranking">
+                            <div class="rank-number">{{ loop.index }}</div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 text-center">
+                            <img src="{{ casino.logo_url }}" alt="{{ casino.name }}" class="img-fluid casino-logo">
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <h3 class="casino-name">{{ casino.name }}</h3>
+                            <div class="rating mb-2">
+                                {% set full_stars = (casino.rating | int) %}
+                                {% set half_star = (casino.rating - full_stars) >= 0.5 %}
+                                
+                                {% for i in range(full_stars) %}
+                                    <i class="fas fa-star star"></i>
+                                {% endfor %}
+                                
+                                {% if half_star %}
+                                    <i class="fas fa-star-half-alt star"></i>
+                                    {% set remaining_stars = 4 - full_stars %}
+                                {% else %}
+                                    {% set remaining_stars = 5 - full_stars %}
+                                {% endif %}
+                                
+                                {% for i in range(remaining_stars) %}
+                                    <i class="far fa-star star"></i>
+                                {% endfor %}
+                                
+                                <span class="ms-2">{{ casino.rating }}/5</span>
+                            </div>
+                            <div class="casino-features">
+                                <span class="badge bg-success text-white me-1">New</span>
+                                {% if casino.min_deposit %}
+                                    <span class="badge bg-light text-dark">Min Deposit: ${{ casino.min_deposit }}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-2">
+                            <div class="bonus-info">
+                                <span class="bonus-label">Welcome Bonus</span>
+                                <h4 class="bonus-amount">{{ casino.bonus_description.split(':')[0] if ':' in casino.bonus_description else casino.bonus_description }}</h4>
+                                <p class="bonus-details">{{ casino.bonus_description.split(':', 1)[1] if ':' in casino.bonus_description else '' }}</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 text-center">
+                            <div class="d-grid gap-2">
+                                <a href="{{ casino.url }}" class="btn btn-primary btn-lg visit-btn" target="_blank">Visit Casino</a>
+                                <a href="{{ url_for('reviews') }}" class="btn-link review-link">Read Full Review</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="casino-highlights mt-3">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <p><strong>Why we recommend:</strong> {{ casino.description }}</p>
+                            </div>
+                            <div class="col-md-3 text-md-end">
+                                <p class="terms-note">T&Cs Apply, 18+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <!-- Best Bonuses Section -->
+            <div id="bonuses" class="content-section">
+                <h3 class="section-subheading mt-5 mb-3">Best Casino Bonuses</h3>
+                <p class="section-intro mb-4">Find the most generous welcome offers and promotional bonuses to maximize your playing time and winning potential.</p>
+                
+                <!-- Show a mix of casinos, sorting by bonus value if possible -->
+                {% for casino in all_casinos[:3] %}
+                <div class="casino-list-item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-1 col-md-2 text-center ranking">
+                            <div class="rank-number">{{ loop.index }}</div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 text-center">
+                            <img src="{{ casino.logo_url }}" alt="{{ casino.name }}" class="img-fluid casino-logo">
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <h3 class="casino-name">{{ casino.name }}</h3>
+                            <div class="rating mb-2">
+                                {% set full_stars = (casino.rating | int) %}
+                                {% set half_star = (casino.rating - full_stars) >= 0.5 %}
+                                
+                                {% for i in range(full_stars) %}
+                                    <i class="fas fa-star star"></i>
+                                {% endfor %}
+                                
+                                {% if half_star %}
+                                    <i class="fas fa-star-half-alt star"></i>
+                                    {% set remaining_stars = 4 - full_stars %}
+                                {% else %}
+                                    {% set remaining_stars = 5 - full_stars %}
+                                {% endif %}
+                                
+                                {% for i in range(remaining_stars) %}
+                                    <i class="far fa-star star"></i>
+                                {% endfor %}
+                                
+                                <span class="ms-2">{{ casino.rating }}/5</span>
+                            </div>
+                            <div class="casino-features">
+                                {% if casino.is_new %}
+                                    <span class="badge bg-success text-white me-1">New</span>
+                                {% endif %}
+                                {% if casino.is_featured %}
+                                    <span class="badge bg-warning text-dark me-1">Featured</span>
+                                {% endif %}
+                                {% if casino.min_deposit %}
+                                    <span class="badge bg-light text-dark">Min Deposit: ${{ casino.min_deposit }}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-2">
+                            <div class="bonus-info">
+                                <span class="bonus-label">Welcome Bonus</span>
+                                <h4 class="bonus-amount">{{ casino.bonus_description.split(':')[0] if ':' in casino.bonus_description else casino.bonus_description }}</h4>
+                                <p class="bonus-details">{{ casino.bonus_description.split(':', 1)[1] if ':' in casino.bonus_description else '' }}</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 text-center">
+                            <div class="d-grid gap-2">
+                                <a href="{{ casino.url }}" class="btn btn-primary btn-lg visit-btn" target="_blank">Visit Casino</a>
+                                <a href="{{ url_for('reviews') }}" class="btn-link review-link">Read Full Review</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="casino-highlights mt-3">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <p><strong>Why we recommend:</strong> {{ casino.description }}</p>
+                            </div>
+                            <div class="col-md-3 text-md-end">
+                                <p class="terms-note">T&Cs Apply, 18+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
         
         <div class="text-center mt-4">

@@ -1,4 +1,51 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Table of Contents Functionality
+    const tocTabs = document.querySelectorAll('.toc-tab');
+    const progressBar = document.querySelector('.toc-progress-bar');
+    
+    if (tocTabs.length > 0 && progressBar) {
+        // Set initial active tab
+        const firstTab = tocTabs[0];
+        firstTab.classList.add('active');
+        
+        // Tab click handling
+        tocTabs.forEach((tab, index) => {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all tabs
+                tocTabs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Update progress bar based on tab index
+                const progressWidth = ((index + 1) / tocTabs.length) * 100;
+                progressBar.style.width = `${progressWidth}%`;
+                
+                // Optional: Scroll to section
+                const targetId = tab.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add ID anchors to the relevant sections if they don't exist
+        const sections = ['best-casinos', 'casino-categories', 'new-casinos', 'bonuses'];
+        sections.forEach(sectionId => {
+            if (!document.getElementById(sectionId)) {
+                const sectionContainer = document.createElement('div');
+                sectionContainer.id = sectionId;
+                document.querySelector('.casino-listings').prepend(sectionContainer);
+            }
+        });
+    }
+    
     // Mobile navigation toggle
     const navbarToggler = document.querySelector('.navbar-toggler');
     if (navbarToggler) {
