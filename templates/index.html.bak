@@ -112,7 +112,16 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-2">
-                            {{ render_bonus_card(casino) }}
+                            <div class="bonus-card">
+                                <div class="bonus-main">
+                                    {{ casino.main_bonus }}
+                                </div>
+                                {% if casino.extra_bonus %}
+                                <div class="bonus-extra">
+                                    + {{ casino.extra_bonus }}
+                                </div>
+                                {% endif %}
+                            </div>
                         </div>
                         <div class="col-lg-3 col-md-3 text-center">
                             <div class="d-grid gap-2">
@@ -208,7 +217,16 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-2">
-                            {{ render_bonus_card(casino) }}
+                            <div class="bonus-card">
+                                <div class="bonus-main">
+                                    {{ casino.main_bonus }}
+                                </div>
+                                {% if casino.extra_bonus %}
+                                <div class="bonus-extra">
+                                    + {{ casino.extra_bonus }}
+                                </div>
+                                {% endif %}
+                            </div>
                         </div>
                         <div class="col-lg-3 col-md-3 text-center">
                             <div class="d-grid gap-2">
@@ -282,22 +300,21 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-2">
-                            {{ render_bonus_card(casino) }}
+                            <div class="bonus-card">
+                                <div class="bonus-main">
+                                    {{ casino.main_bonus }}
+                                </div>
+                                {% if casino.extra_bonus %}
+                                <div class="bonus-extra">
+                                    + {{ casino.extra_bonus }}
+                                </div>
+                                {% endif %}
+                            </div>
                         </div>
                         <div class="col-lg-3 col-md-3 text-center">
                             <div class="d-grid gap-2">
                                 <a href="{{ casino.url }}" class="btn btn-primary btn-lg visit-btn" target="_blank">Visit Casino</a>
                                 <a href="{{ url_for('reviews') }}" class="btn-link review-link">Read Full Review</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="casino-highlights mt-3">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <p><strong>Why we recommend:</strong> {{ casino.description }}</p>
-                            </div>
-                            <div class="col-md-3 text-md-end">
-                                <p class="terms-note">T&Cs Apply, 18+</p>
                             </div>
                         </div>
                     </div>
@@ -308,25 +325,111 @@
     </div>
 </section>
 
-<!-- Tips & Articles Section -->
-<section class="articles-section">
+<!-- Gaming Tips Section -->
+<section class="gaming-tips-section pt-60 pb-60 bg-light-gray">
     <div class="container">
         <div class="section-header">
-            <h2>Latest Casino Tips & Guides</h2>
-            <p>Stay informed with our latest articles and guides on online gambling strategies, tips, and industry news.</p>
+            <h2>Expert Gaming Tips</h2>
+            <p>Enhance your casino experience with expert strategies and insights from our team of experienced gamblers.</p>
         </div>
         
-        <div class="row">
-            {% for tip in tips[:3] %}
-            <div class="col-md-4">
-                <div class="article-item">
-                    <h3 class="article-title">{{ tip.title }}</h3>
-                    <p class="article-date">{{ tip.published_date.strftime('%B %d, %Y') }}</p>
-                    <p>{{ tip.content[:150] }}...</p>
-                    <a href="{{ url_for('tips') }}" class="btn btn-outline-primary btn-sm">Read More</a>
+        <div class="tips-container row mt-4">
+            {% if tips %}
+                {% for tip in tips[:3] %}
+                <div class="col-md-4 mb-4">
+                    <div class="tip-card">
+                        <h3>{{ tip.title }}</h3>
+                        <p class="tip-date">{{ tip.published_date.strftime('%B %d, %Y') }}</p>
+                        <p>{{ tip.content|truncate(120) }}</p>
+                        <a href="{{ url_for('tips') }}" class="btn btn-outline-primary btn-sm mt-2">Read More</a>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-12 text-center">
+                    <p>No gaming tips available at the moment. Check back soon!</p>
+                </div>
+            {% endif %}
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{{ url_for('tips') }}" class="btn btn-primary">View All Tips</a>
+        </div>
+    </div>
+</section>
+
+<!-- Responsible Gaming Section -->
+<section class="responsible-gaming-section pt-60 pb-60">
+    <div class="container">
+        <div class="section-header">
+            <h2>Responsible Gaming</h2>
+            <p>At TopPlayInsight, we believe in promoting safe and responsible gambling practices. Learn how to keep your gaming experience enjoyable and under control.</p>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-md-4 mb-4">
+                <div class="responsible-gaming-tip">
+                    <h4 class="tip-title">Set Limits</h4>
+                    <p>Establish time and money limits before you start playing and strictly adhere to them.</p>
                 </div>
             </div>
-            {% endfor %}
+            <div class="col-md-4 mb-4">
+                <div class="responsible-gaming-tip">
+                    <h4 class="tip-title">Avoid Chasing Losses</h4>
+                    <p>Accept losses as part of the experience and never try to win back what you've lost.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="responsible-gaming-tip">
+                    <h4 class="tip-title">Know the Rules</h4>
+                    <p>Understand the rules and odds of the games you play to make informed decisions.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{{ url_for('responsible_gaming') }}" class="btn btn-primary">Learn More About Responsible Gaming</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section class="about-section pt-60 pb-60 bg-light-gray">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2>About TopPlayInsight</h2>
+                <p>TopPlayInsight is dedicated to providing unbiased and comprehensive reviews of online casinos. Our team of experts thoroughly evaluates each casino based on a strict set of criteria to ensure we only recommend trusted and high-quality gaming sites.</p>
+                <p>Our mission is to empower players with accurate information, enabling them to make informed decisions when choosing an online casino.</p>
+                <div class="mt-4">
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline-primary">Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-features">
+                    <div class="about-feature">
+                        <i class="fas fa-check-circle feature-icon"></i>
+                        <div class="feature-content">
+                            <h4>In-Depth Reviews</h4>
+                            <p>Comprehensive casino evaluations covering all aspects of the gaming experience.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <i class="fas fa-user-shield feature-icon"></i>
+                        <div class="feature-content">
+                            <h4>Safety First</h4>
+                            <p>We only recommend licensed casinos with strong security measures and fair gaming practices.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <i class="fas fa-gift feature-icon"></i>
+                        <div class="feature-content">
+                            <h4>Exclusive Bonuses</h4>
+                            <p>Access to special promotions and bonus offers at our recommended casinos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

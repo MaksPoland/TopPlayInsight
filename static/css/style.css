@@ -348,12 +348,14 @@ a:hover {
 
 /* Новый стиль бонусных блоков */
 .bonus-card {
-    border-radius: 16px;
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     margin-bottom: 5px;
-    border: 1px solid #dad750;
+    border: 1px solid #c0d151;
     font-family: Arial, sans-serif;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .bonus-main {
@@ -361,18 +363,21 @@ a:hover {
     text-align: center;
     padding: 14px 12px;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #111;
     line-height: 1.3;
+    border-left: 4px solid #7ab51d;
+    letter-spacing: -0.02em;
 }
 
 .bonus-extra {
-    background-color: #d8d760;
+    background-color: #d8de55;
     text-align: center;
     padding: 8px 12px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #222;
+    letter-spacing: -0.01em;
 }
 
 /* Старые стили для обратной совместимости */

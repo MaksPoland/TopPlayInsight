@@ -2,7 +2,8 @@
 <div class="bonus-card">
     <div class="bonus-main">
         {% set bonus_text = casino.bonus_description.split(':', 1)[1].strip() if ':' in casino.bonus_description else casino.bonus_description %}
-        {% set main_bonus = bonus_text.split('+')[0].strip() %}
+        {% set main_parts = bonus_text.split('+', 1) %}
+        {% set main_bonus = main_parts[0].strip() %}
         {{ main_bonus }}
     </div>
     {% if '+' in bonus_text %}
