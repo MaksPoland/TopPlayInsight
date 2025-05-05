@@ -171,6 +171,7 @@ a:hover {
     .mobile-button {
         margin-bottom: 0 !important;
     }
+    
 }
 
 /* Casino List Section */
@@ -197,15 +198,58 @@ a:hover {
 }
 
 .casino-filters {
-    padding: 15px;
-    background-color: var(--light-gray);
-    border-radius: 8px;
-    margin-bottom: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 16px;
 }
+
+.filters-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  background-color: white;
+  color: #000;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: background-color 0.2s ease, font-weight 0.2s ease;
+  white-space: nowrap;
+}
+
+.tab-btn.active {
+  font-weight: bold;
+  background-color: #fff8dc; /* светлая подсветка */
+}
+
+.tab-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.sort-dropdown select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: white;
+  color: #444;
+}
+
 
 .filter-badges {
     display: flex;
@@ -964,7 +1008,7 @@ footer {
 
 /* Utility Classes */
 .pt-60 {
-    padding-top: 60px;
+    padding-top: 0px;
 }
 
 .pb-60 {
@@ -1636,7 +1680,9 @@ textarea.form-control {
         max-width: 100%;
         box-sizing: border-box;
     }
-    
+    .casino-filters{
+        display: none;
+    }
     .navbar-nav {
         padding: 0 5px;
     }
@@ -2012,7 +2058,7 @@ textarea.form-control {
     }
     
     .hero {
-        padding: 40px 0;
+        padding: 10px 0;
     }
     
     /* Исправление мобильной адаптации рейтинга */
