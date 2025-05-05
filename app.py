@@ -24,17 +24,47 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
+# Utility function for processing bonus descriptions
+def process_casino_bonus(casino):
+    # Split the bonus description for display
+    bonus_desc = casino.bonus_description
+    bonus_text = bonus_desc.split(':', 1)[1].strip() if ':' in bonus_desc else bonus_desc
+    
+    # Set main bonus (everything before the + sign)
+    casino.main_bonus = bonus_text.split('+')[0].strip()
+    
+    # Set extra bonus (everything after the + sign if it exists)
+    if '+' in bonus_text:
+        casino.extra_bonus = bonus_text.split('+', 1)[1].strip()
+    else:
+        casino.extra_bonus = None
+    
+    return casino
+
 # Routes
 @app.route('/')
 def index():
     featured_casinos = Casino.query.filter_by(is_featured=True).all()
     new_casinos = Casino.query.filter_by(is_new=True).all()
     all_casinos = Casino.query.all()
+    
+    # Process all casino bonus descriptions
+    for casino in featured_casinos:
+        process_casino_bonus(casino)
+    
+    for casino in new_casinos:
+        process_casino_bonus(casino)
+        
+    for casino in all_casinos:
+        process_casino_bonus(casino)
+    
+    tips = Tip.query.order_by(Tip.published_date.desc()).all()
     return render_template('index.html', 
                           active_page='home',
                           featured_casinos=featured_casinos,
                           new_casinos=new_casinos,
-                          all_casinos=all_casinos)
+                          all_casinos=all_casinos,
+                          tips=tips)
 
 @app.route('/reviews')
 def reviews():
