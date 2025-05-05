@@ -143,15 +143,66 @@ a:hover {
     margin-bottom: 25px;
 }
 
-.filter-badges .badge {
-    font-size: 0.9rem;
-    padding: 8px 15px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+/* Scrollable Filter Styles */
+.filters-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
 }
 
-.filter-badges .badge:hover {
-    opacity: 0.9;
+.filters-scroll-wrapper {
+    flex: 1;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    margin-right: 15px;
+}
+
+.filters-scroll-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+.filter-badges {
+    display: flex;
+    white-space: nowrap;
+    padding-bottom: 5px;
+}
+
+.filter-badge {
+    display: inline-block;
+    font-size: 0.95rem;
+    padding: 8px 20px;
+    margin-right: 10px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid #e5e5e5;
+    font-weight: 500;
+}
+
+.filter-badge:last-child {
+    margin-right: 5px;
+}
+
+.filter-badge:hover {
+    background-color: #f0f0f0;
+}
+
+.filter-badge.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.sort-dropdown {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 200px;
 }
 
 .casino-list-item {
@@ -462,6 +513,23 @@ footer {
         margin-bottom: 30px;
     }
     
+    /* Filter styles for medium screens */
+    .filters-container {
+        flex-direction: column;
+        padding: 12px;
+    }
+    
+    .filters-scroll-wrapper {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .sort-dropdown {
+        width: 100%;
+        max-width: 100%;
+    }
+    
     /* Mobile responsive for casino list items */
     .casino-list-item {
         padding: 15px;
@@ -490,5 +558,18 @@ footer {
     .terms-note {
         text-align: center;
         margin-top: 10px;
+    }
+}
+
+/* Extra small devices (phones, 576px and down) */
+@media (max-width: 576px) {
+    .filters-container {
+        padding: 10px;
+    }
+    
+    .filter-badge {
+        font-size: 0.85rem;
+        padding: 7px 15px;
+        margin-right: 8px;
     }
 }
