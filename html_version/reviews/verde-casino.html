@@ -244,6 +244,225 @@
             margin-right: 10px;
         }
         
+        /* User Reviews Styles */
+        .user-reviews-section {
+            margin: 50px 0;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        
+        .user-reviews-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .user-reviews-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .reviews-container {
+            margin-bottom: 30px;
+        }
+        
+        .review-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .reviewer-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .reviewer-name {
+            font-weight: 600;
+        }
+        
+        .review-date {
+            color: #888;
+            font-size: 0.85rem;
+        }
+        
+        .review-rating {
+            display: flex;
+            align-items: center;
+        }
+        
+        .review-content {
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+        
+        .review-pros-cons {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .review-pros, .review-cons {
+            flex: 1;
+            min-width: 200px;
+            margin-top: 10px;
+        }
+        
+        .review-pros h4, .review-cons h4 {
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .review-pros h4 i {
+            color: var(--primary-color);
+            margin-right: 5px;
+        }
+        
+        .review-cons h4 i {
+            color: #d32f2f;
+            margin-right: 5px;
+        }
+        
+        .review-pros ul, .review-cons ul {
+            margin: 0;
+            padding-left: 25px;
+            font-size: 0.9rem;
+        }
+        
+        /* Review Form Styles */
+        .review-form-container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .review-form-header {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .review-form-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .review-form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .rating-selector {
+            display: flex;
+            align-items: center;
+        }
+        
+        .rating-selector .star-rating {
+            margin-left: 15px;
+        }
+        
+        .star-rating i {
+            color: #ddd;
+            font-size: 1.3rem;
+            cursor: pointer;
+            margin-right: 5px;
+            transition: all 0.2s ease;
+        }
+        
+        .star-rating i:hover,
+        .star-rating i.active {
+            color: #FFC107;
+        }
+        
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+        }
+        
+        .submit-btn:hover {
+            background-color: #1b5e20;
+            transform: translateY(-2px);
+        }
+        
+        .required-field::after {
+            content: "*";
+            color: #d32f2f;
+            margin-left: 4px;
+        }
+        
+        .load-more-btn {
+            display: block;
+            margin: 20px auto;
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .load-more-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
         @media (max-width: 768px) {
             .key-info-item {
                 flex: 100%;
@@ -257,6 +476,19 @@
             
             .gallery-item {
                 max-width: 100%;
+            }
+            
+            .review-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .review-rating {
+                margin-top: 10px;
+            }
+            
+            .review-pros-cons {
+                flex-direction: column;
             }
         }
     </style>
@@ -519,6 +751,299 @@
                         <p>Join today and claim your welcome package of 120% up to €500 plus 200 free spins while supporting environmental initiatives.</p>
                         <a href="#" class="cta-btn">Visit Verde Casino <i class="fas fa-external-link-alt" style="margin-left: 10px;"></i></a>
                     </div>
+
+                    <!-- User Reviews Section -->
+                    <div class="user-reviews-section">
+                        <div class="user-reviews-header">
+                            <h2>Verde Casino User Reviews</h2>
+                            <p>Discover what players think about Verde Casino's eco-friendly approach and gaming experience</p>
+                        </div>
+                        
+                        <div class="reviews-container">
+                            <!-- Review 1 -->
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            AL
+                                        </div>
+                                        <div>
+                                            <div class="reviewer-name">Alex Lee</div>
+                                            <div class="review-date">March 12, 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>Verde Casino really impressed me with their eco-friendly approach - it's not just marketing, they actually follow through with their green initiatives. I received an email confirmation when a tree was planted after my registration, which was a nice touch. Beyond the environmental aspect, the casino itself is excellent - great game selection (particularly slots from Pragmatic Play and NetEnt), fast payouts, and the welcome bonus was easy to clear with reasonable wagering requirements. The interface is clean and intuitive, and I haven't experienced any technical issues in the three months I've been playing.</p>
+                                    <div class="review-pros-cons">
+                                        <div class="review-pros">
+                                            <h4><i class="fas fa-plus-circle"></i> What I like</h4>
+                                            <ul>
+                                                <li>Genuine environmental commitment</li>
+                                                <li>Excellent game selection</li>
+                                                <li>Fast withdrawal processing</li>
+                                                <li>User-friendly interface</li>
+                                            </ul>
+                                        </div>
+                                        <div class="review-cons">
+                                            <h4><i class="fas fa-minus-circle"></i> What could be better</h4>
+                                            <ul>
+                                                <li>Could offer more payment methods</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Review 2 -->
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            MB
+                                        </div>
+                                        <div>
+                                            <div class="reviewer-name">Maria Bianchi</div>
+                                            <div class="review-date">February 27, 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star-half-alt star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>As someone who's concerned about environmental issues, I was drawn to Verde Casino for their green approach, but I stayed for the quality gaming experience. Their live dealer games are excellent - professional dealers and smooth streaming even on my older iPad. The Green Loyalty Program is well-designed, with nice additional perks like carbon offset credits as you progress through levels. Customer support has been responsive when I had questions about withdrawals. My only minor complaint is that sometimes the site loads a bit slowly during peak hours.</p>
+                                    <div class="review-pros-cons">
+                                        <div class="review-pros">
+                                            <h4><i class="fas fa-plus-circle"></i> What I like</h4>
+                                            <ul>
+                                                <li>High-quality live dealer games</li>
+                                                <li>Unique Green Loyalty Program benefits</li>
+                                                <li>Helpful customer support</li>
+                                                <li>Good selection of eco-themed games</li>
+                                            </ul>
+                                        </div>
+                                        <div class="review-cons">
+                                            <h4><i class="fas fa-minus-circle"></i> What could be better</h4>
+                                            <ul>
+                                                <li>Occasional slow loading times</li>
+                                                <li>Limited cryptocurrency options</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Review 3 -->
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            JT
+                                        </div>
+                                        <div>
+                                            <div class="reviewer-name">Jack Thompson</div>
+                                            <div class="review-date">January 18, 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="far fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>Verde Casino offers a refreshing concept in the online gaming world with its environmental focus. The game selection is solid with over 2,000 titles, though I've found a few favorite games missing compared to some larger casinos. What really stands out is their transparency - they publish regular reports about their environmental initiatives and exactly how player funds contribute to these causes. The weekly cashback offer has been particularly valuable for me, and withdrawals to my e-wallet have always been processed within the promised timeframe.</p>
+                                    <div class="review-pros-cons">
+                                        <div class="review-pros">
+                                            <h4><i class="fas fa-plus-circle"></i> What I like</h4>
+                                            <ul>
+                                                <li>Transparent reporting on eco-initiatives</li>
+                                                <li>Reliable withdrawal processing</li>
+                                                <li>Good weekly cashback offers</li>
+                                                <li>Solid mobile experience</li>
+                                            </ul>
+                                        </div>
+                                        <div class="review-cons">
+                                            <h4><i class="fas fa-minus-circle"></i> What could be better</h4>
+                                            <ul>
+                                                <li>Missing some popular game titles</li>
+                                                <li>Could offer 24/7 live chat support</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Review 4 -->
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            KN
+                                        </div>
+                                        <div>
+                                            <div class="reviewer-name">Katrin Nielsen</div>
+                                            <div class="review-date">March 5, 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>I've been playing at Verde Casino for about six months now after switching from another platform, and I'm thoroughly impressed. Their eco-friendly approach initially caught my attention, but it's the overall quality of service that keeps me coming back. The 200 free spins from the welcome bonus were spread over 10 days, which I actually preferred to getting them all at once. The table games selection is diverse with multiple variants of blackjack and roulette. I particularly appreciate their responsible gaming tools - the deposit limits and reality checks are well-implemented and easy to adjust.</p>
+                                    <div class="review-pros-cons">
+                                        <div class="review-pros">
+                                            <h4><i class="fas fa-plus-circle"></i> What I like</h4>
+                                            <ul>
+                                                <li>Well-structured welcome bonus</li>
+                                                <li>Excellent table games variety</li>
+                                                <li>Strong responsible gaming features</li>
+                                                <li>Meaningful environmental initiatives</li>
+                                            </ul>
+                                        </div>
+                                        <div class="review-cons">
+                                            <h4><i class="fas fa-minus-circle"></i> What could be better</h4>
+                                            <ul>
+                                                <li>Tournament schedule could be more frequent</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Review 5 -->
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            DP
+                                        </div>
+                                        <div>
+                                            <div class="reviewer-name">David Peterson</div>
+                                            <div class="review-date">February 2, 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>Verde Casino has become my go-to gaming destination. Their eco-themed slots are uniquely enjoyable, especially "Amazon Rainforest" and "Green Energy." Beyond gaming, I value how they involve players in environmental decisions through quarterly surveys where players can vote on which green projects the casino should support next. The VIP program rewards loyalty with meaningful benefits, including higher withdrawal limits and personalized bonuses. The site design is clean and intuitive, making it easy to find games and access account features. Their mobile casino works flawlessly on my Android phone too.</p>
+                                    <div class="review-pros-cons">
+                                        <div class="review-pros">
+                                            <h4><i class="fas fa-plus-circle"></i> What I like</h4>
+                                            <ul>
+                                                <li>Unique eco-themed exclusive slots</li>
+                                                <li>Player involvement in environmental initiatives</li>
+                                                <li>Valuable VIP program benefits</li>
+                                                <li>Excellent mobile compatibility</li>
+                                            </ul>
+                                        </div>
+                                        <div class="review-cons">
+                                            <h4><i class="fas fa-minus-circle"></i> What could be better</h4>
+                                            <ul>
+                                                <li>Live casino could offer more game show titles</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Additional reviews can be added here -->
+                            
+                        </div>
+                        
+                        <button class="load-more-btn">Load More Reviews</button>
+                        
+                        <!-- Review Form -->
+                        <div class="review-form-container">
+                            <div class="review-form-header">
+                                <h3>Share Your Verde Casino Experience</h3>
+                                <p>Have you played at Verde Casino? Let the community know what you think!</p>
+                            </div>
+                            
+                            <form class="review-form">
+                                <div class="form-group">
+                                    <label for="reviewer-name" class="required-field">Your Name</label>
+                                    <input type="text" id="reviewer-name" class="form-control" placeholder="Enter your name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="reviewer-email" class="required-field">Email Address</label>
+                                    <input type="email" id="reviewer-email" class="form-control" placeholder="Enter your email (will not be published)" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="required-field">Your Rating</label>
+                                    <div class="rating-selector">
+                                        <div class="star-rating">
+                                            <i class="far fa-star" data-rating="1"></i>
+                                            <i class="far fa-star" data-rating="2"></i>
+                                            <i class="far fa-star" data-rating="3"></i>
+                                            <i class="far fa-star" data-rating="4"></i>
+                                            <i class="far fa-star" data-rating="5"></i>
+                                        </div>
+                                        <input type="hidden" id="rating-value" value="0" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="review-title" class="required-field">Review Title</label>
+                                    <input type="text" id="review-title" class="form-control" placeholder="Summarize your experience" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="review-content" class="required-field">Your Review</label>
+                                    <textarea id="review-content" class="form-control" placeholder="Share your experience with Verde Casino..." required></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="review-pros">What did you like?</label>
+                                    <textarea id="review-pros" class="form-control" placeholder="List the positives (optional)"></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="review-cons">What could be improved?</label>
+                                    <textarea id="review-cons" class="form-control" placeholder="List any negatives (optional)"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="submit-btn">Submit Review</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -555,5 +1080,104 @@
     </footer>
 
     <script src="../js/script.js"></script>
+    <script>
+        // Star rating functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const stars = document.querySelectorAll('.star-rating i');
+            const ratingInput = document.getElementById('rating-value');
+            
+            // Set initial stars on page load if there's a value
+            if(ratingInput && ratingInput.value > 0) {
+                highlightStars(ratingInput.value);
+            }
+            
+            // Add click event to stars
+            stars.forEach(star => {
+                star.addEventListener('click', function() {
+                    const rating = this.getAttribute('data-rating');
+                    ratingInput.value = rating;
+                    highlightStars(rating);
+                });
+                
+                // Hover effects
+                star.addEventListener('mouseover', function() {
+                    const rating = this.getAttribute('data-rating');
+                    clearStars();
+                    highlightStarsTemporarily(rating);
+                });
+                
+                star.addEventListener('mouseout', function() {
+                    clearStars();
+                    if(ratingInput.value > 0) {
+                        highlightStars(ratingInput.value);
+                    }
+                });
+            });
+            
+            // Function to highlight stars permanently (after click)
+            function highlightStars(rating) {
+                clearStars();
+                for(let i = 0; i < stars.length; i++) {
+                    const starRating = stars[i].getAttribute('data-rating');
+                    if(starRating <= rating) {
+                        stars[i].classList.remove('far');
+                        stars[i].classList.add('fas');
+                        stars[i].classList.add('active');
+                    }
+                }
+            }
+            
+            // Function to highlight stars temporarily (on hover)
+            function highlightStarsTemporarily(rating) {
+                for(let i = 0; i < stars.length; i++) {
+                    const starRating = stars[i].getAttribute('data-rating');
+                    if(starRating <= rating) {
+                        stars[i].classList.remove('far');
+                        stars[i].classList.add('fas');
+                    }
+                }
+            }
+            
+            // Function to reset stars
+            function clearStars() {
+                stars.forEach(star => {
+                    star.classList.remove('fas', 'active');
+                    star.classList.add('far');
+                });
+            }
+            
+            // Load more reviews button functionality
+            const loadMoreButton = document.querySelector('.load-more-btn');
+            if(loadMoreButton) {
+                loadMoreButton.addEventListener('click', function() {
+                    // In a real implementation, this would load more reviews from the server
+                    // For now, we'll just display a message
+                    this.textContent = 'No more reviews to load';
+                    this.disabled = true;
+                    setTimeout(() => {
+                        this.textContent = 'Load More Reviews';
+                        this.disabled = false;
+                    }, 3000);
+                });
+            }
+            
+            // Form submission (prevent default for this demo)
+            const reviewForm = document.querySelector('.review-form');
+            if(reviewForm) {
+                reviewForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // In a real implementation, this would submit the form data
+                    // For now, just show an alert
+                    alert('Thank you for your review! It will be published after moderation.');
+                    
+                    // Reset form
+                    this.reset();
+                    clearStars();
+                    ratingInput.value = 0;
+                });
+            }
+        });
+    </script>
 </body>
 </html>

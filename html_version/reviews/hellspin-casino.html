@@ -244,6 +244,225 @@
             margin-right: 10px;
         }
         
+        /* User Reviews Styles */
+        .user-reviews-section {
+            margin: 50px 0;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        
+        .user-reviews-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .user-reviews-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .reviews-container {
+            margin-bottom: 30px;
+        }
+        
+        .review-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .reviewer-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .reviewer-name {
+            font-weight: 600;
+        }
+        
+        .review-date {
+            color: #888;
+            font-size: 0.85rem;
+        }
+        
+        .review-rating {
+            display: flex;
+            align-items: center;
+        }
+        
+        .review-content {
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+        
+        .review-pros-cons {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .review-pros, .review-cons {
+            flex: 1;
+            min-width: 200px;
+            margin-top: 10px;
+        }
+        
+        .review-pros h4, .review-cons h4 {
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .review-pros h4 i {
+            color: var(--primary-color);
+            margin-right: 5px;
+        }
+        
+        .review-cons h4 i {
+            color: #d32f2f;
+            margin-right: 5px;
+        }
+        
+        .review-pros ul, .review-cons ul {
+            margin: 0;
+            padding-left: 25px;
+            font-size: 0.9rem;
+        }
+        
+        /* Review Form Styles */
+        .review-form-container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .review-form-header {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .review-form-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .review-form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .rating-selector {
+            display: flex;
+            align-items: center;
+        }
+        
+        .rating-selector .star-rating {
+            margin-left: 15px;
+        }
+        
+        .star-rating i {
+            color: #ddd;
+            font-size: 1.3rem;
+            cursor: pointer;
+            margin-right: 5px;
+            transition: all 0.2s ease;
+        }
+        
+        .star-rating i:hover,
+        .star-rating i.active {
+            color: #FFC107;
+        }
+        
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+        }
+        
+        .submit-btn:hover {
+            background-color: #1b5e20;
+            transform: translateY(-2px);
+        }
+        
+        .required-field::after {
+            content: "*";
+            color: #d32f2f;
+            margin-left: 4px;
+        }
+        
+        .load-more-btn {
+            display: block;
+            margin: 20px auto;
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .load-more-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
         @media (max-width: 768px) {
             .key-info-item {
                 flex: 100%;
@@ -257,6 +476,19 @@
             
             .gallery-item {
                 max-width: 100%;
+            }
+            
+            .review-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .review-rating {
+                margin-top: 10px;
+            }
+            
+            .review-pros-cons {
+                flex-direction: column;
             }
         }
     </style>
@@ -534,6 +766,305 @@
                         <p>Join today and claim your welcome package of 100% up to €400 plus 100 free spins and 10% cashback.</p>
                         <a href="#" class="cta-btn">Visit Hellspin Casino <i class="fas fa-external-link-alt" style="margin-left: 10px;"></i></a>
                     </div>
+
+                    <!-- User Reviews Section -->
+                    <div class="user-reviews-section">
+                        <div class="user-reviews-header">
+                            <h2>Hellspin Casino User Reviews</h2>
+                            <p>Discover what real players have to say about their experiences with Hellspin Casino</p>
+                        </div>
+                        
+                        <div class="reviews-container">
+                            <!-- Review 1 -->
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            DM
+                                        </div>
+                                        <div>
+                                            <div class="reviewer-name">Daniel Martinez</div>
+                                            <div class="review-date">March 20, 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="far fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>I was initially drawn to Hellspin because of its unique dark theme and extensive game library. After playing for about three months, I've found it to be a solid casino with some definite strengths. The game variety is excellent - I primarily play slots, and there are thousands to choose from with new titles added regularly. I particularly enjoy their weekly tournaments which add an extra layer of excitement. Withdrawals to my crypto wallet have been consistently fast (under 24 hours). The welcome bonus was generous, though I'd prefer to get all the free spins at once rather than spread over 10 days. Customer support has been responsive via live chat, though sometimes with a slight delay during busy periods.</p>
+                                    <div class="review-pros-cons">
+                                        <div class="review-pros">
+                                            <h4><i class="fas fa-plus-circle"></i> What I like</h4>
+                                            <ul>
+                                                <li>Distinctive theme and user interface</li>
+                                                <li>Excellent game selection from top providers</li>
+                                                <li>Fast cryptocurrency withdrawals</li>
+                                                <li>Engaging weekly tournaments</li>
+                                            </ul>
+                                        </div>
+                                        <div class="review-cons">
+                                            <h4><i class="fas fa-minus-circle"></i> What could be better</h4>
+                                            <ul>
+                                                <li>Free spins distributed over multiple days</li>
+                                                <li>Occasional customer support delays</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Review 2 -->
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            SK
+                                        </div>
+                                        <div>
+                                            <div class="reviewer-name">Sophie Klein</div>
+                                            <div class="review-date">February 11, 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>I've been playing at Hellspin Casino for over six months now, and it's become my favorite online casino. The dark theme perfectly matches my preferences - it's easier on the eyes during evening gaming sessions. The live dealer section is exceptional with professional dealers and multiple game variants. What really stands out is their VIP program - I'm currently at the Silver level, and the personalized bonuses and cashback offers provide genuine value. Withdrawals to my e-wallet are processed within hours, which is faster than most casinos I've tried. The mobile experience is seamless on my iPhone, with games loading quickly and running smoothly even with spotty internet connections.</p>
+                                    <div class="review-pros-cons">
+                                        <div class="review-pros">
+                                            <h4><i class="fas fa-plus-circle"></i> What I like</h4>
+                                            <ul>
+                                                <li>Eye-friendly dark interface</li>
+                                                <li>Outstanding live dealer games</li>
+                                                <li>Valuable VIP program benefits</li>
+                                                <li>Quick withdrawal processing</li>
+                                                <li>Excellent mobile optimization</li>
+                                            </ul>
+                                        </div>
+                                        <div class="review-cons">
+                                            <h4><i class="fas fa-minus-circle"></i> What could be better</h4>
+                                            <ul>
+                                                <li>Could offer phone support</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Review 3 -->
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            AR
+                                        </div>
+                                        <div>
+                                            <div class="reviewer-name">Adam Richards</div>
+                                            <div class="review-date">January 3, 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="far fa-star star"></i>
+                                            <i class="far fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>Hellspin has some good qualities but also several drawbacks from my experience. On the positive side, their game selection is extensive with over 2,500 titles from quality providers. I also appreciate their cryptocurrency support which makes transactions more private. However, I've encountered inconsistent customer service - sometimes very helpful, other times slow to respond or providing generic answers. The wagering requirements on bonuses (40x) are on the high side, making it difficult to convert bonus funds to real money. The dark theme looks cool at first but can make it challenging to find specific information or settings after extended play sessions. I've also experienced occasional technical glitches on certain games, though these were resolved after refreshing the page.</p>
+                                    <div class="review-pros-cons">
+                                        <div class="review-pros">
+                                            <h4><i class="fas fa-plus-circle"></i> What I like</h4>
+                                            <ul>
+                                                <li>Wide selection of quality games</li>
+                                                <li>Good cryptocurrency integration</li>
+                                                <li>Frequent promotions</li>
+                                            </ul>
+                                        </div>
+                                        <div class="review-cons">
+                                            <h4><i class="fas fa-minus-circle"></i> What could be better</h4>
+                                            <ul>
+                                                <li>Inconsistent customer service</li>
+                                                <li>High wagering requirements</li>
+                                                <li>Occasional technical issues</li>
+                                                <li>Dark theme can impair navigation</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Review 4 -->
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            NP
+                                        </div>
+                                        <div>
+                                            <div class="reviewer-name">Natalie Patel</div>
+                                            <div class="review-date">March 1, 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star-half-alt star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>As a regular table game player, I'm quite impressed with Hellspin's offering. Their blackjack and roulette selections include multiple variants with different betting limits to accommodate both casual players and those with larger bankrolls. The 10% cashback offer has been particularly valuable, especially during less fortunate sessions. The verification process was straightforward and completed within 24 hours, which is faster than many competitors. I appreciate the responsible gaming tools that make it easy to set deposit limits and take breaks when needed. The weekly reload bonuses provide consistent value, though they could improve by offering more table game-specific promotions rather than focusing primarily on slots.</p>
+                                    <div class="review-pros-cons">
+                                        <div class="review-pros">
+                                            <h4><i class="fas fa-plus-circle"></i> What I like</h4>
+                                            <ul>
+                                                <li>Excellent table game variety</li>
+                                                <li>Valuable cashback offer</li>
+                                                <li>Quick verification process</li>
+                                                <li>Comprehensive responsible gaming tools</li>
+                                                <li>Regular reload bonuses</li>
+                                            </ul>
+                                        </div>
+                                        <div class="review-cons">
+                                            <h4><i class="fas fa-minus-circle"></i> What could be better</h4>
+                                            <ul>
+                                                <li>Limited table game promotions</li>
+                                                <li>No VIP-exclusive games</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Review 5 -->
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            JP
+                                        </div>
+                                        <div>
+                                            <div class="reviewer-name">James Parker</div>
+                                            <div class="review-date">February 27, 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="far fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>I primarily play on my Android tablet, and Hellspin Casino provides one of the best mobile experiences I've found. Games load quickly and the interface adapts perfectly to the touch screen. Their game filters make it easy to find exactly what I'm looking for, whether it's a specific provider or game feature. The loyalty point accumulation feels fair, and I've managed to climb to the Gold VIP level within a few months of regular play. One feature I particularly appreciate is the detailed game information provided before you start playing, including RTP percentages and volatility. The only significant drawback is the limited payment options available in my region, though cryptocurrency deposits work well as an alternative.</p>
+                                    <div class="review-pros-cons">
+                                        <div class="review-pros">
+                                            <h4><i class="fas fa-plus-circle"></i> What I like</h4>
+                                            <ul>
+                                                <li>Superior mobile compatibility</li>
+                                                <li>Effective game filtering system</li>
+                                                <li>Fair VIP progression</li>
+                                                <li>Transparent game information</li>
+                                                <li>Reliable cryptocurrency processing</li>
+                                            </ul>
+                                        </div>
+                                        <div class="review-cons">
+                                            <h4><i class="fas fa-minus-circle"></i> What could be better</h4>
+                                            <ul>
+                                                <li>Limited regional payment options</li>
+                                                <li>Could offer a dedicated mobile app</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Additional reviews can be added here -->
+                            
+                        </div>
+                        
+                        <button class="load-more-btn">Load More Reviews</button>
+                        
+                        <!-- Review Form -->
+                        <div class="review-form-container">
+                            <div class="review-form-header">
+                                <h3>Share Your Hellspin Casino Experience</h3>
+                                <p>Have you played at Hellspin Casino? Let others know what you think!</p>
+                            </div>
+                            
+                            <form class="review-form">
+                                <div class="form-group">
+                                    <label for="reviewer-name" class="required-field">Your Name</label>
+                                    <input type="text" id="reviewer-name" class="form-control" placeholder="Enter your name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="reviewer-email" class="required-field">Email Address</label>
+                                    <input type="email" id="reviewer-email" class="form-control" placeholder="Enter your email (will not be published)" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="required-field">Your Rating</label>
+                                    <div class="rating-selector">
+                                        <div class="star-rating">
+                                            <i class="far fa-star" data-rating="1"></i>
+                                            <i class="far fa-star" data-rating="2"></i>
+                                            <i class="far fa-star" data-rating="3"></i>
+                                            <i class="far fa-star" data-rating="4"></i>
+                                            <i class="far fa-star" data-rating="5"></i>
+                                        </div>
+                                        <input type="hidden" id="rating-value" value="0" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="review-title" class="required-field">Review Title</label>
+                                    <input type="text" id="review-title" class="form-control" placeholder="Summarize your experience" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="review-content" class="required-field">Your Review</label>
+                                    <textarea id="review-content" class="form-control" placeholder="Share your experience with Hellspin Casino..." required></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="review-pros">What did you like?</label>
+                                    <textarea id="review-pros" class="form-control" placeholder="List the positives (optional)"></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="review-cons">What could be improved?</label>
+                                    <textarea id="review-cons" class="form-control" placeholder="List any negatives (optional)"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="submit-btn">Submit Review</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -570,5 +1101,104 @@
     </footer>
 
     <script src="../js/script.js"></script>
+    <script>
+        // Star rating functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const stars = document.querySelectorAll('.star-rating i');
+            const ratingInput = document.getElementById('rating-value');
+            
+            // Set initial stars on page load if there's a value
+            if(ratingInput && ratingInput.value > 0) {
+                highlightStars(ratingInput.value);
+            }
+            
+            // Add click event to stars
+            stars.forEach(star => {
+                star.addEventListener('click', function() {
+                    const rating = this.getAttribute('data-rating');
+                    ratingInput.value = rating;
+                    highlightStars(rating);
+                });
+                
+                // Hover effects
+                star.addEventListener('mouseover', function() {
+                    const rating = this.getAttribute('data-rating');
+                    clearStars();
+                    highlightStarsTemporarily(rating);
+                });
+                
+                star.addEventListener('mouseout', function() {
+                    clearStars();
+                    if(ratingInput.value > 0) {
+                        highlightStars(ratingInput.value);
+                    }
+                });
+            });
+            
+            // Function to highlight stars permanently (after click)
+            function highlightStars(rating) {
+                clearStars();
+                for(let i = 0; i < stars.length; i++) {
+                    const starRating = stars[i].getAttribute('data-rating');
+                    if(starRating <= rating) {
+                        stars[i].classList.remove('far');
+                        stars[i].classList.add('fas');
+                        stars[i].classList.add('active');
+                    }
+                }
+            }
+            
+            // Function to highlight stars temporarily (on hover)
+            function highlightStarsTemporarily(rating) {
+                for(let i = 0; i < stars.length; i++) {
+                    const starRating = stars[i].getAttribute('data-rating');
+                    if(starRating <= rating) {
+                        stars[i].classList.remove('far');
+                        stars[i].classList.add('fas');
+                    }
+                }
+            }
+            
+            // Function to reset stars
+            function clearStars() {
+                stars.forEach(star => {
+                    star.classList.remove('fas', 'active');
+                    star.classList.add('far');
+                });
+            }
+            
+            // Load more reviews button functionality
+            const loadMoreButton = document.querySelector('.load-more-btn');
+            if(loadMoreButton) {
+                loadMoreButton.addEventListener('click', function() {
+                    // In a real implementation, this would load more reviews from the server
+                    // For now, we'll just display a message
+                    this.textContent = 'No more reviews to load';
+                    this.disabled = true;
+                    setTimeout(() => {
+                        this.textContent = 'Load More Reviews';
+                        this.disabled = false;
+                    }, 3000);
+                });
+            }
+            
+            // Form submission (prevent default for this demo)
+            const reviewForm = document.querySelector('.review-form');
+            if(reviewForm) {
+                reviewForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // In a real implementation, this would submit the form data
+                    // For now, just show an alert
+                    alert('Thank you for your review! It will be published after moderation.');
+                    
+                    // Reset form
+                    this.reset();
+                    clearStars();
+                    ratingInput.value = 0;
+                });
+            }
+        });
+    </script>
 </body>
 </html>

@@ -244,6 +244,225 @@
             margin-right: 10px;
         }
         
+        /* User Reviews Styles */
+        .user-reviews-section {
+            margin: 50px 0;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        
+        .user-reviews-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .user-reviews-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .reviews-container {
+            margin-bottom: 30px;
+        }
+        
+        .review-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .reviewer-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .reviewer-name {
+            font-weight: 600;
+        }
+        
+        .review-date {
+            color: #888;
+            font-size: 0.85rem;
+        }
+        
+        .review-rating {
+            display: flex;
+            align-items: center;
+        }
+        
+        .review-content {
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+        
+        .review-pros-cons {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .review-pros, .review-cons {
+            flex: 1;
+            min-width: 200px;
+            margin-top: 10px;
+        }
+        
+        .review-pros h4, .review-cons h4 {
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .review-pros h4 i {
+            color: var(--primary-color);
+            margin-right: 5px;
+        }
+        
+        .review-cons h4 i {
+            color: #d32f2f;
+            margin-right: 5px;
+        }
+        
+        .review-pros ul, .review-cons ul {
+            margin: 0;
+            padding-left: 25px;
+            font-size: 0.9rem;
+        }
+        
+        /* Review Form Styles */
+        .review-form-container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .review-form-header {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .review-form-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .review-form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .rating-selector {
+            display: flex;
+            align-items: center;
+        }
+        
+        .rating-selector .star-rating {
+            margin-left: 15px;
+        }
+        
+        .star-rating i {
+            color: #ddd;
+            font-size: 1.3rem;
+            cursor: pointer;
+            margin-right: 5px;
+            transition: all 0.2s ease;
+        }
+        
+        .star-rating i:hover,
+        .star-rating i.active {
+            color: #FFC107;
+        }
+        
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+        }
+        
+        .submit-btn:hover {
+            background-color: #1b5e20;
+            transform: translateY(-2px);
+        }
+        
+        .required-field::after {
+            content: "*";
+            color: #d32f2f;
+            margin-left: 4px;
+        }
+        
+        .load-more-btn {
+            display: block;
+            margin: 20px auto;
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .load-more-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
         @media (max-width: 768px) {
             .key-info-item {
                 flex: 100%;
@@ -257,6 +476,19 @@
             
             .gallery-item {
                 max-width: 100%;
+            }
+            
+            .review-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .review-rating {
+                margin-top: 10px;
+            }
+            
+            .review-pros-cons {
+                flex-direction: column;
             }
         }
     </style>
@@ -525,6 +757,303 @@
                         <p>Join Mad Casino today and claim your welcome bonus of 100% up to €250 plus 50 free spins.</p>
                         <a href="#" class="cta-btn">Visit Mad Casino <i class="fas fa-external-link-alt" style="margin-left: 10px;"></i></a>
                     </div>
+
+                    <!-- User Reviews Section -->
+                    <div class="user-reviews-section">
+                        <div class="user-reviews-header">
+                            <h2>Mad Casino User Reviews</h2>
+                            <p>Discover what players have to say about their quirky experiences at Mad Casino</p>
+                        </div>
+                        
+                        <div class="reviews-container">
+                            <!-- Review 1 -->
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            TW
+                                        </div>
+                                        <div>
+                                            <div class="reviewer-name">Tom Wilson</div>
+                                            <div class="review-date">February 19, 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>The quirky theme of Mad Casino is what initially caught my attention - it's a refreshing change from the typical serious casino sites. I've been playing here for about four months, and the experience has been consistently enjoyable. The humor throughout the site keeps things fun, but they don't compromise on functionality. Game selection is solid, though not as extensive as some larger casinos. I mainly play slots, and they have a good variety of themes and features. Withdrawals have been processed within the advertised timeframe each time (usually about 2 days to my e-wallet). Customer support has been helpful when I had questions about a promotion.</p>
+                                    <div class="review-pros-cons">
+                                        <div class="review-pros">
+                                            <h4><i class="fas fa-plus-circle"></i> What I like</h4>
+                                            <ul>
+                                                <li>Unique and entertaining theme</li>
+                                                <li>Good selection of quality slots</li>
+                                                <li>Reliable withdrawal processing</li>
+                                                <li>Fun promotions that match the theme</li>
+                                            </ul>
+                                        </div>
+                                        <div class="review-cons">
+                                            <h4><i class="fas fa-minus-circle"></i> What could be better</h4>
+                                            <ul>
+                                                <li>Could offer more table game variations</li>
+                                                <li>Live chat isn't available 24/7</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Review 2 -->
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            LS
+                                        </div>
+                                        <div>
+                                            <div class="reviewer-name">Laura Schmidt</div>
+                                            <div class="review-date">March 7, 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="far fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>Mad Casino has a fun concept that carries through their whole site - I particularly enjoy their weekly "Madness" promotions that offer unusual bonuses and challenges. The casino runs smoothly on my phone, which is important since I rarely play on desktop. Their game selection is decent with about 1800 titles, though I'd like to see more variety in their live dealer section. I appreciate the low minimum deposit of just €10, making it accessible for casual play. Withdrawals to my Visa took about 3 days, which is acceptable. The only significant downside is the 45x wagering requirement on bonuses, which is on the high side compared to other casinos I've used.</p>
+                                    <div class="review-pros-cons">
+                                        <div class="review-pros">
+                                            <h4><i class="fas fa-plus-circle"></i> What I like</h4>
+                                            <ul>
+                                                <li>Creative weekly promotions</li>
+                                                <li>Excellent mobile compatibility</li>
+                                                <li>Low minimum deposit</li>
+                                                <li>Entertaining user interface</li>
+                                            </ul>
+                                        </div>
+                                        <div class="review-cons">
+                                            <h4><i class="fas fa-minus-circle"></i> What could be better</h4>
+                                            <ul>
+                                                <li>High bonus wagering requirements</li>
+                                                <li>Limited live dealer game selection</li>
+                                                <li>Card withdrawals could be faster</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Review 3 -->
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            RJ
+                                        </div>
+                                        <div>
+                                            <div class="reviewer-name">Ryan Jones</div>
+                                            <div class="review-date">January 30, 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="far fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>I'm a fan of Mad Casino's unique personality - their error messages and loading screens even have amusing content that makes technical moments less frustrating. As a table game player, I find their blackjack and roulette selection adequate, though not exceptional. The "Mad Rewards" loyalty program is well-structured, with reasonable points accumulation rates and worthwhile benefits at each level. I especially appreciate their responsible gaming tools, which are comprehensive and easy to access. My only significant complaint is that their payment options are somewhat limited in my region, though the ones they do offer work reliably.</p>
+                                    <div class="review-pros-cons">
+                                        <div class="review-pros">
+                                            <h4><i class="fas fa-plus-circle"></i> What I like</h4>
+                                            <ul>
+                                                <li>Attention to detail in theme implementation</li>
+                                                <li>Solid table game basics</li>
+                                                <li>Rewarding loyalty program structure</li>
+                                                <li>Strong responsible gaming features</li>
+                                            </ul>
+                                        </div>
+                                        <div class="review-cons">
+                                            <h4><i class="fas fa-minus-circle"></i> What could be better</h4>
+                                            <ul>
+                                                <li>Limited payment methods for some regions</li>
+                                                <li>Could use more advanced table game variants</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Review 4 -->
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            MB
+                                        </div>
+                                        <div>
+                                            <div class="reviewer-name">Michael Blackwood</div>
+                                            <div class="review-date">February 3, 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="far fa-star star"></i>
+                                            <i class="far fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>Mad Casino has some good qualities, but there are definitely areas for improvement. The positive side includes their entertaining theme, good game quality from reputable providers, and intuitive site navigation. However, I've had mixed experiences with their customer support - sometimes responses take longer than I'd expect, especially outside peak hours. The game library, while decent, hasn't expanded much in the months I've been playing. Their bonus terms are somewhat restrictive with high wagering requirements and short validity periods. For casual play it's fine, but I've found better options for more serious gaming sessions.</p>
+                                    <div class="review-pros-cons">
+                                        <div class="review-pros">
+                                            <h4><i class="fas fa-plus-circle"></i> What I like</h4>
+                                            <ul>
+                                                <li>Quality games from good providers</li>
+                                                <li>Easy site navigation</li>
+                                                <li>Fun thematic elements</li>
+                                            </ul>
+                                        </div>
+                                        <div class="review-cons">
+                                            <h4><i class="fas fa-minus-circle"></i> What could be better</h4>
+                                            <ul>
+                                                <li>Inconsistent customer support</li>
+                                                <li>Slow game library expansion</li>
+                                                <li>Restrictive bonus terms</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Review 5 -->
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            EL
+                                        </div>
+                                        <div>
+                                            <div class="reviewer-name">Emma Lee</div>
+                                            <div class="review-date">March 15, 2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star-half-alt star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>I really enjoy the unique atmosphere at Mad Casino - it's different from any other online casino I've tried. Their exclusive "Mad Hatter" slot game is particularly fun with great graphics and entertaining bonus features. The welcome bonus was quite generous, though the wagering requirements meant I needed to play quite a bit before cashing out. E-wallet withdrawals were processed within 24 hours which is impressive. Their mobile site works perfectly on my Android phone with no issues even on older games. I'd like to see them add more payment options and perhaps develop a dedicated app in the future, but overall it's a solid choice with personality.</p>
+                                    <div class="review-pros-cons">
+                                        <div class="review-pros">
+                                            <h4><i class="fas fa-plus-circle"></i> What I like</h4>
+                                            <ul>
+                                                <li>Unique and consistent theme</li>
+                                                <li>Entertaining exclusive games</li>
+                                                <li>Fast e-wallet withdrawals</li>
+                                                <li>Good mobile optimization</li>
+                                            </ul>
+                                        </div>
+                                        <div class="review-cons">
+                                            <h4><i class="fas fa-minus-circle"></i> What could be better</h4>
+                                            <ul>
+                                                <li>Limited payment options</li>
+                                                <li>No dedicated mobile app</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Additional reviews can be added here -->
+                            
+                        </div>
+                        
+                        <button class="load-more-btn">Load More Reviews</button>
+                        
+                        <!-- Review Form -->
+                        <div class="review-form-container">
+                            <div class="review-form-header">
+                                <h3>Share Your Mad Casino Experience</h3>
+                                <p>Have you played at Mad Casino? Let others know what you think!</p>
+                            </div>
+                            
+                            <form class="review-form">
+                                <div class="form-group">
+                                    <label for="reviewer-name" class="required-field">Your Name</label>
+                                    <input type="text" id="reviewer-name" class="form-control" placeholder="Enter your name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="reviewer-email" class="required-field">Email Address</label>
+                                    <input type="email" id="reviewer-email" class="form-control" placeholder="Enter your email (will not be published)" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="required-field">Your Rating</label>
+                                    <div class="rating-selector">
+                                        <div class="star-rating">
+                                            <i class="far fa-star" data-rating="1"></i>
+                                            <i class="far fa-star" data-rating="2"></i>
+                                            <i class="far fa-star" data-rating="3"></i>
+                                            <i class="far fa-star" data-rating="4"></i>
+                                            <i class="far fa-star" data-rating="5"></i>
+                                        </div>
+                                        <input type="hidden" id="rating-value" value="0" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="review-title" class="required-field">Review Title</label>
+                                    <input type="text" id="review-title" class="form-control" placeholder="Summarize your experience" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="review-content" class="required-field">Your Review</label>
+                                    <textarea id="review-content" class="form-control" placeholder="Share your experience with Mad Casino..." required></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="review-pros">What did you like?</label>
+                                    <textarea id="review-pros" class="form-control" placeholder="List the positives (optional)"></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="review-cons">What could be improved?</label>
+                                    <textarea id="review-cons" class="form-control" placeholder="List any negatives (optional)"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="submit-btn">Submit Review</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -561,5 +1090,104 @@
     </footer>
 
     <script src="../js/script.js"></script>
+    <script>
+        // Star rating functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const stars = document.querySelectorAll('.star-rating i');
+            const ratingInput = document.getElementById('rating-value');
+            
+            // Set initial stars on page load if there's a value
+            if(ratingInput && ratingInput.value > 0) {
+                highlightStars(ratingInput.value);
+            }
+            
+            // Add click event to stars
+            stars.forEach(star => {
+                star.addEventListener('click', function() {
+                    const rating = this.getAttribute('data-rating');
+                    ratingInput.value = rating;
+                    highlightStars(rating);
+                });
+                
+                // Hover effects
+                star.addEventListener('mouseover', function() {
+                    const rating = this.getAttribute('data-rating');
+                    clearStars();
+                    highlightStarsTemporarily(rating);
+                });
+                
+                star.addEventListener('mouseout', function() {
+                    clearStars();
+                    if(ratingInput.value > 0) {
+                        highlightStars(ratingInput.value);
+                    }
+                });
+            });
+            
+            // Function to highlight stars permanently (after click)
+            function highlightStars(rating) {
+                clearStars();
+                for(let i = 0; i < stars.length; i++) {
+                    const starRating = stars[i].getAttribute('data-rating');
+                    if(starRating <= rating) {
+                        stars[i].classList.remove('far');
+                        stars[i].classList.add('fas');
+                        stars[i].classList.add('active');
+                    }
+                }
+            }
+            
+            // Function to highlight stars temporarily (on hover)
+            function highlightStarsTemporarily(rating) {
+                for(let i = 0; i < stars.length; i++) {
+                    const starRating = stars[i].getAttribute('data-rating');
+                    if(starRating <= rating) {
+                        stars[i].classList.remove('far');
+                        stars[i].classList.add('fas');
+                    }
+                }
+            }
+            
+            // Function to reset stars
+            function clearStars() {
+                stars.forEach(star => {
+                    star.classList.remove('fas', 'active');
+                    star.classList.add('far');
+                });
+            }
+            
+            // Load more reviews button functionality
+            const loadMoreButton = document.querySelector('.load-more-btn');
+            if(loadMoreButton) {
+                loadMoreButton.addEventListener('click', function() {
+                    // In a real implementation, this would load more reviews from the server
+                    // For now, we'll just display a message
+                    this.textContent = 'No more reviews to load';
+                    this.disabled = true;
+                    setTimeout(() => {
+                        this.textContent = 'Load More Reviews';
+                        this.disabled = false;
+                    }, 3000);
+                });
+            }
+            
+            // Form submission (prevent default for this demo)
+            const reviewForm = document.querySelector('.review-form');
+            if(reviewForm) {
+                reviewForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // In a real implementation, this would submit the form data
+                    // For now, just show an alert
+                    alert('Thank you for your review! It will be published after moderation.');
+                    
+                    // Reset form
+                    this.reset();
+                    clearStars();
+                    ratingInput.value = 0;
+                });
+            }
+        });
+    </script>
 </body>
 </html>
