@@ -69,16 +69,16 @@
             </div>
         </div>
 
-        <!-- Featured Casino Review - Bizzo Casino -->
+        <!-- Featured Casino Review -->
         <div class="casino-list-item slots-casino live-dealer fast-payout">
             <div class="row">
                 <div class="col-lg-4 col-md-4">
                     <div class="casino-logo-container">
-                        <img src="images/midnite.svg" alt="Bizzo Casino" class="img-fluid" style="background-color: #8ded3f; padding: 10px;">
+                        <img src="images/royal-palace.svg" alt="Royal Palace Casino" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8">
-                    <h2 class="casino-name">Bizzo Casino Review: Premium Gaming Experience</h2>
+                    <h2 class="casino-name">Royal Palace Casino Review: Luxury Gaming Experience</h2>
                     <div class="mobile-rating-container d-none d-md-none d-sm-block">
                         <div class="ranking-label">Ranking</div>
                         <div class="rating mb-2">
@@ -86,8 +86,8 @@
                             <i class="fas fa-star star"></i>
                             <i class="fas fa-star star"></i>
                             <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <span class="ms-2">5.0 / 5</span>
+                            <i class="fas fa-star-half-alt star"></i>
+                            <span class="ms-2">4.8 / 5</span>
                         </div>
                     </div>
                    
@@ -95,47 +95,46 @@
                     <div class="casino-specs">
                         <div class="spec-item">
                             <span class="spec-label">Games</span>
-                            <span class="spec-value">3500+</span>
+                            <span class="spec-value">1650+</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Min Deposit</span>
-                            <span class="spec-value">€20</span>
+                            <span class="spec-value">$20</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Payout Speed</span>
                             <span class="spec-value">1-2 Days</span>
                         </div>
                         <div class="spec-item">
-                            <span class="spec-label">License</span>
-                            <span class="spec-value">Malta</span>
+                            <span class="spec-label">Win Rate</span>
+                            <span class="spec-value">96.5%</span>
                         </div>
                     </div>
                     
-                    <p>Bizzo Casino stands out for its impressive game library from top providers like NetEnt and Microgaming. Licensed by the Malta Gaming Authority, it offers a secure environment with fast withdrawals and excellent mobile compatibility. The site's clean design and intuitive interface make navigation effortless.</p>
+                    <p>Royal Palace Casino offers an exceptional gaming experience with a wide variety of games including slots, table games, and live dealer options. The customer service is outstanding, and the VIP program provides excellent benefits for loyal players.</p>
                     
                     <div class="row mt-4">
                         <div class="col-md-6">
                             <h3 class="mb-2">Pros</h3>
                             <ul>
-                                <li>Extensive game selection (3500+)</li>
-                                <li>Fast withdrawal processing</li>
-                                <li>Malta Gaming Authority license</li>
-                                <li>Excellent mobile compatibility</li>
+                                <li>Great game selection</li>
+                                <li>Fast payouts</li>
+                                <li>Excellent VIP program</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <h3 class="mb-2">Cons</h3>
                             <ul>
-                                <li>Higher wagering requirements (40x)</li>
-                                <li>Some country restrictions</li>
+                                <li>Higher than average wagering requirements</li>
+                                <li>Limited payment methods</li>
                             </ul>
                         </div>
                     </div>
                     
                     <div class="bonus-info">
                         <span class="bonus-label">Welcome Bonus</span>
-                        <div class="bonus-amount">100% up to €500 + 100 Free Spins</div>
-                        <div class="bonus-terms">New players only. Min deposit €20. Wagering requirement 40x. Bonus valid for 7 days. T&Cs apply.</div>
+                        <div class="bonus-amount">200% up to $1000 + 50 Free Spins</div>
+                        <div class="bonus-terms">18+. New players only. Min. deposit $20. Wagering requirement 35x.</div>
                     </div>
                     
                     <div class="payment-methods">
@@ -162,6 +161,18 @@
                                 <img src="images/payment-methods/skrill.svg" alt="Skrill">
                             </div>
                             <span class="payment-method-label">Skrill</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
+                                <img src="images/payment-methods/neteller.svg" alt="Neteller">
+                            </div>
+                            <span class="payment-method-label">Neteller</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
+                                <img src="images/payment-methods/crypto.svg" alt="Crypto">
+                            </div>
+                            <span class="payment-method-label">Crypto</span>
                         </div>
                     </div>
                     
@@ -175,16 +186,16 @@
             </div>
         </div>
 
-        <!-- Verde Casino Review -->
+        <!-- Golden Nugget Review -->
         <div class="casino-list-item slots-casino mobile-casino">
             <div class="row">
                 <div class="col-lg-4 col-md-4">
                     <div class="casino-logo-container">
-                        <img src="images/golden-nugget.svg" alt="Verde Casino" class="img-fluid">
+                        <img src="images/golden-nugget.svg" alt="Golden Nugget" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8">
-                    <h2 class="casino-name">Verde Casino Review: Eco-Friendly Gaming Approach</h2>
+                    <h2 class="casino-name">Golden Nugget Review: Classic Casino with Modern Touch</h2>
                     <div class="mobile-rating-container d-none d-md-none d-sm-block">
                         <div class="ranking-label">Ranking</div>
                         <div class="rating mb-2">
@@ -193,7 +204,7 @@
                             <i class="fas fa-star star"></i>
                             <i class="fas fa-star star"></i>
                             <i class="fas fa-star-half-alt star"></i>
-                            <span class="ms-2">4.8 / 5</span>
+                            <span class="ms-2">4.5 / 5</span>
                         </div>
                     </div>
                     
@@ -201,47 +212,46 @@
                     <div class="casino-specs">
                         <div class="spec-item">
                             <span class="spec-label">Games</span>
-                            <span class="spec-value">2000+</span>
+                            <span class="spec-value">1250+</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Min Deposit</span>
-                            <span class="spec-value">€20</span>
+                            <span class="spec-value">$10</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Payout Speed</span>
                             <span class="spec-value">1-3 Days</span>
                         </div>
                         <div class="spec-item">
-                            <span class="spec-label">License</span>
-                            <span class="spec-value">Curacao</span>
+                            <span class="spec-label">Win Rate</span>
+                            <span class="spec-value">96.2%</span>
                         </div>
                     </div>
                     
-                    <p>Verde Casino offers an eco-friendly gaming approach with a vast selection of over 2000 games. Their Curacao license ensures fair play, while their dedicated support team is available around the clock. The platform excels in providing quick withdrawals and supports numerous payment methods for player convenience.</p>
+                    <p>Golden Nugget combines classic casino charm with modern features. Their slot selection is impressive, and the table games have competitive limits for both casual players and high rollers.</p>
                     
                     <div class="row mt-4">
                         <div class="col-md-6">
                             <h3 class="mb-2">Pros</h3>
                             <ul>
-                                <li>Live Dealer Games</li>
-                                <li>Mobile Optimized</li>
-                                <li>Weekly Promotions</li>
-                                <li>24/7 Customer Support</li>
+                                <li>Huge game library</li>
+                                <li>User-friendly interface</li>
+                                <li>Great mobile experience</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <h3 class="mb-2">Cons</h3>
                             <ul>
-                                <li>Limited country availability</li>
-                                <li>Some withdrawal methods have fees</li>
+                                <li>Customer support can be slow</li>
+                                <li>Some country restrictions</li>
                             </ul>
                         </div>
                     </div>
                     
                     <div class="bonus-info">
                         <span class="bonus-label">Welcome Bonus</span>
-                        <div class="bonus-amount">120% up to €500 + 200 Free Spins</div>
-                        <div class="bonus-terms">18+. New players only. Min deposit €20. Wagering requirement 35x. Bonus valid for 14 days. T&Cs apply.</div>
+                        <div class="bonus-amount">100% up to $250 + 200 Free Spins</div>
+                        <div class="bonus-terms">18+. First deposit only. Minimum deposit $10. 40x wagering requirement.</div>
                     </div>
                     
                     <div class="payment-methods">
@@ -265,112 +275,6 @@
                         </div>
                         <div class="payment-method">
                             <div class="payment-method-icon">
-                                <img src="images/payment-methods/crypto.svg" alt="Crypto">
-                            </div>
-                            <span class="payment-method-label">Crypto</span>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-4">
-                        <a href="reviews/verde-casino.html" class="btn-primary btn-lg visit-btn">
-                            <span>READ REVIEW</span>
-                            <i class="fas fa-chevron-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- PlayAmo Casino Review -->
-        <div class="casino-list-item live-dealer fast-payout">
-            <div class="row">
-                <div class="col-lg-4 col-md-4">
-                    <div class="casino-logo-container">
-                        <img src="images/diamond-club.svg" alt="PlayAmo Casino" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-8">
-                    <h2 class="casino-name">PlayAmo Casino Review: Crypto-Friendly Gaming Platform</h2>
-                    <div class="mobile-rating-container d-none d-md-none d-sm-block">
-                        <div class="ranking-label">Ranking</div>
-                        <div class="rating mb-2">
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star-half-alt star"></i>
-                            <span class="ms-2">4.7 / 5</span>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="casino-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Games</span>
-                            <span class="spec-value">3000+</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Min Deposit</span>
-                            <span class="spec-value">€20</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Payout Speed</span>
-                            <span class="spec-value">Instant</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">License</span>
-                            <span class="spec-value">Curacao</span>
-                        </div>
-                    </div>
-                    
-                    <p>PlayAmo Casino stands out with its cryptocurrency compatibility and diverse game selection from over 40 software providers. Licensed in Curacao, they offer instant withdrawals and a user-friendly website that adapts perfectly to all devices. Their VIP program provides additional value for regular players.</p>
-                    
-                    <div class="row mt-4">
-                        <div class="col-md-6">
-                            <h3 class="mb-2">Pros</h3>
-                            <ul>
-                                <li>Bitcoin Compatible</li>
-                                <li>40+ Software Providers</li>
-                                <li>High-Stakes Tables</li>
-                                <li>Instant Withdrawals</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <h3 class="mb-2">Cons</h3>
-                            <ul>
-                                <li>Higher wagering requirements (50x)</li>
-                                <li>Shorter bonus validity period</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="bonus-info">
-                        <span class="bonus-label">Welcome Bonus</span>
-                        <div class="bonus-amount">100% up to €300 + 150 Free Spins</div>
-                        <div class="bonus-terms">18+. New players only. Min deposit €20. Wagering requirement 50x. Bonus valid for 10 days. T&Cs apply.</div>
-                    </div>
-                    
-                    <div class="payment-methods">
-                        <div class="payment-method">
-                            <div class="payment-method-icon">
-                                <img src="images/payment-methods/visa.svg" alt="Visa">
-                            </div>
-                            <span class="payment-method-label">Visa</span>
-                        </div>
-                        <div class="payment-method">
-                            <div class="payment-method-icon">
-                                <img src="images/payment-methods/mastercard.svg" alt="Mastercard">
-                            </div>
-                            <span class="payment-method-label">Mastercard</span>
-                        </div>
-                        <div class="payment-method">
-                            <div class="payment-method-icon">
-                                <img src="images/payment-methods/crypto.svg" alt="Bitcoin">
-                            </div>
-                            <span class="payment-method-label">Bitcoin</span>
-                        </div>
-                        <div class="payment-method">
-                            <div class="payment-method-icon">
                                 <img src="images/payment-methods/skrill.svg" alt="Skrill">
                             </div>
                             <span class="payment-method-label">Skrill</span>
@@ -378,7 +282,7 @@
                     </div>
                     
                     <div class="mt-4">
-                        <a href="reviews/playamo-casino.html" class="btn-primary btn-lg visit-btn">
+                        <a href="reviews/golden-nugget-casino.html" class="btn-primary btn-lg visit-btn">
                             <span>READ REVIEW</span>
                             <i class="fas fa-chevron-right ms-2"></i>
                         </a>
@@ -387,16 +291,16 @@
             </div>
         </div>
 
-        <!-- Mad Casino Review -->
-        <div class="casino-list-item slots-casino mobile-casino fast-payout">
+        <!-- Lucky Spin Review -->
+        <div class="casino-list-item live-dealer fast-payout">
             <div class="row">
                 <div class="col-lg-4 col-md-4">
                     <div class="casino-logo-container">
-                        <img src="images/lucky-spin.svg" alt="Mad Casino" class="img-fluid">
+                        <img src="images/lucky-spin.svg" alt="Lucky Spin Casino" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8">
-                    <h2 class="casino-name">Mad Casino Review: Quirky Gaming Experience</h2>
+                    <h2 class="casino-name">Lucky Spin Casino Review: Premium Live Experience</h2>
                     <div class="mobile-rating-container d-none d-md-none d-sm-block">
                         <div class="ranking-label">Ranking</div>
                         <div class="rating mb-2">
@@ -404,8 +308,8 @@
                             <i class="fas fa-star star"></i>
                             <i class="fas fa-star star"></i>
                             <i class="fas fa-star star"></i>
-                            <i class="far fa-star star"></i>
-                            <span class="ms-2">4.3 / 5</span>
+                            <i class="fas fa-star star"></i>
+                            <span class="ms-2">4.9 / 5</span>
                         </div>
                     </div>
                     
@@ -413,47 +317,46 @@
                     <div class="casino-specs">
                         <div class="spec-item">
                             <span class="spec-label">Games</span>
-                            <span class="spec-value">1800+</span>
+                            <span class="spec-value">950+</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Min Deposit</span>
-                            <span class="spec-value">€20</span>
+                            <span class="spec-value">$25</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Payout Speed</span>
-                            <span class="spec-value">1-2 Days</span>
+                            <span class="spec-value">Same Day</span>
                         </div>
                         <div class="spec-item">
-                            <span class="spec-label">License</span>
-                            <span class="spec-value">Curacao</span>
+                            <span class="spec-label">Live Dealers</span>
+                            <span class="spec-value">24/7</span>
                         </div>
                     </div>
                     
-                    <p>Mad Casino delivers an entertaining gaming experience with its quirky design and extensive slot collection. Their focus on transparency and responsible gaming is backed by a solid Curacao license. The site offers straightforward navigation and helpful customer support through multiple channels.</p>
+                    <p>Lucky Spin Casino stands out for its exceptional live dealer games and lightning-fast payouts. With professional dealers and high-quality streaming, it offers one of the most immersive online casino experiences available.</p>
                     
                     <div class="row mt-4">
                         <div class="col-md-6">
                             <h3 class="mb-2">Pros</h3>
                             <ul>
-                                <li>Weekly Tournaments</li>
-                                <li>Slot Races</li>
-                                <li>Exclusive Games</li>
-                                <li>No-deposit Bonus Available</li>
+                                <li>Premium live dealer experience</li>
+                                <li>Same-day withdrawals</li>
+                                <li>24/7 customer support</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <h3 class="mb-2">Cons</h3>
                             <ul>
-                                <li>High wagering requirements (60x for no-deposit bonus)</li>
-                                <li>Some country restrictions</li>
+                                <li>Limited slot selection</li>
+                                <li>Higher minimum deposits</li>
                             </ul>
                         </div>
                     </div>
                     
                     <div class="bonus-info">
                         <span class="bonus-label">Welcome Bonus</span>
-                        <div class="bonus-amount">€5 No Deposit + 200% up to €1000</div>
-                        <div class="bonus-terms">18+. New players only. €5 no deposit bonus with 60x wagering. Deposit bonus: Min deposit €20, 45x wagering, valid for 30 days. T&Cs apply.</div>
+                        <div class="bonus-amount">Up to $1500 + 300 Free Spins</div>
+                        <div class="bonus-terms">18+. New players only. 30x wagering requirement. Min deposit $25.</div>
                     </div>
                     
                     <div class="payment-methods">
@@ -477,14 +380,20 @@
                         </div>
                         <div class="payment-method">
                             <div class="payment-method-icon">
-                                <img src="images/payment-methods/paysafecard.svg" alt="Paysafecard">
+                                <img src="images/payment-methods/skrill.svg" alt="Skrill">
                             </div>
-                            <span class="payment-method-label">Paysafecard</span>
+                            <span class="payment-method-label">Skrill</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
+                                <img src="images/payment-methods/crypto.svg" alt="Crypto">
+                            </div>
+                            <span class="payment-method-label">Crypto</span>
                         </div>
                     </div>
                     
                     <div class="mt-4">
-                        <a href="reviews/mad-casino.html" class="btn-primary btn-lg visit-btn">
+                        <a href="reviews/lucky-spin-casino.html" class="btn-primary btn-lg visit-btn">
                             <span>READ REVIEW</span>
                             <i class="fas fa-chevron-right ms-2"></i>
                         </a>
@@ -493,16 +402,16 @@
             </div>
         </div>
 
-        <!-- Hellspin Casino Review -->
-        <div class="casino-list-item live-dealer mobile-casino">
+        <!-- PowerPlay Review -->
+        <div class="casino-list-item slots-casino mobile-casino fast-payout">
             <div class="row">
                 <div class="col-lg-4 col-md-4">
                     <div class="casino-logo-container">
-                        <img src="images/mega-jackpot.svg" alt="Hellspin Casino" class="img-fluid">
+                        <img src="images/powerplay.svg" alt="PowerPlay Casino" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8">
-                    <h2 class="casino-name">Hellspin Casino Review: Dark-Themed Gaming Platform</h2>
+                    <h2 class="casino-name">PowerPlay Casino Review: Modern Sports and Casino Experience</h2>
                     <div class="mobile-rating-container d-none d-md-none d-sm-block">
                         <div class="ranking-label">Ranking</div>
                         <div class="rating mb-2">
@@ -519,47 +428,46 @@
                     <div class="casino-specs">
                         <div class="spec-item">
                             <span class="spec-label">Games</span>
-                            <span class="spec-value">2500+</span>
+                            <span class="spec-value">1200+</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Min Deposit</span>
-                            <span class="spec-value">€20</span>
+                            <span class="spec-value">$10</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Payout Speed</span>
-                            <span class="spec-value">1-3 Days</span>
+                            <span class="spec-value">1-2 Days</span>
                         </div>
                         <div class="spec-item">
-                            <span class="spec-label">License</span>
-                            <span class="spec-value">Curacao</span>
+                            <span class="spec-label">Mobile Apps</span>
+                            <span class="spec-value">iOS, Android</span>
                         </div>
                     </div>
                     
-                    <p>Hellspin Casino impresses with its dark-themed design and extensive portfolio of over 2500 games. Their Curacao license ensures fair play standards, while the diverse payment options including cryptocurrencies provide flexibility for users. Their loyalty program rewards regular players with cashback and exclusive bonuses.</p>
+                    <p>PowerPlay offers a sleek and engaging gaming experience with an extensive selection of casino games and sports betting options. Their mobile experience is particularly impressive, and they're known for their fast payouts and reliable customer service.</p>
                     
                     <div class="row mt-4">
                         <div class="col-md-6">
                             <h3 class="mb-2">Pros</h3>
                             <ul>
-                                <li>Large Game Library</li>
-                                <li>Cryptocurrency Support</li>
-                                <li>VIP Program</li>
-                                <li>Mobile-friendly Platform</li>
+                                <li>Excellent mobile experience</li>
+                                <li>Fast withdrawals</li>
+                                <li>Great sports and casino integration</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <h3 class="mb-2">Cons</h3>
                             <ul>
-                                <li>Country Restrictions</li>
-                                <li>Longer Withdrawal Times for Some Methods</li>
+                                <li>Limited payment methods</li>
+                                <li>Some country restrictions</li>
                             </ul>
                         </div>
                     </div>
                     
                     <div class="bonus-info">
                         <span class="bonus-label">Welcome Bonus</span>
-                        <div class="bonus-amount">100% up to €400 + 100 Free Spins</div>
-                        <div class="bonus-terms">18+. New players only. Min deposit €20. Wagering requirement 40x. Bonus valid for 14 days. T&Cs apply.</div>
+                        <div class="bonus-amount">100% up to $500 + 100 Free Spins</div>
+                        <div class="bonus-terms">New players only. Wagering requirements apply. See website for full T&C.</div>
                     </div>
                     
                     <div class="payment-methods">
@@ -577,9 +485,114 @@
                         </div>
                         <div class="payment-method">
                             <div class="payment-method-icon">
+                                <img src="images/payment-methods/paypal.svg" alt="PayPal">
+                            </div>
+                            <span class="payment-method-label">PayPal</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
                                 <img src="images/payment-methods/crypto.svg" alt="Crypto">
                             </div>
                             <span class="payment-method-label">Crypto</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="reviews/powerplay-casino.html" class="btn-primary btn-lg visit-btn">
+                            <span>READ REVIEW</span>
+                            <i class="fas fa-chevron-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Betgoodwin Review -->
+        <div class="casino-list-item live-dealer mobile-casino">
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="casino-logo-container">
+                        <img src="images/betgoodwin.svg" alt="Betgoodwin Casino" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <h2 class="casino-name">Betgoodwin Review: Traditional Betting with Modern Touches</h2>
+                    <div class="mobile-rating-container d-none d-md-none d-sm-block">
+                        <div class="ranking-label">Ranking</div>
+                        <div class="rating mb-2">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="far fa-star star"></i>
+                            <span class="ms-2">4.0 / 5</span>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="casino-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Games</span>
+                            <span class="spec-value">800+</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Min Deposit</span>
+                            <span class="spec-value">£5</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Payout Speed</span>
+                            <span class="spec-value">1-3 Days</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Live Casino</span>
+                            <span class="spec-value">Premium</span>
+                        </div>
+                    </div>
+                    
+                    <p>Betgoodwin combines traditional UK bookmaking heritage with modern casino offerings. They feature an excellent live dealer section, competitive odds, and a solid mobile experience that appeals to both betting veterans and newcomers.</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h3 class="mb-2">Pros</h3>
+                            <ul>
+                                <li>Excellent live dealer games</li>
+                                <li>Strong mobile application</li>
+                                <li>Trusted UK betting heritage</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="mb-2">Cons</h3>
+                            <ul>
+                                <li>Limited slots selection</li>
+                                <li>Slower withdrawals for some methods</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bonus-info">
+                        <span class="bonus-label">Welcome Bonus</span>
+                        <div class="bonus-amount">Bet £10 Get £30 + 50 Free Spins</div>
+                        <div class="bonus-terms">18+. New customers only. Min deposit £10. T&Cs apply.</div>
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
+                                <img src="images/payment-methods/visa.svg" alt="Visa">
+                            </div>
+                            <span class="payment-method-label">Visa</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
+                                <img src="images/payment-methods/mastercard.svg" alt="Mastercard">
+                            </div>
+                            <span class="payment-method-label">Mastercard</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
+                                <img src="images/payment-methods/paypal.svg" alt="PayPal">
+                            </div>
+                            <span class="payment-method-label">PayPal</span>
                         </div>
                         <div class="payment-method">
                             <div class="payment-method-icon">
@@ -590,7 +603,7 @@
                     </div>
                     
                     <div class="mt-4">
-                        <a href="reviews/hellspin-casino.html" class="btn-primary btn-lg visit-btn">
+                        <a href="reviews/betgoodwin-casino.html" class="btn-primary btn-lg visit-btn">
                             <span>READ REVIEW</span>
                             <i class="fas fa-chevron-right ms-2"></i>
                         </a>
@@ -685,67 +698,3 @@
                                 <img src="images/payment-methods/skrill.svg" alt="Skrill">
                             </div>
                             <span class="payment-method-label">Skrill</span>
-                        </div>
-                        <div class="payment-method">
-                            <div class="payment-method-icon">
-                                <img src="images/payment-methods/crypto.svg" alt="Crypto">
-                            </div>
-                            <span class="payment-method-label">Crypto</span>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-4">
-                        <a href="reviews/picklebet-casino.html" class="btn-primary btn-lg visit-btn">
-                            <span>READ REVIEW</span>
-                            <i class="fas fa-chevron-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- More Reviews Coming Soon -->
-        <div class="text-center mt-4 mb-4">
-            <h3>More Detailed Reviews Coming Soon</h3>
-            <p>Our team is currently reviewing more casinos to bring you comprehensive insights.</p>
-        </div>
-    </section>
-
-    <!-- Responsible Gaming Reminder -->
-    <section class="container mb-30">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <div class="responsible-gaming-tip">
-                    <h3 class="tip-title"><i class="fas fa-shield-alt me-2"></i> Play Responsibly</h3>
-                    <p>At TopPlayInsight, we advocate for responsible gaming practices. Always remember that gambling should be enjoyable entertainment, not a way to make money. Set time and money limits before you play, and never chase losses.</p>
-                    <a href="responsible-gaming.html" class="btn-outline-primary mt-2">Learn More About Responsible Gaming</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="text-center">
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="reviews.html">Reviews</a>
-                    <a href="tips.html">Tips</a>
-                    <a href="responsible-gaming.html">Responsible Gaming</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                </div>
-                
-                <div class="age-notice">
-                    <i class="fas fa-exclamation-triangle me-2"></i> 18+ Gambling can be addictive. Play responsibly.
-                </div>
-                
-                <p class="copyright">© 2023 TopPlayInsight. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
-</html>

@@ -1,0 +1,65 @@
+                            <span class="payment-method-label">Skrill</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
+                                <img src="images/payment-methods/crypto.svg" alt="Crypto">
+                            </div>
+                            <span class="payment-method-label">Crypto</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="reviews/picklebet-casino.html" class="btn-primary btn-lg visit-btn">
+                            <span>READ REVIEW</span>
+                            <i class="fas fa-chevron-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- More Reviews Coming Soon -->
+        <div class="text-center mt-4 mb-4">
+            <h3>More Detailed Reviews Coming Soon</h3>
+            <p>Our team is currently reviewing more casinos to bring you comprehensive insights.</p>
+        </div>
+    </section>
+
+    <!-- Responsible Gaming Reminder -->
+    <section class="container mb-30">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="responsible-gaming-tip">
+                    <h3 class="tip-title"><i class="fas fa-shield-alt me-2"></i> Play Responsibly</h3>
+                    <p>At TopPlayInsight, we advocate for responsible gaming practices. Always remember that gambling should be enjoyable entertainment, not a way to make money. Set time and money limits before you play, and never chase losses.</p>
+                    <a href="responsible-gaming.html" class="btn-outline-primary mt-2">Learn More About Responsible Gaming</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="text-center">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="reviews.html">Reviews</a>
+                    <a href="tips.html">Tips</a>
+                    <a href="responsible-gaming.html">Responsible Gaming</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                </div>
+                
+                <div class="age-notice">
+                    <i class="fas fa-exclamation-triangle me-2"></i> 18+ Gambling can be addictive. Play responsibly.
+                </div>
+                
+                <p class="copyright">© 2023 TopPlayInsight. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
