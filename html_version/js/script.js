@@ -350,3 +350,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// Age Verification
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if the user has already confirmed their age
+    const ageVerified = localStorage.getItem('ageVerified');
+    const ageModal = document.getElementById('ageVerificationModal');
+    
+    if (!ageVerified && ageModal) {
+        // Show the age verification modal
+        ageModal.classList.add('show');
+        
+        // Confirm age button
+        const confirmBtn = document.getElementById('confirmAgeBtn');
+        if (confirmBtn) {
+            confirmBtn.addEventListener('click', function() {
+                // Set that the user has confirmed their age (valid for 30 days)
+                localStorage.setItem('ageVerified', 'true');
+                // Hide the modal
+                ageModal.classList.remove('show');
+            });
+        }
+        
+        // Leave button
+        const leaveBtn = document.getElementById('leaveBtn');
+        if (leaveBtn) {
+            leaveBtn.addEventListener('click', function() {
+                // Redirect to Google
+                window.location.href = 'https://www.google.com';
+            });
+        }
+    }
+});
