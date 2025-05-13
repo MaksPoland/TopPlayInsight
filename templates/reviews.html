@@ -1,185 +1,180 @@
 {% extends 'base.html' %}
 
-{% block title %}Casino Reviews - TopPlayInsight{% endblock %}
+{% block title %}UK Online Casino Reviews 2025 - Detailed Assessments | TopPlayInsight{% endblock %}
+
+{% block meta_description %}Comprehensive UK casino reviews with detailed information on games, bonuses, security, mobile compatibility and payment methods. All casinos are UKGC-licensed.{% endblock %}
 
 {% block content %}
-<!-- Header Section -->
-<div class="section-header pt-60 pb-30">
-    <h1>Online Casino Reviews</h1>
-    <p>Comprehensive, honest assessments of the most popular online casinos. Our experts evaluate game selection, bonuses, banking options, security, and overall player experience.</p>
-</div>
-
-<!-- Filter Section -->
-<div class="review-filters mb-30">
+<!-- Hero Section -->
+<section class="hero">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-3 mb-3 mb-md-0">
-                <label class="filter-label">Sort by:</label>
-                <select class="form-select">
-                    <option selected>Top Rated</option>
-                    <option>Newest First</option>
-                    <option>A-Z</option>
-                </select>
-            </div>
-            <div class="col-md-3 mb-3 mb-md-0">
-                <label class="filter-label">Game Type:</label>
-                <select class="form-select">
-                    <option selected>All Games</option>
-                    <option>Slots</option>
-                    <option>Table Games</option>
-                    <option>Live Dealer</option>
-                </select>
-            </div>
-            <div class="col-md-3 mb-3 mb-md-0">
-                <label class="filter-label">Minimum Rating:</label>
-                <select class="form-select">
-                    <option selected>Any Rating</option>
-                    <option>5 Stars</option>
-                    <option>4+ Stars</option>
-                    <option>3+ Stars</option>
-                </select>
-            </div>
+        <div class="hero-content">
+            <h1>Online Casino Reviews</h1>
+            <p>Detailed assessments of UKGC-licensed casinos for UK players</p>
         </div>
     </div>
-</div>
+</section>
 
-<!-- Casino Reviews -->
-<section class="casino-reviews pb-60">
+<!-- Reviews List Section -->
+<section class="reviews-list pt-60 pb-60">
     <div class="container">
-        <div class="row">
-            <!-- Casino 1 -->
-            <div class="col-md-6">
-                <div class="casino-card">
-                    <div class="casino-title">Royal Vegas Casino</div>
-                    <div class="rating">
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star-half-alt star"></i>
-                        <span class="ms-2">4.5/5</span>
-                    </div>
-                    <p><strong>Highlights:</strong> Over 700 games, excellent mobile experience, 24/7 customer support</p>
-                    <p>Royal Vegas has been operating since 2000 and continues to provide a premium gaming experience. Their game selection is powered by Microgaming, ensuring high-quality graphics and gameplay. The welcome bonus is competitive, and they offer various secure payment methods including credit cards, e-wallets, and bank transfers.</p>
-                    <p>Their customer support team is responsive and helpful, available through live chat, email, and phone. The casino holds licenses from the Malta Gaming Authority and is eCOGRA certified, ensuring fair play and security.</p>
-                    <div class="casino-buttons">
-                        <a href="#" class="btn btn-outline-primary">Full Review</a>
-                        <a href="#" class="btn btn-primary">Visit Site</a>
-                    </div>
-                </div>
+        <div class="casino-filter-tools">
+            <div class="search-filter">
+                <input type="text" id="casino-search" placeholder="Search casinos..." class="form-control">
             </div>
-
-            <!-- Casino 2 -->
-            <div class="col-md-6">
-                <div class="casino-card">
-                    <div class="casino-title">Platinum Play</div>
-                    <div class="rating">
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star star"></i>
-                        <i class="far fa-star star"></i>
-                        <span class="ms-2">4.0/5</span>
-                    </div>
-                    <p><strong>Highlights:</strong> User-friendly interface, excellent VIP program, fast withdrawals</p>
-                    <p>Platinum Play offers a polished gaming experience with a diverse game library featuring slots, table games, and live dealer options. The casino's interface is intuitive and responsive, making navigation easy for both beginners and experienced players.</p>
-                    <p>Their VIP program is particularly noteworthy, offering escalating rewards and personalized service. Withdrawals are processed efficiently, with e-wallet options typically completed within 24 hours. The site is secured with SSL encryption and licensed by the Malta Gaming Authority.</p>
-                    <div class="casino-buttons">
-                        <a href="#" class="btn btn-outline-primary">Full Review</a>
-                        <a href="#" class="btn btn-primary">Visit Site</a>
-                    </div>
-                </div>
+            <div class="sort-options">
+                <label for="sort-select">Sort by:</label>
+                <select id="sort-select" class="form-control">
+                    <option value="rating">Rating: High to Low</option>
+                    <option value="name">Name: A to Z</option>
+                    <option value="bonus">Bonus Value</option>
+                </select>
             </div>
-
-            <!-- Casino 3 -->
-            <div class="col-md-6">
-                <div class="casino-card">
-                    <div class="casino-title">Jackpot City</div>
-                    <div class="rating">
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star star"></i>
-                        <span class="ms-2">5.0/5</span>
-                    </div>
-                    <p><strong>Highlights:</strong> Impressive progressive jackpots, top-tier security, excellent game variety</p>
-                    <p>Jackpot City stands out with its impressive collection of progressive jackpot slots, where players have won millions. The casino features games from multiple providers, ensuring variety and quality. Their mobile platform delivers a seamless experience across all devices.</p>
-                    <p>Security is a priority at Jackpot City, with advanced encryption protecting player data and transactions. Their customer service team is available 24/7 through multiple channels, and their banking system supports numerous currencies and payment methods with quick processing times.</p>
-                    <div class="casino-buttons">
-                        <a href="#" class="btn btn-outline-primary">Full Review</a>
-                        <a href="#" class="btn btn-primary">Visit Site</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Casino 4 -->
-            <div class="col-md-6">
-                <div class="casino-card">
-                    <div class="casino-title">Spin Palace</div>
-                    <div class="rating">
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star star"></i>
-                        <i class="fas fa-star star"></i>
-                        <i class="far fa-star star"></i>
-                        <span class="ms-2">4.0/5</span>
-                    </div>
-                    <p><strong>Highlights:</strong> Great slot selection, regular promotions, trusted reputation</p>
-                    <p>Spin Palace has earned its reputation through years of reliable service and quality gaming. Their slot selection is particularly impressive, with hundreds of titles including classic, video, and progressive jackpot options.</p>
-                    <p>The casino runs regular promotions and a loyalty program that rewards consistent play. The platform is available in multiple languages and currencies, making it accessible to an international audience. While their withdrawal times aren't the fastest, their reliability and security make up for this minor drawback.</p>
-                    <div class="casino-buttons">
-                        <a href="#" class="btn btn-outline-primary">Full Review</a>
-                        <a href="#" class="btn btn-primary">Visit Site</a>
-                    </div>
-                </div>
+            <div class="filter-options">
+                <button class="filter-button active" data-filter="all">All Casinos</button>
+                <button class="filter-button" data-filter="slots-casino">Best for Slots</button>
+                <button class="filter-button" data-filter="mobile-casino">Mobile Friendly</button>
+                <button class="filter-button" data-filter="fast-payout">Fast Payouts</button>
             </div>
         </div>
         
-        <div class="text-center mt-30">
-            <a href="#" class="btn btn-primary">Load More Reviews</a>
-        </div>
-    </div>
-</section>
-
-<!-- Review Methodology -->
-<section class="bg-light-gray pt-60 pb-60">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-                <h2 class="text-center mb-4">Our Review Methodology</h2>
-                <p>At TopPlayInsight, we take our casino reviews seriously. Each review undergoes a thorough evaluation process:</p>
-                
-                <div class="row mt-4">
-                    <div class="col-md-6">
-                        <div class="tip-card">
-                            <h3><i class="fas fa-shield-alt me-2"></i> Security & Licensing</h3>
-                            <p>We verify that each casino holds valid licenses from respected regulatory bodies and implements proper security measures to protect player data.</p>
+        <div class="casino-review-list">
+            {% for casino in casinos %}
+            <div id="{{ casino.name|lower|replace(' ', '-') }}" class="casino-list-item slots-casino mobile-casino fast-payout">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="casino-logo-container">
+                            <img src="{{ url_for('static', filename=casino.logo_url) }}" alt="{{ casino.name }}" class="img-fluid" {% if 'royal-vegas' in casino.logo_url %}style="background-color: #4169E1; padding: 5px;"{% endif %}>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="tip-card">
-                            <h3><i class="fas fa-gamepad me-2"></i> Game Selection</h3>
-                            <p>We evaluate the variety, quality, and providers of games offered, including slots, table games, live dealer options, and specialty games.</p>
+                    <div class="col-lg-8 col-md-8">
+                        <h2 class="casino-name">{{ casino.name }} Review: Premium Gaming Experience</h2>
+                        <div class="casino-rating">
+                            <div class="stars">
+                                {% for i in range(5) %}
+                                    {% if i < casino.rating|int %}
+                                    <i class="fas fa-star star"></i>
+                                    {% elif i < casino.rating and i >= casino.rating|int %}
+                                    <i class="fas fa-star-half-alt star"></i>
+                                    {% else %}
+                                    <i class="far fa-star star"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <span class="rating-text">{{ casino.rating }}/5</span>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="tip-card">
-                            <h3><i class="fas fa-gift me-2"></i> Bonuses & Promotions</h3>
-                            <p>We analyze the value, terms, and wagering requirements of welcome bonuses, ongoing promotions, and loyalty programs.</p>
+                        
+                        <p>{{ casino.description }}</p>
+                        
+                        <div class="casino-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Min Deposit:</span>
+                                <span class="detail-value">£{{ casino.min_deposit }}</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Bonus:</span>
+                                <span class="detail-value">{{ casino.main_bonus }}</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="tip-card">
-                            <h3><i class="fas fa-money-bill-wave me-2"></i> Banking Options</h3>
-                            <p>We examine deposit and withdrawal methods, processing times, fees, and overall payment reliability.</p>
+                        
+                        <div class="casino-review-cta">
+                            <a href="{{ url_for('reviews') }}#{{ casino.name|lower|replace(' ', '-') }}" class="btn-primary btn-lg visit-btn">
+                                READ REVIEW <i class="fas fa-chevron-right"></i>
+                            </a>
+                            <a href="{{ casino.url }}" class="btn-secondary mt-2 visit-website-btn" target="_blank">
+                                Visit Website <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-                
-                <p class="mt-4">Our reviews are updated regularly to reflect changes in casino offerings, policies, or performance. We value player feedback and incorporate verified user experiences into our assessments.</p>
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const casinoItems = document.querySelectorAll('.casino-list-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter casino items
+                casinoItems.forEach(item => {
+                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Search functionality
+        const searchInput = document.getElementById('casino-search');
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            casinoItems.forEach(item => {
+                const casinoName = item.querySelector('.casino-name').textContent.toLowerCase();
+                const casinoDesc = item.querySelector('p').textContent.toLowerCase();
+                
+                if (casinoName.includes(searchTerm) || casinoDesc.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+        
+        // Sort functionality
+        const sortSelect = document.getElementById('sort-select');
+        sortSelect.addEventListener('change', function() {
+            const sortValue = this.value;
+            const casinoList = document.querySelector('.casino-review-list');
+            const casinoItemsArray = Array.from(casinoItems);
+            
+            casinoItemsArray.sort((a, b) => {
+                if (sortValue === 'name') {
+                    const nameA = a.querySelector('.casino-name').textContent.toLowerCase();
+                    const nameB = b.querySelector('.casino-name').textContent.toLowerCase();
+                    return nameA.localeCompare(nameB);
+                } else if (sortValue === 'rating') {
+                    const ratingA = parseFloat(a.querySelector('.rating-text').textContent);
+                    const ratingB = parseFloat(b.querySelector('.rating-text').textContent);
+                    return ratingB - ratingA;
+                } else if (sortValue === 'bonus') {
+                    const bonusA = a.querySelector('.detail-value:nth-child(2)').textContent;
+                    const bonusB = b.querySelector('.detail-value:nth-child(2)').textContent;
+                    
+                    const valueA = extractBonusValue(bonusA);
+                    const valueB = extractBonusValue(bonusB);
+                    
+                    return valueB - valueA;
+                }
+                
+                return 0;
+            });
+            
+            casinoItemsArray.forEach(item => {
+                casinoList.appendChild(item);
+            });
+        });
+        
+        function extractBonusValue(el) {
+            const match = el.match(/\d+/);
+            return match ? parseInt(match[0]) : 0;
+        }
+    });
+</script>
 {% endblock %}

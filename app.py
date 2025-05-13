@@ -1,16 +1,15 @@
 import os
 from flask import Flask, render_template, request, flash, redirect, url_for
+from werkzeug.middleware.proxy_fix import ProxyFix
 from models import db, Casino, Review, Tip, Contact
 
 # Create the Flask application
 app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", "dev-key-for-topplayinsight")
+app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1) # needed for url_for to generate with https
 
 # Configure the database
 app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
-if not app.config["SQLALCHEMY_DATABASE_URI"]:
-    print("Warning: DATABASE_URL is not set. Using SQLite as fallback.")
-    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///topplayinsight.db"
 app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
     "pool_recycle": 300,
     "pool_pre_ping": True,
@@ -100,12 +99,11 @@ def contact():
             return render_template('contact.html', active_page='contact')
         
         # Create new contact record
-        new_contact = Contact(
-            name=name,
-            email=email,
-            subject=subject,
-            message=message
-        )
+        new_contact = Contact()
+        new_contact.name = name
+        new_contact.email = email
+        new_contact.subject = subject
+        new_contact.message = message
         
         # Save to database
         db.session.add(new_contact)

@@ -1,3 +1,16 @@
-[run_flask]
-command = "python -m flask run --host=0.0.0.0 --port=8080"
-env = { FLASK_APP = "app.py", FLASK_ENV = "development", FLASK_DEBUG = "1" }
+{
+  "run": {
+    "run": "python main.py",
+    "shell": "bash",
+    "secrets": [
+      "DATABASE_URL"
+    ]
+  },
+  "flask_server": {
+    "run": "python main.py",
+    "shell": "bash",
+    "secrets": [
+      "DATABASE_URL"
+    ]
+  }
+}

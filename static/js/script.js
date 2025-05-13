@@ -1,150 +1,383 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Table of Contents Functionality
-    const tocTabs = document.querySelectorAll('.toc-tab');
-    const progressBar = document.querySelector('.toc-progress-bar');
+// Validate email format
+function isValidEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+// Show error message
+function showError(input, message) {
+    const formGroup = input.parentElement;
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'error-message text-danger mt-1';
+    errorDiv.textContent = message;
     
-    if (tocTabs.length > 0 && progressBar) {
-        // Set initial active tab
-        const firstTab = tocTabs[0];
-        firstTab.classList.add('active');
-        
-        // Tab click handling
-        tocTabs.forEach((tab, index) => {
-            tab.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Remove active class from all tabs
-                tocTabs.forEach(t => t.classList.remove('active'));
-                
-                // Add active class to clicked tab
-                tab.classList.add('active');
-                
-                // Update progress bar based on tab index
-                const progressWidth = ((index + 1) / tocTabs.length) * 100;
-                progressBar.style.width = `${progressWidth}%`;
-                
-                // Optional: Scroll to section
-                const targetId = tab.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
+    // Remove any existing error message
+    removeError(input);
+    
+    // Add the new error message
+    formGroup.appendChild(errorDiv);
+    input.classList.add('is-invalid');
+}
+
+// Remove error message
+function removeError(input) {
+    const formGroup = input.parentElement;
+    const errorDiv = formGroup.querySelector('.error-message');
+    
+    if (errorDiv) {
+        formGroup.removeChild(errorDiv);
+    }
+    
+    input.classList.remove('is-invalid');
+}
+
+// Casino filtering and sorting functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Filter badges functionality
+    const filterBadges = document.querySelectorAll('.filter-badges .badge');
+    if (filterBadges.length > 0) {
+        filterBadges.forEach(badge => {
+            badge.addEventListener('click', function() {
+                // Toggle active class
+                if (this.classList.contains('badge-active')) {
+                    this.classList.remove('badge-active');
+                    this.classList.add('bg-light');
+                    this.classList.add('text-dark');
+                } else {
+                    // Reset all badges first
+                    filterBadges.forEach(b => {
+                        b.classList.remove('badge-active');
+                        b.classList.add('bg-light');
+                        b.classList.add('text-dark');
                     });
+                    
+                    // Set active badge
+                    this.classList.add('badge-active');
+                    this.classList.remove('bg-light');
+                    this.classList.remove('text-dark');
                 }
+                
+                filterCasinos();
             });
         });
+    }
+    
+    // Sort dropdown functionality
+    const sortSelect = document.querySelector('.casino-filters .form-select');
+    if (sortSelect) {
+        sortSelect.addEventListener('change', function() {
+            sortCasinos(this.value);
+        });
+    }
+    
+    // Function to filter casinos
+    function filterCasinos() {
+        const activeBadge = document.querySelector('.filter-badges .badge-active');
+        const casinoItems = document.querySelectorAll('.casino-list-item');
         
-        // Add ID anchors to the relevant sections if they don't exist
-        const sections = ['best-casinos', 'casino-categories', 'new-casinos', 'bonuses'];
-        sections.forEach(sectionId => {
-            if (!document.getElementById(sectionId)) {
-                const sectionContainer = document.createElement('div');
-                sectionContainer.id = sectionId;
-                document.querySelector('.casino-listings').prepend(sectionContainer);
+        if (!activeBadge) {
+            // Show all casinos if no filter is active
+            casinoItems.forEach(item => {
+                item.style.display = 'block';
+            });
+            return;
+        }
+        
+        const filterText = activeBadge.textContent.trim().toLowerCase();
+        
+        casinoItems.forEach(item => {
+            if (filterText === 'new casinos') {
+                // Display only new casinos (3rd one for demo purposes)
+                if (item.querySelector('.rank-number') && item.querySelector('.rank-number').textContent === '3') {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            } else if (filterText === 'featured casinos' && item.classList.contains('featured-casino')) {
+                item.style.display = 'block';
+            } else if (filterText === 'best bonus' && item.querySelector('.bonus-amount')) {
+                // Check for big bonuses (more than €1000 or with free spins)
+                const bonusText = item.querySelector('.bonus-amount').textContent.toLowerCase();
+                if (bonusText.includes('€3,000') || bonusText.includes('free spins')) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            } else if (filterText === 'fast payouts' && item.querySelector('.spec-label')) {
+                // Check if casino has fast payout (24 hours or less)
+                const payoutElements = item.querySelectorAll('.spec-label');
+                let hasFastPayout = false;
+                
+                payoutElements.forEach(el => {
+                    if (el.textContent.includes('Payout') && 
+                        el.nextElementSibling && 
+                        (el.nextElementSibling.textContent.includes('24') || 
+                         el.nextElementSibling.textContent.includes('Instant'))) {
+                        hasFastPayout = true;
+                    }
+                });
+                
+                item.style.display = hasFastPayout ? 'block' : 'none';
+            } else if (filterText === 'all casinos') {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
             }
         });
     }
     
-    // Mobile navigation toggle
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    if (navbarToggler) {
-        navbarToggler.addEventListener('click', function() {
-            const navbarCollapse = document.querySelector('.navbar-collapse');
-            navbarCollapse.classList.toggle('show');
+    // Function to sort casinos
+    function sortCasinos(sortOption) {
+        const casinoContainer = document.querySelector('.casino-listings');
+        const casinoItems = Array.from(document.querySelectorAll('.casino-list-item'));
+        
+        if (!casinoContainer || casinoItems.length === 0) return;
+        
+        sortOption = sortOption ? sortOption.toLowerCase() : 'recommended';
+        
+        casinoItems.sort((a, b) => {
+            if (sortOption === 'highest rated') {
+                const ratingA = parseFloat(a.querySelector('.rating span').textContent) || 0;
+                const ratingB = parseFloat(b.querySelector('.rating span').textContent) || 0;
+                return ratingB - ratingA;
+            } 
+            else if (sortOption === 'newest first') {
+                const isNewA = a.classList.contains('new-casino') ? 1 : 0;
+                const isNewB = b.classList.contains('new-casino') ? 1 : 0;
+                return isNewB - isNewA;
+            }
+            else if (sortOption === 'biggest bonus') {
+                // Extract bonus amount if possible or use 0
+                function extractBonusValue(el) {
+                    const bonusText = el.querySelector('.bonus-amount')?.textContent || '';
+                    const match = bonusText.match(/\d+/);
+                    return match ? parseInt(match[0]) : 0;
+                }
+                
+                const bonusA = extractBonusValue(a);
+                const bonusB = extractBonusValue(b);
+                return bonusB - bonusA;
+            }
+            else {
+                // Default sort by rank
+                const rankA = parseInt(a.querySelector('.rank-number')?.textContent) || 999;
+                const rankB = parseInt(b.querySelector('.rank-number')?.textContent) || 999;
+                return rankA - rankB;
+            }
+        });
+        
+        // Clear container and append sorted items
+        casinoContainer.innerHTML = '';
+        casinoItems.forEach(item => {
+            casinoContainer.appendChild(item);
         });
     }
+});
 
-    // Form validation for contact form
+// Contact form validation
+document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
+    
     if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault();
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
             
             let isValid = true;
+            
+            // Get form elements
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
+            const subjectInput = document.getElementById('subject');
             const messageInput = document.getElementById('message');
             
-            // Simple validation
-            if (!nameInput.value.trim()) {
+            // Validate name
+            if (nameInput.value.trim() === '') {
                 showError(nameInput, 'Please enter your name');
                 isValid = false;
             } else {
                 removeError(nameInput);
             }
             
-            if (!emailInput.value.trim()) {
+            // Validate email
+            if (emailInput.value.trim() === '') {
                 showError(emailInput, 'Please enter your email');
                 isValid = false;
-            } else if (!isValidEmail(emailInput.value.trim())) {
+            } else if (!isValidEmail(emailInput.value)) {
                 showError(emailInput, 'Please enter a valid email address');
                 isValid = false;
             } else {
                 removeError(emailInput);
             }
             
-            if (!messageInput.value.trim()) {
+            // Validate subject
+            if (subjectInput.value.trim() === '') {
+                showError(subjectInput, 'Please enter a subject');
+                isValid = false;
+            } else {
+                removeError(subjectInput);
+            }
+            
+            // Validate message
+            if (messageInput.value.trim() === '') {
                 showError(messageInput, 'Please enter your message');
                 isValid = false;
             } else {
                 removeError(messageInput);
             }
             
+            // If valid, show success message
             if (isValid) {
-                // Show success message (in a real app, this would submit the form)
-                const successMessage = document.createElement('div');
-                successMessage.className = 'alert alert-success mt-3';
-                successMessage.role = 'alert';
-                successMessage.textContent = 'Your message has been sent. We\'ll get back to you soon!';
+                const alertDiv = document.createElement('div');
+                alertDiv.className = 'alert alert-success mt-3';
+                alertDiv.textContent = 'Your message has been sent successfully! We will get back to you soon.';
                 
+                const formContainer = document.querySelector('.contact-form');
+                formContainer.insertBefore(alertDiv, contactForm);
+                
+                // Reset form
                 contactForm.reset();
-                contactForm.parentNode.insertBefore(successMessage, contactForm.nextSibling);
                 
                 // Remove success message after 5 seconds
-                setTimeout(() => {
-                    successMessage.remove();
+                setTimeout(function() {
+                    formContainer.removeChild(alertDiv);
                 }, 5000);
             }
         });
     }
     
-    // Validate email format
-    function isValidEmail(email) {
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regex.test(email);
+    // Review filters functionality
+    const reviewFilterBadges = document.querySelectorAll('.review-filters .badge');
+    
+    if (reviewFilterBadges.length > 0) {
+        reviewFilterBadges.forEach(badge => {
+            badge.addEventListener('click', function() {
+                // Toggle active class
+                reviewFilterBadges.forEach(b => {
+                    b.classList.remove('bg-primary');
+                    b.classList.add('bg-light', 'text-dark');
+                });
+                
+                this.classList.remove('bg-light', 'text-dark');
+                this.classList.add('bg-primary');
+                
+                const filterType = this.getAttribute('data-filter');
+                const reviewItems = document.querySelectorAll('.casino-list-item');
+                
+                // Плавная анимация для фильтрации
+                reviewItems.forEach(item => {
+                    // Определяем, должен ли элемент отображаться
+                    const shouldDisplay = 
+                        filterType === 'all' || 
+                        (filterType === 'slots' && item.classList.contains('slots-casino')) ||
+                        (filterType === 'live' && item.classList.contains('live-dealer')) ||
+                        (filterType === 'mobile' && item.classList.contains('mobile-casino')) ||
+                        (filterType === 'fast' && item.classList.contains('fast-payout'));
+                    
+                    if (shouldDisplay) {
+                        // Если элемент должен быть показан, делаем это плавно
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.filter = 'blur(0)';
+                            item.style.display = 'block';
+                        }, 50);
+                    } else {
+                        // Если элемент должен быть скрыт, сначала анимируем исчезновение
+                        item.style.opacity = '0';
+                        item.style.filter = 'blur(4px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300); // Задержка соответствует времени перехода
+                    }
+                });
+            });
+        });
     }
     
-    // Show error message
-    function showError(input, message) {
-        const formGroup = input.closest('.form-group');
-        const errorMessage = formGroup.querySelector('.invalid-feedback') || document.createElement('div');
-        
-        errorMessage.className = 'invalid-feedback d-block';
-        errorMessage.textContent = message;
-        
-        if (!formGroup.querySelector('.invalid-feedback')) {
-            formGroup.appendChild(errorMessage);
-        }
-        
-        input.classList.add('is-invalid');
+    // Review sorting functionality
+    const reviewSortSelect = document.querySelector('#sortSelect');
+    if (reviewSortSelect) {
+        reviewSortSelect.addEventListener('change', function() {
+            const sortOption = this.value;
+            const reviewContainer = document.querySelector('.container');
+            const reviewItems = Array.from(document.querySelectorAll('.casino-list-item'));
+            
+            if (!reviewContainer || reviewItems.length === 0) return;
+            
+            reviewItems.sort((a, b) => {
+                if (sortOption === 'rating-high' || sortOption === 'rating-low') {
+                    const ratingA = parseFloat(a.querySelector('.rating span')?.textContent) || 0;
+                    const ratingB = parseFloat(b.querySelector('.rating span')?.textContent) || 0;
+                    return sortOption === 'rating-high' ? ratingB - ratingA : ratingA - ratingB;
+                } else if (sortOption === 'newest') {
+                    return -1; // Предполагаем, что первый элемент новее
+                } else if (sortOption === 'a-z') {
+                    const nameA = a.querySelector('.casino-name')?.textContent.trim() || '';
+                    const nameB = b.querySelector('.casino-name')?.textContent.trim() || '';
+                    return nameA.localeCompare(nameB);
+                }
+                return 0;
+            });
+            
+            // Анимация для сортировки
+            const reviewSection = document.querySelector('.container .pt-60.pb-60');
+            const filterSection = reviewSection.querySelector('.review-filters');
+            const moreReviewsSection = document.querySelector('.text-center.mt-4.mb-4');
+            
+            // Сначала скрываем все элементы
+            reviewItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.filter = 'blur(4px)';
+            });
+            
+            // Затем с небольшой задержкой меняем порядок
+            setTimeout(() => {
+                reviewSection.innerHTML = '';
+                reviewSection.appendChild(filterSection);
+                
+                // Добавляем элементы в новом порядке
+                reviewItems.forEach((item, index) => {
+                    reviewSection.appendChild(item);
+                    
+                    // Плавно показываем элементы с cascade-эффектом (поочередно)
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.filter = 'blur(0)';
+                    }, 50 * index); // Задержка между появлением каждого элемента
+                });
+                
+                reviewSection.appendChild(moreReviewsSection);
+            }, 300);
+        });
     }
+});
+// Age Verification
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if the user has already confirmed their age
+    const ageVerified = localStorage.getItem('ageVerified');
+    const ageModal = document.getElementById('ageVerificationModal');
     
-    // Remove error message
-    function removeError(input) {
-        const formGroup = input.closest('.form-group');
-        const errorMessage = formGroup.querySelector('.invalid-feedback');
+    if (!ageVerified && ageModal) {
+        // Show the age verification modal
+        ageModal.classList.add('show');
         
-        if (errorMessage) {
-            errorMessage.remove();
+        // Confirm age button
+        const confirmBtn = document.getElementById('confirmAgeBtn');
+        if (confirmBtn) {
+            confirmBtn.addEventListener('click', function() {
+                // Set that the user has confirmed their age (valid for 30 days)
+                localStorage.setItem('ageVerified', 'true');
+                // Hide the modal
+                ageModal.classList.remove('show');
+            });
         }
         
-        input.classList.remove('is-invalid');
+        // Leave button
+        const leaveBtn = document.getElementById('leaveBtn');
+        if (leaveBtn) {
+            leaveBtn.addEventListener('click', function() {
+                // Redirect to Google
+                window.location.href = 'https://www.google.com';
+            });
+        }
     }
-
-    // Initialize tooltips
-    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-        new bootstrap.Tooltip(tooltipTriggerEl);
-    });
 });

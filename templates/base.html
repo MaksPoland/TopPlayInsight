@@ -3,90 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TopPlayInsight - Trusted reviews, tips, and responsible gaming advice for online casino players.">
-    <title>{% block title %}TopPlayInsight - Trusted Casino Information Portal{% endblock %}</title>
+    <title>{% block title %}TopPlayInsight - Online Casino Information Platform{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Comprehensive resource for online casino information, reviews, and gaming tips for UK players.{% endblock %}">
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    
     {% block extra_css %}{% endblock %}
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header with Navigation -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="top-nav">
             <div class="container">
-                <a class="navbar-brand" href="{{ url_for('index') }}">
-                    <i class="fas fa-dice me-2"></i>TopPlayInsight
+                <a href="{{ url_for('index') }}" class="navbar-brand">
+                    <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="TopPlayInsight" height="40">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link {% if active_page == 'home' %}active{% endif %}" href="{{ url_for('index') }}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if active_page == 'reviews' %}active{% endif %}" href="{{ url_for('reviews') }}">Reviews</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if active_page == 'tips' %}active{% endif %}" href="{{ url_for('tips') }}">Tips</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if active_page == 'responsible_gaming' %}active{% endif %}" href="{{ url_for('responsible_gaming') }}">Responsible Gaming</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if active_page == 'contact' %}active{% endif %}" href="{{ url_for('contact') }}">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
+            </div>
+        </div>
+        <nav class="navbar main-navigation">
+            <div class="container">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link {% if active_page == 'home' %}active{% endif %}">Home</a></li>
+                    <li class="nav-item"><a href="{{ url_for('reviews') }}" class="nav-link {% if active_page == 'reviews' %}active{% endif %}">Reviews</a></li>
+                    <li class="nav-item"><a href="{{ url_for('responsible_gaming') }}" class="nav-link {% if active_page == 'responsible_gaming' %}active{% endif %}">Responsible Gaming</a></li>
+                    <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link {% if active_page == 'contact' %}active{% endif %}">Contact</a></li>
+                </ul>
             </div>
         </nav>
     </header>
-    
-    <!-- Main Content -->
-    <main class="container py-4">
-        {% block content %}{% endblock %}
-    </main>
-    
-    <!-- Footer -->
-    <footer class="bg-light">
-        <div class="container text-center">
-            <div class="age-notice">
-                <i class="fas fa-exclamation-triangle me-2"></i> For individuals 18 years and older only
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>About TopPlayInsight</h3>
+                    <p>TopPlayInsight provides comprehensive, honest information about online casinos for UK players. Our goal is to help players make informed decisions without directly promoting gambling.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Important Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="{{ url_for('responsible_gaming') }}">Responsible Gaming</a></li>
+                        <li><a href="{{ url_for('privacy_policy') }}">Privacy Policy</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Disclaimer</h3>
+                    <p>TopPlayInsight is an informational resource only. We encourage responsible play and adherence to local gambling laws. Please note that gambling may not be legal in your jurisdiction.</p>
+                </div>
             </div>
-            
-            <div class="footer-links">
-                <a href="{{ url_for('index') }}">Home</a>
-                <a href="{{ url_for('reviews') }}">Reviews</a>
-                <a href="{{ url_for('tips') }}">Tips</a>
-                <a href="{{ url_for('responsible_gaming') }}">Responsible Gaming</a>
-                <a href="{{ url_for('contact') }}">Contact Us</a>
-                <a href="{{ url_for('privacy_policy') }}">Privacy Policy</a>
+            <hr>
+            <div class="copyright">
+                <p>&copy; 2025 TopPlayInsight. All rights reserved.</p>
+                <p class="legal-text">18+ BeGambleAware.org | Play Responsibly</p>
             </div>
-            
-            <p class="copyright mt-4">
-                &copy; <script>document.write(new Date().getFullYear())</script> TopPlayInsight. All rights reserved.
-            </p>
         </div>
     </footer>
-    
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Custom JavaScript -->
+
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    
     {% block extra_js %}{% endblock %}
 </body>
 </html>
