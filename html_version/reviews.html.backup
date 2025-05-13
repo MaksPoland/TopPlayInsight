@@ -221,7 +221,7 @@
                         </div>
                     </div>
                     
-                    <p>JackpotCity Casino has been a leading gaming destination since 1998, offering UK players a sophisticated experience with its extensive Microgaming portfolio. Licensed by the UK Gambling Commission, it maintains rigorous security standards and provides responsive customer support. The platform features an elegant interface with intuitive navigation across desktop and mobile devices.</p>
+                    <p>JackpotCity Casino has been a leading gaming destination since 1998, offering a sophisticated experience with its extensive Microgaming portfolio. Licensed by the UK Gambling Commission, it maintains rigorous security standards and provides responsive customer support. The platform features an elegant interface with intuitive navigation across desktop and mobile devices.</p>
                     
                     <div class="row mt-4">
                         <div class="col-md-6">
@@ -245,7 +245,8 @@
                     <div class="bonus-info">
                         <span class="bonus-label">Welcome Bonus</span>
                         <div class="bonus-amount">100% up to £500 Welcome Package</div>
-                        <div class="bonus-terms">New UK players only. Min deposit £10. Wagering requirement 50x. Bonus valid for 7 days. T&Cs apply.</div>
+                        <div class="bonus-terms">New UK players only. Min deposit £10. Wagering requirement 50x. Bonus valid for
+                        7 days. T&Cs apply.</div>
                     </div>
                     
                     <div class="payment-methods">
@@ -269,9 +270,11 @@
                         </div>
                         <div class="payment-method">
                             <div class="payment-method-icon">
-                                <img src="images/payment-methods/skrill.svg" alt="Skrill">
+<<<<<<< HEAD
+=======
+                                <img src="images/payment-methods/crypto.svg" alt="Crypto">
                             </div>
-                            <span class="payment-method-label">Skrill</span>
+                            <span class="payment-method-label">Crypto</span>
                         </div>
                     </div>
                     
@@ -280,14 +283,11 @@
                             <span>READ REVIEW</span>
                             <i class="fas fa-chevron-right ms-2"></i>
                         </a>
-                        <a href="https://www.jackpotcitycasino.com/uk" class="btn-secondary mt-2 visit-website-btn" target="_blank">
-                            <span>Visit Website</span>
-                            <i class="fas fa-external-link-alt ms-2"></i>
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <!-- Ruby Fortune Casino Review -->
         <div class="casino-list-item live-dealer fast-payout mobile-casino">
@@ -306,8 +306,118 @@
                             <i class="fas fa-star star"></i>
                             <i class="fas fa-star star"></i>
                             <i class="fas fa-star star"></i>
+                            <i class="far fa-star star"></i>
+                            <span class="ms-2">4.3 / 5</span>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="casino-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Games</span>
+                            <span class="spec-value">1800+</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Min Deposit</span>
+                            <span class="spec-value">€20</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Payout Speed</span>
+                            <span class="spec-value">1-2 Days</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">License</span>
+                            <span class="spec-value">Curacao</span>
+                        </div>
+                    </div>
+                    
+                    <p>Mad Casino delivers an entertaining gaming experience with its quirky design and extensive slot collection. Their focus on transparency and responsible gaming is backed by a solid Curacao license. The site offers straightforward navigation and helpful customer support through multiple channels.</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h3 class="mb-2">Pros</h3>
+                            <ul>
+                                <li>Weekly Tournaments</li>
+                                <li>Slot Races</li>
+                                <li>Exclusive Games</li>
+                                <li>No-deposit Bonus Available</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="mb-2">Cons</h3>
+                            <ul>
+                                <li>High wagering requirements (60x for no-deposit bonus)</li>
+                                <li>Some country restrictions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bonus-info">
+                        <span class="bonus-label">Welcome Bonus</span>
+                        <div class="bonus-amount">€5 No Deposit + 200% up to €1000</div>
+                        <div class="bonus-terms">18+. New players only. €5 no deposit bonus with 60x wagering. Deposit bonus: Min deposit €20, 45x wagering, valid for 30 days. T&Cs apply.</div>
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
+                                <img src="images/payment-methods/visa.svg" alt="Visa">
+                            </div>
+                            <span class="payment-method-label">Visa</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
+                                <img src="images/payment-methods/mastercard.svg" alt="Mastercard">
+                            </div>
+                            <span class="payment-method-label">Mastercard</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
+                                <img src="images/payment-methods/neteller.svg" alt="Neteller">
+                            </div>
+                            <span class="payment-method-label">Neteller</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
+                                <img src="images/payment-methods/paysafecard.svg" alt="Paysafecard">
+                            </div>
+                            <span class="payment-method-label">Paysafecard</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="reviews/lucky-nugget-casino.html" class="btn-primary btn-lg visit-btn">
+                            <span>READ REVIEW</span>
+                            <i class="fas fa-chevron-right ms-2"></i>
+                        </a>
+                        <a href="https://www.luckynuggetcasino.com/uk" class="btn-secondary mt-2 visit-website-btn" target="_blank">
+                            <span>Visit Website</span>
+                            <i class="fas fa-external-link-alt ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lucky Nugget Casino Review -->
+        <div class="casino-list-item live-dealer mobile-casino">
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="casino-logo-container">
+                        <img src="images/lucky-nugget.png" alt="Lucky Nugget Casino" class="img-fluid" style="background-color: #004d00; padding: 5px;">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <h2 class="casino-name">Lucky Nugget Casino Review: Time-Tested UK Gaming Experience</h2>
+                    <div class="mobile-rating-container d-none d-md-none d-sm-block">
+                        <div class="ranking-label">Ranking</div>
+                        <div class="rating mb-2">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
                             <i class="fas fa-star-half-alt star"></i>
-                            <span class="ms-2">4.6 / 5</span>
+                            <span class="ms-2">4.5 / 5</span>
                         </div>
                     </div>
                     
@@ -323,7 +433,7 @@
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Payout Speed</span>
-                            <span class="spec-value">1-2 Days</span>
+                            <span class="spec-value">1-3 Days</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">License</span>
@@ -331,31 +441,31 @@
                         </div>
                     </div>
                     
-                    <p>Ruby Fortune Casino has been serving UK players since 2003, providing a polished gaming environment with reliable service and consistent quality. Licensed by the UK Gambling Commission, they offer a selection of over 450 games from Microgaming alongside a streamlined mobile experience. Their eCOGRA certification ensures fair play and transparent practices.</p>
+                    <p>Lucky Nugget Casino has been serving UK players since 1998, making it one of the most established online casinos available. Licensed by the UK Gambling Commission, they offer a focused selection of Microgaming titles, strong security protocols, and dedicated customer support. Their classic approach to online gaming prioritizes reliability and player safety.</p>
                     
                     <div class="row mt-4">
                         <div class="col-md-6">
                             <h3 class="mb-2">Pros</h3>
                             <ul>
-                                <li>Consistent quality since 2003</li>
-                                <li>eCOGRA certified fair gaming</li>
-                                <li>Optimized for mobile play</li>
-                                <li>24/7 customer support</li>
+                                <li>Veteran brand (since 1998)</li>
+                                <li>Regular independent audits</li>
+                                <li>Reliable payouts</li>
+                                <li>Good mobile optimization</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <h3 class="mb-2">Cons</h3>
                             <ul>
-                                <li>Limited game providers (primarily Microgaming)</li>
-                                <li>Few cryptocurrency options</li>
+                                <li>Limited to Microgaming titles</li>
+                                <li>Smaller game selection</li>
                             </ul>
                         </div>
                     </div>
                     
                     <div class="bonus-info">
                         <span class="bonus-label">Welcome Bonus</span>
-                        <div class="bonus-amount">100% up to £750 Welcome Package</div>
-                        <div class="bonus-terms">New UK players only. Min deposit £10. Wagering requirement 50x. Bonus split across first three deposits. T&Cs apply.</div>
+                        <div class="bonus-amount">150% up to £150 + 25 Free Spins</div>
+                        <div class="bonus-terms">18+. UK players only. Min deposit £10. Wagering requirement 50x. Bonus valid for the first deposit only. T&Cs apply. Please gamble responsibly.</div>
                     </div>
                     
                     <div class="payment-methods">
@@ -391,116 +501,6 @@
                             <i class="fas fa-chevron-right ms-2"></i>
                         </a>
                         <a href="https://www.rubyfortunecasino.com/uk" class="btn-secondary mt-2 visit-website-btn" target="_blank">
-                            <span>Visit Website</span>
-                            <i class="fas fa-external-link-alt ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Lucky Nugget Casino Review -->
-        <div class="casino-list-item live-dealer mobile-casino">
-            <div class="row">
-                <div class="col-lg-4 col-md-4">
-                    <div class="casino-logo-container">
-                        <img src="images/lucky-nugget-casino.png" alt="Lucky Nugget Casino" class="img-fluid" style="background-color: #006400; padding: 5px;">
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-8">
-                    <h2 class="casino-name">Lucky Nugget Casino Review: Time-Tested UK Gaming Experience</h2>
-                    <div class="mobile-rating-container d-none d-md-none d-sm-block">
-                        <div class="ranking-label">Ranking</div>
-                        <div class="rating mb-2">
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="fas fa-star star"></i>
-                            <i class="far fa-star star"></i>
-                            <span class="ms-2">4.5 / 5</span>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="casino-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Games</span>
-                            <span class="spec-value">400+</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Min Deposit</span>
-                            <span class="spec-value">£10</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Payout Speed</span>
-                            <span class="spec-value">1-3 Days</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">License</span>
-                            <span class="spec-value">UKGC 🇬🇧</span>
-                        </div>
-                    </div>
-                    
-                    <p>Lucky Nugget Casino has provided UK players with quality entertainment since 1998, holding a trusted UK Gambling Commission license. Their streamlined site delivers a selection of top Microgaming titles with excellent mobile optimization. The casino's longevity demonstrates their commitment to fair play, robust security, and player satisfaction.</p>
-                    
-                    <div class="row mt-4">
-                        <div class="col-md-6">
-                            <h3 class="mb-2">Pros</h3>
-                            <ul>
-                                <li>Established UK-licensed casino since 1998</li>
-                                <li>Strong focus on mobile compatibility</li>
-                                <li>Fair 40x wagering requirements</li>
-                                <li>Responsive multilingual support</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <h3 class="mb-2">Cons</h3>
-                            <ul>
-                                <li>Smaller game selection than competitors</li>
-                                <li>Limited promotional variety</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="bonus-info">
-                        <span class="bonus-label">Welcome Bonus</span>
-                        <div class="bonus-amount">150% up to £200 First Deposit Match</div>
-                        <div class="bonus-terms">New UK players only. Min deposit £10. Wagering requirement 40x. Bonus valid for 30 days. T&Cs apply.</div>
-                    </div>
-                    
-                    <div class="payment-methods">
-                        <div class="payment-method">
-                            <div class="payment-method-icon">
-                                <img src="images/payment-methods/visa.svg" alt="Visa">
-                            </div>
-                            <span class="payment-method-label">Visa</span>
-                        </div>
-                        <div class="payment-method">
-                            <div class="payment-method-icon">
-                                <img src="images/payment-methods/mastercard.svg" alt="Mastercard">
-                            </div>
-                            <span class="payment-method-label">Mastercard</span>
-                        </div>
-                        <div class="payment-method">
-                            <div class="payment-method-icon">
-                                <img src="images/payment-methods/paypal.svg" alt="PayPal">
-                            </div>
-                            <span class="payment-method-label">PayPal</span>
-                        </div>
-                        <div class="payment-method">
-                            <div class="payment-method-icon">
-                                <img src="images/payment-methods/skrill.svg" alt="Skrill">
-                            </div>
-                            <span class="payment-method-label">Skrill</span>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-4">
-                        <a href="reviews/lucky-nugget-casino.html" class="btn-primary btn-lg visit-btn">
-                            <span>READ REVIEW</span>
-                            <i class="fas fa-chevron-right ms-2"></i>
-                        </a>
-                        <a href="https://www.luckynuggetcasino.com/uk" class="btn-secondary mt-2 visit-website-btn" target="_blank">
                             <span>Visit Website</span>
                             <i class="fas fa-external-link-alt ms-2"></i>
                         </a>
@@ -606,11 +606,11 @@
                     </div>
                     
                     <div class="mt-4">
-                        <a href="reviews/casino-epoca.html" class="btn-primary btn-lg visit-btn">
+                        <a href="reviews/lucky-nugget-casino.html" class="btn-primary btn-lg visit-btn">
                             <span>READ REVIEW</span>
                             <i class="fas fa-chevron-right ms-2"></i>
                         </a>
-                        <a href="https://www.casinoepoca.com/uk" class="btn-secondary mt-2 visit-website-btn" target="_blank">
+                        <a href="https://www.luckynuggetcasino.com/uk" class="btn-secondary mt-2 visit-website-btn" target="_blank">
                             <span>Visit Website</span>
                             <i class="fas fa-external-link-alt ms-2"></i>
                         </a>
@@ -618,6 +618,117 @@
                 </div>
             </div>
         </div>
+
+        <!-- Casino Epoca Review -->
+        <div class="casino-list-item live-dealer mobile-casino">
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="casino-logo-container">
+                        <img src="images/casino-epoca.png" alt="Casino Epoca" class="img-fluid" style="background-color: #8B0000; padding: 5px;">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <h2 class="casino-name">Casino Epoca Review: Refined Classic Gaming</h2>
+                    <div class="mobile-rating-container d-none d-md-none d-sm-block">
+                        <div class="ranking-label">Ranking</div>
+                        <div class="rating mb-2">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="far fa-star star"></i>
+                            <span class="ms-2">4.2 / 5</span>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="casino-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Games</span>
+                            <span class="spec-value">350+</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Min Deposit</span>
+                            <span class="spec-value">£10</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Payout Speed</span>
+                            <span class="spec-value">1-3 Days</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">License</span>
+                            <span class="spec-value">UKGC 🇬🇧</span>
+                        </div>
+                    </div>
+                    
+                    <p>Casino Epoca offers a classic online gaming experience with a refined selection of Microgaming titles. Licensed by the UK Gambling Commission, this established platform provides a secure environment with robust encryption technology. Their games are regularly audited for fairness, and the user interface is designed for easy navigation on both desktop and mobile devices.</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h3 class="mb-2">Pros</h3>
+                            <ul>
+                                <li>Monthly Promotions</li>
+                                <li>Loyalty Points System</li>
+                                <li>Multilingual Support</li>
+                                <li>eCOGRA Certified</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="mb-2">Cons</h3>
+                            <ul>
+                                <li>Limited game selection compared to competitors</li>
+                                <li>Higher wagering requirements (50x)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bonus-info">
+                        <span class="bonus-label">Welcome Bonus</span>
+                        <div class="bonus-amount">100% up to £200 First Deposit Bonus</div>
+                        <div class="bonus-terms">New UK players only. Min deposit £10. Wagering requirement 50x. Bonus valid for 7 days. T&Cs apply.</div>
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
+                                <img src="images/payment-methods/visa.svg" alt="Visa">
+                            </div>
+                            <span class="payment-method-label">Visa</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
+                                <img src="images/payment-methods/mastercard.svg" alt="Mastercard">
+                            </div>
+                            <span class="payment-method-label">Mastercard</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
+                                <img src="images/payment-methods/paypal.svg" alt="PayPal">
+                            </div>
+                            <span class="payment-method-label">PayPal</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="payment-method-icon">
+                                <img src="images/payment-methods/skrill.svg" alt="Skrill">
+                            </div>
+                            <span class="payment-method-label">Skrill</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="reviews/casino-epoca.html" class="btn-primary btn-lg visit-btn">
+                            <span>READ REVIEW</span>
+                            <i class="fas fa-chevron-right ms-2"></i>
+                        </a>
+                        <a href="https://www.casinoepoca.co.uk" class="btn-secondary mt-2 visit-website-btn" target="_blank">
+                            <span>Visit Website</span>
+                            <i class="fas fa-external-link-alt ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- More Reviews Coming Soon -->
         <div class="text-center mt-4 mb-4">
